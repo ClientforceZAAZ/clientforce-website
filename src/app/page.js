@@ -1,65 +1,121 @@
-import Image from "next/image";
+import Hero from "@/components/sections/home/Hero";
+import WhyClientForce from "@/components/sections/home/WhyClientForce";
+import ClientForceFix from "@/components/sections/home/ClientForceFix";
+import AllSimpleSteps from "@/components/sections/shared/AllSimpleSteps";
+import FeauturesBenefits from "@/components/sections/home/FeauturesBenefits";
+import WatchDemo from "@/components/sections/home/WatchDemo";
+import UseCases from "@/components/sections/shared/UseCases";
+import Proof from "@/components/sections/home/Proof";
+import AgentRoi from "@/components/sections/home/AgentRoi";
+import SecurityCompliance from "@/components/sections/home/SecurityCompliance";
+import LaunchOnce from "@/components/sections/home/LaunchOnce";
+import FAQ from "@/components/sections/shared/FrequentlyAskedQuestions";
+
+
+
+
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main>
+      <Hero />
+      <WhyClientForce />
+      <ClientForceFix />
+      <AllSimpleSteps
+        heading={
+          <>
+            All in{" "}
+            <span className="text-transparent bg-linear-to-r from-[#13D111] to-[#0FC6D8] bg-clip-text">
+              3 Simple Steps
+            </span>
+          </>
+        }
+        bgColor="bg-[#EEF9FA]"
+        steps={[
+          {
+            image: "/images/all_simple_steps_card1.png",
+            badgeIcon: "/icons/all_simple_step1.svg",
+            title: "Create Your AI Sales Agent",
+            description1: "Pick a DFY playbook or use chat-style setup.",
+            description2: (
+              <>
+                Your Agent learns from your PDFs/links And{" "}
+                <span className="font-bold">adopts your positioning, pricing, and proof.</span>
+              </>
+            ),
+          },
+          {
+            image: "/images/all_simple_steps_card2.png",
+            badgeIcon: "/icons/all_simple_step2.svg",
+            title: "Connect Lead Sources",
+            description1: (
+              <>
+                Enable the Finder for auto-prospecting, add{" "}
+                <span className="font-bold">widgets</span> to your site, or capture from
+                LinkedIn/GMB via <span className="font-bold">Chrome Extension</span> or
+                upload your CSV
+              </>
+            ),
+          },
+          {
+            image: "/images/all_simple_steps_card3.png",
+            badgeIcon: "/icons/all_simple_steps3.svg",
+            title: "Launch a Perpetual Campaign",
+            description1: (
+              <>
+                Your Agent runs a goal-aligned sequence (email → WhatsApp → voice), sends{" "}
+                <span className="font-bold">dynamic proposals</span>, and books calls and
+                close sales—<span className="font-bold">24/7</span> with compliance guardrails.
+              </>
+            ),
+          },
+        ]}
+      />
+      <FeauturesBenefits />
+      <WatchDemo />
+      <UseCases
+        heading="Use Cases"
+        highlightText=""
+        cards={[
+         {
+            id: "agencies",
+            title: "Agencies",
+            description: "Offer Done-For-You AI Prospecting & Booking.",
+            image: "/images/usecase_agencies.png",
+          },
+          {
+            id: "saas",
+            title: "SaaS",
+            description: "Convert Trials And Book Product Demos Automatically.",
+            image: "/images/usecase_saas.png",
+          },
+          {
+            id: "local-services",
+            title: "Local Services",
+            description: "Capture Inbound + Outbound Leads And Call Back Instantly.",
+            image: "/images/usecase_local.png",
+          },
+          {
+            id: "consultants",
+            title: "Consultants/Coaches",
+            description: "High-Ticket Pipelines With Voice-Assisted Closing.",
+            image: "/images/usecase_consultant.png",
+          },
+        ]}
+      />  
+      <Proof />
+      <AgentRoi />
+      <SecurityCompliance />
+      <FAQ faqs={[
+          { id: 1, question: "Does this replace my CRM?", answer: "ClientForceAI can run standalone or alongside your CRM. Use our unified inbox + pipelines, or sync via integrations." },
+          { id: 2, question: "Can it make real phone calls?", answer: "Yes. Our AI voice agents can make and receive real calls..." },
+          { id: 3, question: "What if I don't have lists?", answer: "No problem. Our auto-prospecting engine builds targeted lead lists..." },
+          { id: 4, question: "Can I use this for my clients?", answer: "Absolutely. Our agency plan lets you spin up separate AI agents..." },
+          { id: 5, question: "Will emails land in inbox?", answer: "We use domain warming, inbox rotation, and deliverability monitoring..." },
+        ]} />
+      <LaunchOnce />
+    </main>
   );
 }
+
+
