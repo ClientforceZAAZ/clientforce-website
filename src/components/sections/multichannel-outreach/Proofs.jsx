@@ -142,7 +142,7 @@ function MeetingsCard({ visible }) {
         transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s, box-shadow 0.3s ease",
         boxShadow: hovered ? "0 16px 48px rgba(168,85,247,0.25)" : "0 4px 20px rgba(0,0,0,0.07)",
       }}
-      className="flex-1 bg-[#F5D6F8] rounded-3xl p-5 flex flex-col min-h-[280px]"
+      className="flex-1 bg-[#F5D6F8] rounded-3xl p-5 flex flex-col items-center min-h-[280px] w-fit"
     >
       {/* Stat */}
       <div className="flex items-end gap-2 mb-1">
@@ -187,7 +187,7 @@ function ProposalsCard({ visible }) {
         transition: "opacity 0.6s ease 0.25s, transform 0.6s ease 0.25s, box-shadow 0.3s ease",
         boxShadow: hovered ? "0 16px 48px rgba(34,197,94,0.2)" : "0 4px 20px rgba(0,0,0,0.07)",
       }}
-      className="flex-1 bg-[#E3FFED] rounded-3xl p-5 flex flex-col min-h-[280px]"
+      className="flex-1 bg-[#E3FFED] rounded-3xl p-5 flex flex-col items-center min-h-[280px] w-fit"
     >
       {/* Wave first on this card */}
       <div className="mb-3">
@@ -229,7 +229,7 @@ function RevenueCard({ visible }) {
         transition: "opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s, box-shadow 0.3s ease",
         boxShadow: hovered ? "0 16px 48px rgba(249,115,22,0.22)" : "0 4px 20px rgba(0,0,0,0.07)",
       }}
-      className="flex-1 bg-[#FACBB2] rounded-3xl p-5 flex flex-col min-h-[280px]"
+      className="flex-1 bg-[#FACBB2] rounded-3xl p-5 flex flex-col items-center min-h-[280px] w-fit"
     >
       {/* Stat */}
       <div className="mb-3">
@@ -280,13 +280,13 @@ export default function ProofInPractice() {
         }}
         className="mb-8"
       >
-        <h2 className="text-4xl lg:text-5xl font-bold text-black font-degular">
+        <h2 className="text-4xl lg:text-5xl font-bold text-black font-degular text-center md:text-left">
           Proof In Practice
         </h2>
       </div>
 
       {/* Cards Row */}
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col items-center md:flex-row gap-8">
         <MeetingsCard visible={visible} />
         <ProposalsCard visible={visible} />
         <RevenueCard visible={visible} />

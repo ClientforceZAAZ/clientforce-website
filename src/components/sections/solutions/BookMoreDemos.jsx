@@ -1,116 +1,4 @@
 
-// "use client";
-
-// import Image from "next/image";
-// import { useEffect, useRef, useState } from "react";
-
-// function useVisible(threshold = 0.15) {
-//   const ref = useRef(null);
-//   const [visible, setVisible] = useState(false);
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) { setVisible(true); observer.disconnect(); }
-//       },
-//       { threshold }
-//     );
-//     if (ref.current) observer.observe(ref.current);
-//     return () => observer.disconnect();
-//   }, [threshold]);
-//   return [ref, visible];
-// }
-
-// export default function TabbedFeatureSection() {
-//   const [ref, visible] = useVisible();
-
-
-//   return (
-//     <section
-//       ref={ref}
-//       className="pt-8 pb-14 px-6 lg:px-16 relative"
-//     >
-      
-//       <h1 className="text-[55px] text-black font-bold font-degular text-center mb-8">Book More Demos <span className="text-[#787878]">(B2B & SaaS)</span> </h1>
-
-//       {/* Content card */}
-//       <div
-//         style={{
-//           opacity: visible ? 1 : 0,
-//           transform: visible ? "translateY(0)" : "translateY(24px)",
-//           transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s",
-//           boxShadow: "0 8px 40px rgba(0,0,0,0.07)",
-//         }}
-//         className={`bg-white border border-gray-300 rounded-3xl overflow-hidden `}
-//       >
-//         <div
-//           style={{ animation: "tabFadeIn 0.35s ease" }}
-//           className={`flex flex-col md:flex-row`}
-//         >
-//           {/* Left — image */}
-//           <div className="md:w-[50%] p-6 pl-0 flex items-center justify-center">
-//               <img
-//                 src=""
-//                 alt=""
-//                 className="w-full h-full object-cover rounded-2xl bg-[#0000001A]"
-//               />
-//           </div>
-
-//           {/* Right — text */}
-//           <div className="md:w-[50%] p-8 flex flex-col justify-center">
-//             <h2 className="text-2xl font-bold text-black leading-10 mb-6">
-//               Turn Cold Prospects Into Booked <br /> Meetings On Autopilot.
-//             </h2>
-//             <p className=" text-sm mb-4">Turn cold prospects into booked meetings on autopilot.</p>
-//             <p className="text-sm mb-4"><span className="font-bold">How it works:</span> Finder v2 discovers net-new leads → multichannel outreach (Email + LinkedIn + WhatsApp) → voice assist closes the booking → dynamic proposals confirm value → everything lands in your Unified Inbox.</p>
-//             <p className="font-bold text-sm mb-3">Why it wins</p>
-            
-//             <div className="space-y-4">
-
-//                 <div className="flex items-start gap-3">
-//                   <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
-//                     <Image src="/icons/Done.svg" width={18} height={18} />
-//                   </div>
-//                   <p className="text-sm text-black leading-relaxed">
-//                    <span className="font-bold">Always-on lead flow: </span> keyword/industry/geo rules feed your pipeline daily.</p>
-//                 </div>
-
-//                <div className="flex items-start gap-3">
-//                   <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
-//                     <Image src="/icons/Done.svg" width={18} height={18} />
-//                   </div>
-//                   <p className="text-sm text-black leading-relaxed">
-//                    <span className="font-bold"> Right touch, right time: </span> emails warm, WA nudges, one well-timed AI call seals the slot.</p>
-//                 </div>
-                
-//                <div className="flex items-start gap-3">
-//                   <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
-//                     <Image src="/icons/Done.svg" width={18} height={18} />
-//                   </div>
-//                   <p className="text-sm text-black leading-relaxed">
-//                    <span className="font-bold">Frictionless booking: </span> one-click calendar links, timezone aware</p>
-//                 </div>
-
-//                 <p className="text-sm"><span className="font-bold">Playbooks included: </span>SaaS Demo Booking, B2B Discovery, Partner Outreach.</p>
-
-//             </div>
-    
-//           </div>
-//         </div>
-//       </div>
-
-
-
-//       <style>{`
-//         @keyframes tabFadeIn {
-//           from { opacity: 0; transform: translateY(8px); }
-//           to   { opacity: 1; transform: translateY(0); }
-//         }
-//       `}</style>
-//     </section>
-//   );
-// }
-
-
 
 "use client";
 
@@ -202,7 +90,7 @@ export default function BookMoreDemos() {
   return (
     <section className=" pb-14 bg-[#F6F6F6] py-8 px-6 lg:px-16 relative">
 
-      <h1 className="text-[55px] text-black font-bold font-degular text-center mb-4">
+      <h1 className="text-2xl sm:text-4xl lg:text-[55px] text-black font-bold font-degular text-center mb-4">
         Book More Demos <span className="text-[#787878]">(B2B & SaaS)</span>
       </h1>
 

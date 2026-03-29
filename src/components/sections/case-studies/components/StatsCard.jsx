@@ -47,10 +47,10 @@ export default function StatsCard() {
             transform: visible ? "translateX(0)" : "translateX(16px)",
             transition: `opacity 0.5s ease ${0.15 + i * 0.12}s, transform 0.5s ease ${0.15 + i * 0.12}s`,
           }}
-          className="flex items-center justify-between border border-gray-300 px-8 py-10 rounded-2xl"
+          className="flex items-center justify-between border border-gray-300 px-4 lg:px-8 py-5 lg:py-10 rounded-2xl"
         >
-          <span className="text-lg font-medium text-[#00000099]">{stat.label}</span>
-          <span className="text-3xl font-extrabold text-[#000015] ml-4 whitespace-nowrap">{stat.value}</span>
+          <span className="text-sm sm:text-lg font-medium text-[#00000099]">{stat.label}</span>
+          <span className=" text-xl sm:text-3xl font-extrabold text-[#000015] ml-4 whitespace-nowrap">{stat.value}</span>
         </div>
       ))}
     </div>

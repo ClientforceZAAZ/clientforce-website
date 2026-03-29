@@ -58,7 +58,7 @@ export default function HowItWorks() {
   const [ref, visible] = useVisible();
 
   return (
-    <section ref={ref} className="py-16">
+    <section ref={ref} className="py-6 md:py-16">
 
       {/* Heading */}
       <div
@@ -68,14 +68,14 @@ export default function HowItWorks() {
           transition: "opacity 0.6s ease 0.05s, transform 0.6s ease 0.05s",
         }}
       >
-        <h2 className="text-4xl lg:text-5xl font-bold font-degular text-center text-gray-900 mb-10">
+        <h2 className="text-4xl lg:text-5xl font-bold font-degular text-center text-gray-900 mb-5 md:mb-10">
           How It Works{" "}
           <span className="text-[#787878]">(Fast)</span>
         </h2>
       </div>
 
       {/* Top Row — 2 large cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4 px-6 lg:px-35">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-4 px-6 lg:px-35">
         <StepCard
           image="/images/lead-acquisition-suite/how_set_rules.png"
           imageAlt="Set Your Rules"
@@ -99,7 +99,7 @@ export default function HowItWorks() {
       </div>
 
       {/* Bottom Row — 3 smaller light cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 px-6 lg:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 px-6 lg:px-16">
         <StepCard
           image="/images/lead-acquisition-suite/how_enrich.png"
           imageAlt="Clean & Enrich"

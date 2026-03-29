@@ -1,4 +1,4 @@
-import { DM_Sans, Manrope, Plus_Jakarta_Sans, Bebas_Neue  } from "next/font/google";
+import { DM_Sans, Manrope, Plus_Jakarta_Sans, Bebas_Neue, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -29,6 +29,14 @@ const bebasNeue = Bebas_Neue({
 })
 
 
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-source-serif",
+});
+
+
 
 export const metadata = {
   title: "ClientForce",
@@ -39,7 +47,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={` ${dmSans.variable} ${manrope.variable} ${pjs.variable} ${bebasNeue.variable} antialiased`}
+        className={` ${dmSans.variable} ${manrope.variable} ${pjs.variable} ${bebasNeue.variable} ${sourceSerif.variable} antialiased`}
       >
         <Navbar />
         {children}

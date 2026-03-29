@@ -84,7 +84,7 @@ function BrandScroller() {
   const items = [...BRANDS, ...BRANDS, ...BRANDS];
 
   return (
-    <div className="relative mt-12 overflow-hidden">
+    <div className="relative mt-5 sm:mt-12 overflow-hidden">
       {/* Fade masks on left and right edges */}
       <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-6 bg-gradient-to-r from-white to-transparent" />
       <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-6 bg-gradient-to-l from-white to-transparent" />
@@ -99,8 +99,6 @@ function BrandScroller() {
               key={`${brand.id}-${i}`}
               className="flex shrink-0 items-center justify-center border border-gray-300 w-[160px] h-[95px]"
             >
-              {/* If you have image files use the Image component below.
-                  Otherwise replace with an <img> or inline SVG. */}
               <Image
                 src={brand.image}
                 alt={brand.label}
@@ -140,7 +138,7 @@ export default function Proof() {
     <section ref={sectionRef} className="w-full bg-white px-6 py-16 md:px-12">
 
       {/* Heading */}
-      <h2 className="mb-14 text-center text-5xl font-extrabold text-black font-degular">
+      <h2 className="mb-5 sm:mb-14 text-center text-3xl sm:text-5xl font-extrabold text-black font-degular">
         ❤ Proof That Matters
       </h2>
 

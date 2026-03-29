@@ -12,6 +12,24 @@ import LaunchOnce from "@/components/sections/home/LaunchOnce";
 import FAQ from "@/components/sections/shared/FrequentlyAskedQuestions";
 
 
+export const metadata = {
+  title: "Clientforce AI — Launch Once. Sell 24/7.",
+  description: "Deploy AI Agents that refill your pipeline, personalize outreach, and close deals on autopilot. Multichannel, 24/7.",
+  openGraph: {
+    title: "Clientforce AI — Launch Once. Sell 24/7.",
+    description: "Deploy AI Agents that refill your pipeline, personalize outreach, and close deals on autopilot.",
+    url: "https://clientforceai.com",
+    siteName: "Clientforce AI",
+    images: [{ url: "https://clientforceai.com/images/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clientforce AI — Launch Once. Sell 24/7.",
+    description: "Deploy AI Agents that refill your pipeline, personalize outreach, and close deals on autopilot.",
+    images: ["https://clientforceai.com/images/og-image.png"],
+  },
+};
 
 
 

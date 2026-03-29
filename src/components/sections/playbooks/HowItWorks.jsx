@@ -28,13 +28,13 @@ function FeatureGrid() {
   return (
     <div ref={ref} className="px-6 lg:px-20">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-black text-[46px] border px-6 rounded-full font-bold text-center font-degular mb-2">
+        <h1 className="text-black text-2xl sm:text-4xl lg:text-[46px] border px-6 rounded-full font-bold text-center font-degular mb-2">
           How It Works
         </h1>
       </div>
 
       {/*  Row of Cards */}
-      <div className="grid grid-cols-14 gap-6 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-14 gap-6 mt-6">
         {/* Finder v2 Rules */}
         <div
           style={{
@@ -42,7 +42,7 @@ function FeatureGrid() {
             transform: visible ? "translateY(0px)" : "translateY(24px)",
             transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
           }}
-          className="bg-white border border-[#00000024] rounded-2xl overflow-hidden col-span-5 flex flex-col-reverse items-center p-6"
+          className="bg-white border border-[#00000024] rounded-2xl overflow-hidden col-span-1 lg:col-span-5 flex flex-col-reverse items-center p-6"
         >
           <div className="mt-4">
             <h3 className="text-black font-bold text-xl leading-snug">
@@ -68,7 +68,7 @@ function FeatureGrid() {
             transform: visible ? "translateY(0px)" : "translateY(24px)",
             transition: "opacity 0.55s ease 0.3s, transform 0.55s ease 0.3s",
           }}
-          className="bg-white border border-[#00000024] rounded-2xl overflow-hidden col-span-4 flex flex-col items-center p-6"
+          className="bg-white border border-[#00000024] rounded-2xl overflow-hidden col-span-1 lg:col-span-4 flex flex-col items-center p-6"
         >
           <div className="mb-4">
             <h3 className="text-black font-bold text-xl leading-snug">
@@ -94,7 +94,7 @@ function FeatureGrid() {
             transform: visible ? "translateY(0px)" : "translateY(24px)",
             transition: "opacity 0.55s ease 0.5s, transform 0.55s ease 0.5s",
           }}
-          className="bg-white border border-[#00000024] rounded-2xl overflow-hidden col-span-5 flex flex-col-reverse items-center p-6"
+          className="bg-white border border-[#00000024] rounded-2xl overflow-hidden col-span-1 lg:col-span-5 flex flex-col-reverse items-center p-6"
         >
           <div className="mt-4">
             <h3 className="text-black font-bold text-xl leading-snug">

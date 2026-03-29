@@ -30,8 +30,7 @@ export default function WhyItWins() {
   return (
     <section
       ref={ref}
-      className="relative rounded-3xl overflow-hidden mx-20 mt-6 mb-20"
-      style={{ minHeight: "680px" }}
+      className="relative rounded-3xl overflow-hidden mx-8 sm:mx-20 mt-6 mb-20"
     >
       {/* Background image — room + dashboard combined */}
       <div
@@ -43,7 +42,7 @@ export default function WhyItWins() {
       {/* <div className="absolute inset-0 bg-black/30 rounded-3xl" /> */}
 
       {/* Content */}
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-between px-8 pt-16" style={{ minHeight: "520px" }}>
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-between px-8 pt-8 md:pt-16">
 
         {/* Heading */}
         <div
@@ -54,10 +53,10 @@ export default function WhyItWins() {
           }}
           className="flex flex-col gap-3 items-center "
         >
-          <h2 className="text-5xl lg:text-6xl font-extrabold text-white font-degular text-center">
-            Launch your first AI Sales <br /> Agent today
+          <h2 className="text-2xl sm:text-4xl lg:text-6xl font-extrabold text-white font-degular text-center leading-6 sm:leading-8 md:leading-10 lg:leading-13">
+            Launch your first AI Sales <br className="hidden sm:block" /> Agent today
           </h2>
-          <p className="text-2xl font-degular text-[#FFFFFF99] mb-2">End-To-End Prospecting, Follow-Up, And Closing—On Autopilot.</p>
+          <p className=" text-lg md:text-xl lg:text-2xl font-degular text-[#FFFFFF99] mb-2 text-center leading-5 sm:leading-6">End-To-End Prospecting, Follow-Up, And Closing—On Autopilot.</p>
            <button
             className="flex-shrink-0 bg-[#35E834] cursor-pointer text-black font-bold font-degular px-16 py-2 border-2 border-white rounded-full text-lg transition-all duration-200 hover:scale-105 hover:brightness-110"
             style={{ boxShadow: "0 0 18px 4px rgba(8,165,65,0.4)" }}
@@ -66,11 +65,11 @@ export default function WhyItWins() {
           </button>
         </div>
 
-            <div className="mt-20 relative">
-                <Image src="/images/agent_roi_bg3.png" width={840} height={525} />
+            <div className="mt-8 md:mt-20 relative">
+                <Image src="/images/agent_roi_bg3.png" width={840} height={525} className="hidden sm:block" />
 
                     
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 hidden lg:block">
                     <GraphCard />
                     <SidebarCard />
                         <div className="absolute bottom-[4%] right-[-54] w-[40%] z-30">

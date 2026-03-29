@@ -29,7 +29,7 @@ export default function ControlSafeguard() {
   const [ref, visible] = useVisible(0.15);
 
   return (
-    <section ref={ref} className={`rounded-3xl overflow-hidden shadow-xl mb-14 mt-20 mx-26 px-10 py-6 bg-cover bg-center  border border-gray-300`} style={{
+    <section ref={ref} className={`rounded-3xl overflow-hidden shadow-xl mb-10 md:mb-14 mt-10 md:mt-20 mx-8 md:mx-26 px-6 sm:px-10 py-6 bg-cover bg-center  border border-gray-300`} style={{
   background: "linear-gradient(to bottom left, #0000000D 30%, #6BE8FD33)"
 }}>
       <div className={`flex flex-col lg:flex-row-reverse items-stretch gap-8`}>
@@ -43,11 +43,11 @@ export default function ControlSafeguard() {
               transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
             }}
           >
-            <h2 className="text-3xl lg:text-[35px] font-bold text-black leading-tight">
-              Controls & Safety <span className="text-[#787878] block"> (Built In)</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-bold text-black leading-tight">
+              Controls & Safety <span className="text-[#787878] inline-block sm:block"> (Built In)</span>
             </h2>
-            <div className=" mt-8">
-               <p className="text-sm">GDPR/TCPA consent tools, WhatsApp template status, DNC handling, domain warm-up, and number reputation checks— <span className="font-bold">so scaling never risks your accounts.</span></p>
+            <div className="mt-4 sm:mt-8">
+               <p className="text-xs sm:text-sm">GDPR/TCPA consent tools, WhatsApp template status, DNC handling, domain warm-up, and number reputation checks— <span className="font-bold">so scaling never risks your accounts.</span></p>
             </div>
             
           </div>

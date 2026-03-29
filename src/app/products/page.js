@@ -7,6 +7,26 @@ import WhatsInside from "@/components/sections/products/WhatsInside";
 import UseCases from "@/components/sections/shared/UseCases";
 import FAQ from "@/components/sections/shared/FrequentlyAskedQuestions";
 
+
+export const metadata = {
+  title: "Products | Clientforce AI",
+  description: "AI Sales Agents, Playbooks, Lead Finder, Multichannel Outreach, Unified Inbox, Dynamic Proposals, Analytics and Guardrails — all in one platform.",
+  openGraph: {
+    title: "Products | Clientforce AI",
+    description: "Everything you need to run a self-operating sales machine.",
+    url: "https://clientforceai.com/products",
+    siteName: "Clientforce AI",
+    images: [{ url: "https://clientforceai.com/images/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Products | Clientforce AI",
+    description: "Everything you need to run a self-operating sales machine.",
+    images: ["https://clientforceai.com/images/og-image.png"],
+  },
+};
+
 export default function ProductsPage() {
   return (
     <main>

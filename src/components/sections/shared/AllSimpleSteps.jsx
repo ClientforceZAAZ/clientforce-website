@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function AllSimpleSteps({ heading, steps, bgColor }) {
   return (
-    <section className={`py-16 relative ${bgColor}`}>
-      <h1 className="font-degular font-bold text-6xl text-center">
+    <section className={` py-8 sm:py-16 relative ${bgColor} px-8`}>
+      <h1 className="font-degular font-bold text-4xl sm:text-5xl md:text-6xl text-center">
         {heading}
       </h1> 
 
-      <div className="flex flex-col items-center mt-12 gap-14">
+      <div className="flex flex-col items-center mt-6 md:mt-12 gap-6 md:gap-14">
 
         {steps.map((step, i) => {
           const isReversed = i % 2 !== 0;
@@ -20,7 +20,7 @@ export default function AllSimpleSteps({ heading, steps, bgColor }) {
             >
               {/* Image first if not reversed, text first if reversed */}
               {!isReversed && (
-                <div>
+                <div className="hidden md:block">
                   <Image src={step.image} alt={`step ${i + 1}`} width={460} height={300} />
                 </div>
               )}
@@ -40,7 +40,7 @@ export default function AllSimpleSteps({ heading, steps, bgColor }) {
 
               {/* Image last if reversed */}
               {isReversed && (
-                <div>
+                <div className="hidden md:block">
                   <Image src={step.image} alt={`step ${i + 1}`} width={460} height={300} />
                 </div>
               )}
@@ -50,15 +50,18 @@ export default function AllSimpleSteps({ heading, steps, bgColor }) {
 
         {/* Only show connect arrows if there are at least 2 steps */}
         {steps.length >= 2 && (
-          <div className="absolute right-40 top-96">
-            <Image src="/icons/step1_to2.svg" width={66} height={395} />
+          <div className="hidden xl:block xl:absolute right-[12%] top-96">
+            <Image src="/icons/step1_to2.svg" width={30} height={200} />
           </div>
         )}
         {steps.length >= 3 && (
-          <div className="absolute left-40 top-186">
-            <Image src="/icons/step2_to3.svg" width={66} height={395} />
+          <div className="hidden xl:block xl:absolute left-[12%] top-186">
+            <Image src="/icons/step2_to3.svg" width={30} height={160} />
           </div>
         )}
+
+        
+
       </div>
     </section>
   );

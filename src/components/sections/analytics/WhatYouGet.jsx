@@ -94,7 +94,7 @@ export default function WhatYouGet() {
   const [ref, visible] = useVisible();
 
   return (
-    <section ref={ref} className="pt-16 px-6 lg:px-50 bg-[#EEF9FA]">
+    <section ref={ref} className="pt-8 md:pt-16 px-6 lg:px-50 bg-[#EEF9FA]">
 
       {/* Heading */}
       <div
@@ -103,16 +103,16 @@ export default function WhatYouGet() {
           transform: visible ? "translateY(0)" : "translateY(-16px)",
           transition: "opacity 0.6s ease 0.05s, transform 0.6s ease 0.05s",
         }}
-        className="text-center mb-12"
+        className="text-center mb-6 md:mb-12"
       >
-        <h2 className="text-4xl lg:text-5xl font-bold font-degular text-gray-900">
+        <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold font-degular text-gray-900">
           What You Get{" "}
           <span className="font-normal">(At A Glance)</span>
         </h2>
       </div>
 
       {/* Cards */}
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="grid md:grid-cols-3 gap-6">
         {ITEMS.map((item) => (
           <GlanceCard key={item.title} {...item} visible={visible} />
         ))}

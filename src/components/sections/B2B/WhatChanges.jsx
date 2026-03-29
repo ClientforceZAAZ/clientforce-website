@@ -100,7 +100,7 @@ export default function WhatYouGet() {
   const [ref, visible] = useVisible();
 
   return (
-    <section ref={ref} className="py-16 px-6 lg:px-50 bg-[#EEF9FA]">
+    <section ref={ref} className="py-8 md:py-16 px-6 lg:px-30 bg-[#EEF9FA]">
 
       {/* Heading */}
       <div
@@ -109,7 +109,7 @@ export default function WhatYouGet() {
           transform: visible ? "translateY(0)" : "translateY(-16px)",
           transition: "opacity 0.6s ease 0.05s, transform 0.6s ease 0.05s",
         }}
-        className="text-center mb-12"
+        className="text-center mb-6 md:mb-12"
       >
         <h2 className="text-4xl lg:text-5xl font-bold font-degular text-gray-900">
           What Changes

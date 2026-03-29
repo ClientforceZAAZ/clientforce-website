@@ -42,7 +42,7 @@ export default function CTA({
 
       <Link
         href={href}
-        className={`relative inline-flex items-center justify-center px-4 py-3 rounded-lg font-bold transition-transform duration-300 hover:-translate-y-1 ${selected.text} ${selected.border} ${className}`}
+        className={`relative inline-flex items-center justify-center px-2 sm:px-4 py-3 rounded-lg font-bold transition-transform duration-300 hover:-translate-y-1 ${selected.text} ${selected.border} ${className}`}
       >
         {/* Background layer */}
         <span
@@ -50,10 +50,10 @@ export default function CTA({
         ></span>
 
         {/* Content */}
-        <span className="relative z-10 flex items-center justify-center gap-2 text-sm">
-            { variant === "light" && (<img src="/icons/Play.svg" alt="playIcon" />) }
+        <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm">
+            { variant === "light" && (<img src="/icons/Play.svg" alt="playIcon" className="h-5 md:h-8" />) }
             {children}
-            { variant === "dark" && (<img src="/icons/forward.svg" alt="forwardIcon" />) }
+            { variant === "dark" && (<img src="/icons/forward.svg" alt="forwardIcon" className="h-5 md:h-8" />) }
         </span>
       </Link>
     </div>

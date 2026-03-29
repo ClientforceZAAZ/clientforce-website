@@ -18,21 +18,24 @@ function useVisible(threshold = 0.15) {
   return [ref, visible];
 }
 
-// function useCounter(target, visible, duration = 1400) {
-//   const [count, setCount] = useState(0);
-//   useEffect(() => {
-//     if (!visible) return;
-//     let start = 0;
-//     const step = target / (duration / 16);
-//     const timer = setInterval(() => {
-//       start += step;
-//       if (start >= target) { setCount(target); clearInterval(timer); }
-//       else setCount(Math.floor(start));
-//     }, 16);
-//     return () => clearInterval(timer);
-//   }, [visible, target, duration]);
-//   return count;
-// }
+
+function useCounter(target, visible, duration = 1400) {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!visible) return;
+    let start = 0;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { setCount(target); clearInterval(timer); }
+      else setCount(Math.floor(start));
+    }, 16);
+    return () => clearInterval(timer);
+  }, [visible, target, duration]);
+  return count;
+}
+
+
 
 // SVG Wave variants
 function WavePurple() {
@@ -141,8 +144,8 @@ const STAT_COLORS = {
 
 // Single Analytics Card 
 function AnalyticsCard({ stat, statPrefix = "", statSuffix = "", description, avatar, name, role, wave = "purple", visible, delay = "0s", nameColor }) {
-//   const numericTarget = parseInt(stat.replace(/[^0-9]/g, ""), 10) || 0;
-//   const count = useCounter(numericTarget, visible, 1300);
+  const numericTarget = parseInt(stat.replace(/[^0-9]/g, ""), 10) || 0;
+  const count = useCounter(numericTarget, visible, 1300);
   const [hovered, setHovered] = useState(false);
   const Wave = WAVES[wave] || WavePurple;
   const bg = BG_COLORS[wave] || "#f3e8ff";
@@ -150,8 +153,8 @@ function AnalyticsCard({ stat, statPrefix = "", statSuffix = "", description, av
   const nc = nameColor || statColor;
 
   // Reconstruct display: e.g. "+14%" → "+" + count + "%"
-//   const hasPlus = stat.startsWith("+");
-//   const suffix = stat.replace(/[0-9+]/g, "").trim();
+  const hasPlus = stat.startsWith("+");
+  const suffix = stat.replace(/[0-9+]/g, "").trim();
 
   return (
     <div
@@ -209,25 +212,29 @@ export function AnalyticsScrollRow({ cards = [], title, subtitle }) {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-//   function checkScroll() {
-//     const el = scrollRef.current;
-//     if (!el) return;
-//     setCanScrollLeft(el.scrollLeft > 0);
-//     setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
-//   }
+  function checkScroll() {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 0);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+  }
 
-//   function scroll(dir) {
-//     scrollRef.current?.scrollBy({ left: dir * 260, behavior: "smooth" });
-//   }
+  function scroll(dir) {
+    scrollRef.current?.scrollBy({ left: dir * 260, behavior: "smooth" });
+  }
 
   return (
     <section ref={ref} className="pt-10 pb-10 px-6 lg:px-16 bg-[#E1F1F2]">
 
-     <h1 className="text-5xl font-bold text-center mb-12 font-degular">Outcomes You Can Promise</h1>
+     <h1 className=" text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-5 md:mb-12 font-degular">Outcomes You Can Promise</h1>
 
       {/* Scrollable row */}
       <div
-        className="flex justify-center gap-4 overflow-x-auto pb-2"
+         ref={scrollRef}
+        onScroll={checkScroll}
+        className="flex gap-4 overflow-x-auto pb-2 min-[1140px]:justify-center"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+
       >
         <style>{`div::-webkit-scrollbar { display: none; }`}</style>
         {cards.map((card, i) => (
@@ -239,6 +246,28 @@ export function AnalyticsScrollRow({ cards = [], title, subtitle }) {
           />
         ))}
       </div>
+
+      {/* Scroll arrows */}
+          <div className="flex items-center justify-center mt-4 gap-4 w-full min-[1140px]:hidden">
+            <button
+              onClick={() => scroll(-1)}
+              disabled={!canScrollLeft}
+              className="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center transition-all hover:border-gray-400 disabled:opacity-30"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              onClick={() => scroll(1)}
+              disabled={!canScrollRight}
+              className="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center transition-all hover:border-gray-400 disabled:opacity-30"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
     </section>
   );
 }

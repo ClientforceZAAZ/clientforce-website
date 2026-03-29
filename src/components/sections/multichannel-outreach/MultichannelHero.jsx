@@ -7,9 +7,10 @@ export default function Hero() {
     <PageHero
       badge="Multichannel Outreach"
       badgeBg="#ECECEC"
-      headline={<>Reach Every <br /> Prospect Where <br /> They Actually Reply.</>}
-      headlineStyle="text-5xl lg:text-[66px] leading-16"
-      description="Email, WhatsApp, LinkedIn, SMS, and AI Voice, Orchestrated In One Flow To Book Meetings And Close Deals, With Smart Timing, Fallbacks, And Compliance Built-In."
+      headline={<>Reach Every <br className="hidden lg:block" /> Prospect Where <br className="hidden md:block" /> They Actually Reply.</>}
+      headlineStyle="text-4xl sm:text-[50px] lg:text-[66px] leading-10 sm:leading-12  lg:leading-16 text-center lg:text-left"
+      description={<>Email, WhatsApp, LinkedIn, SMS, and AI Voice, Orchestrated In One Flow To Book Meetings And Close Deals, With Smart Timing, Fallbacks, And Compliance Built-In.</>}
+      descriptionStyle="text-sm sm:text-lg text-center lg:text-left"
       primaryCTA={<PrimaryCTA variant="dark">Get Started</PrimaryCTA>}
       secondaryCTA={<PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>}
       metrics={<>

@@ -111,7 +111,7 @@ export default function WhyItWins() {
   return (
     <div
       ref={ref}
-      className="relative rounded-3xl overflow-hidden mx-20 mt-6 mb-20"
+      className="relative rounded-3xl overflow-hidden mx-8 md:mx-20 mt-6 mb-20"
       style={{ minHeight: "680px" }}
     >
       {/* Background image — room + dashboard combined */}
@@ -121,7 +121,7 @@ export default function WhyItWins() {
       />
 
       {/* Dark overlay for readability */}
-      {/* <div className="absolute inset-0 bg-black/30 rounded-3xl" /> */}
+      <div className=" block absolute md:hidden inset-0 bg-black/30 rounded-3xl" />
 
       {/* Content */}
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-between px-8 py-10" style={{ minHeight: "520px" }}>
@@ -133,27 +133,27 @@ export default function WhyItWins() {
             transform: visible ? "translateY(0)" : "translateY(-20px)",
             transition: "opacity 0.6s ease 0.05s, transform 0.6s ease 0.05s",
           }}
-          className="flex items-center gap-20"
+          className="flex items-center gap-4 md:gap-20"
         >
           <span><Image src="/images/lead-acquisition-suite/icons/WhyItWins-left.svg" width={50} height={50} /></span>
-          <h2 className="text-5xl lg:text-6xl font-extrabold text-white font-degular">
+          <h2 className=" text-3xl md:text-5xl lg:text-6xl font-extrabold text-white font-degular">
             Why It Wins
           </h2>
           <span><Image src="/images/lead-acquisition-suite/icons/WhyItWins-right.svg" width={50} height={50} /></span>
         </div>
 
         {/* Cards Row — two on left*/}
-        <div className="w-full flex items-end justify-between absolute top-108 px-14">
+        <div className="w-full flex-col md:flex md:flex-row items-center justify-center md:justify-between  absolute top-70 md:top-108 px-14">
 
           {/* Left cards */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col items-center gap-4 mb-6 md:mb-0">
             {CARDS.filter((_, i) => i < 2).map((card) => (
               <WhyItWinsCard key={card.id} card={card} visible={visible} />
             ))}
           </div>
 
           {/* Right cards */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col items-center gap-4">
             {CARDS.filter((_, i) => i >= 2).map((card) => (
               <WhyItWinsCard key={card.id} card={card} visible={visible} />
             ))}

@@ -28,20 +28,20 @@ function WhatYouSee() {
   const [ref, visible] = useVisible();
   return (
     <div ref={ref} className="">
-        <div className="flex justify-center mb-14">
-            <div className={`bg-[#C4FAFF] rounded-full px-8 py-2 font-degular text-black text-[45px] font-semibold`}>
+        <div className="flex justify-center mb-8 sm:mb-14">
+            <div className={`bg-[#C4FAFF] rounded-full px-8 py-2 font-degular text-black text-3xl sm:text-4xl md:text-[40px] lg:text-[45px] font-semibold`}>
                 What You See
             </div>
         </div>
 
-        <div className="grid grid-cols-11 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-11 gap-8">
             <div
             style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0px)" : "translateY(24px)",
                 transition: `opacity 0.55s ease 0.5s, transform 0.55s ease 0.5s`,
             }}
-            className={` rounded-2xl overflow-hidden flex flex-col  col-span-4 bg-linear-to-bl from-[#00000021] to-[#FFFFFF0D] to-50% border border-gray-300 p-8`}
+            className={` rounded-2xl overflow-hidden flex flex-col col-span-1 md:col-span-4 bg-linear-to-bl from-[#00000021] to-[#FFFFFF0D] to-50% border border-gray-300 p-6 lg:p-8`}
             >
             <div className="overflow-hidden">
                 <Image
@@ -71,7 +71,7 @@ function WhatYouSee() {
                 transform: visible ? "translateY(0px)" : "translateY(24px)",
                 transition: `opacity 0.55s ease 0.7s, transform 0.55s ease 0.7s`,
             }}
-            className={` rounded-2xl overflow-hidden flex flex-col-reverse col-span-3 bg-linear-to-br from-[#FFFFFF0D] from-60% to-[#00000021] border border-gray-300 p-8`}
+            className={` rounded-2xl overflow-hidden flex flex-col-reverse col-span-1 md:col-span-3 bg-linear-to-br from-[#FFFFFF0D] from-60% to-[#00000021] border border-gray-300 p-6 lg:p-8`}
             >
             <div className="w-full overflow-hidden">
                 <Image
@@ -84,7 +84,7 @@ function WhatYouSee() {
                 />
             </div>
 
-            <div className="flex-1">
+            <div className="flex-1 mb-4 sm:mb-0 ">
                 <h3 className="text-black font-bold text-xl leading-snug">
                 Unified Thread
                 </h3>
@@ -101,7 +101,7 @@ function WhatYouSee() {
                 transform: visible ? "translateY(0px)" : "translateY(24px)",
                 transition: `opacity 0.55s ease 0.8s, transform 0.55s ease 0.8s`,
             }}
-            className={`rounded-2xl overflow-hidden flex flex-col col-span-4 bg-linear-to-br from-[#00000021] to-[#FFFFFF0D] to-50% border border-gray-300 p-8`}
+            className={`rounded-2xl overflow-hidden flex flex-col col-span-1 md:col-span-4 bg-linear-to-br from-[#00000021] to-[#FFFFFF0D] to-50% border border-gray-300 p-6 lg:p-8`}
             >
             <div className="w-full overflow-hidden">
                 <Image

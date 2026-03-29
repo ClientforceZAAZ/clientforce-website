@@ -7,6 +7,24 @@ import Launch from "@/components/sections/pricing/Launch";
 import FAQ from "@/components/sections/shared/FrequentlyAskedQuestions";
 
 
+export const metadata = {
+  title: "Pricing | Clientforce AI",
+  description: "Simple, honest plans for teams that want momentum. Start with the plan that fits today and upgrade as you scale.",
+  openGraph: {
+    title: "Pricing | Clientforce AI",
+    description: "Simple, honest plans for teams that want momentum.",
+    url: "https://clientforceai.com/pricing",
+    siteName: "Clientforce AI",
+    images: [{ url: "https://clientforceai.com/images/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing | Clientforce AI",
+    description: "Simple, honest plans for teams that want momentum.",
+    images: ["https://clientforceai.com/images/og-image.png"],
+  },
+};
 
 export default function page() {
   return (

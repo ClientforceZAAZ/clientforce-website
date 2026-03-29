@@ -52,9 +52,9 @@ const LEAD_TABS = [
 
 export default function FeauturesBenefits() {
   return (
-    <section className="pt-20 relative">
+    <section className=" pt-10 lg:pt-16 relative">
         <div className=" flex flex-col items-center">
-            <h1 className=" font-bold text-5xl font-degular">What's Inside</h1>
+            <h1 className=" font-bold text-4xl md:text-5xl font-degular">What's Inside</h1>
             <FeatureTabs TABS={LEAD_TABS} />
         </div>
         <div className="">

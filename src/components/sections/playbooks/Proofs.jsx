@@ -223,7 +223,7 @@ export function AnalyticsScrollRow({ cards = [], title, subtitle }) {
   return (
     <section ref={ref} className="py-12 px-6 lg:px-16">
 
-     <h1 className="text-5xl font-bold text-center mb-12 font-degular">Proof of performance</h1>
+     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 font-degular">Proof of performance</h1>
 
       {/* Scrollable row */}
       <div
@@ -264,7 +264,7 @@ export function AnalyticsScrollRow({ cards = [], title, subtitle }) {
               </svg>
             </button>
           </div>
-          <h1 className="text-[27px] text-[#606060] text-center mt-4">(Results Vary By Niche, List Quality, And Offer Strength.)</h1>
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-[27px] text-[#606060] text-center mt-4">(Results Vary By Niche, List Quality, And Offer Strength.)</h1>
     </section>
   );
 }

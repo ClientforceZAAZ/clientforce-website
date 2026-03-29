@@ -5,7 +5,24 @@ import VoiceAndGlobalCards from "@/components/sections/guardrails/VoiceAndGlobal
 import GetStarted from "@/components/sections/guardrails/GetStarted";
 import TabbedFeatureSection from "@/components/sections/shared/TabbedFeatureSection";
 
-
+export const metadata = {
+  title: "Guardrails & Compliance | Clientforce AI",
+  description: "GDPR-friendly capture, TCPA consent, DNC lists, domain verification and audit logs. ClientForce ensures compliance for seamless 24/7 operations.",
+  openGraph: {
+    title: "Guardrails & Compliance | Clientforce AI",
+    description: "ClientForce ensures compliance and deliverability for seamless 24/7 operations.",
+    url: "https://clientforceai.com/guardrails",
+    siteName: "Clientforce AI",
+    images: [{ url: "https://clientforceai.com/images/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Guardrails & Compliance | Clientforce AI",
+    description: "ClientForce ensures compliance and deliverability for seamless 24/7 operations.",
+    images: ["https://clientforceai.com/images/og-image.png"],
+  },
+};
 
 export default function Guardrails() {
   return (

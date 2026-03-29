@@ -16,7 +16,7 @@ const tagColors = {
 
 // Notch SVG
 
-const NOTCH_W = 108;
+const NOTCH_W = 100;
 const NOTCH_H = 24;
 
 function Notch({ x, bgColor = "#f5f5f3" }) {
@@ -111,31 +111,40 @@ export default function FeatureTabs({ TABS = [] }) {
   }
 
   return (
-    <section className="flex min-h-screen w-full items-center justify-center px-20 py-16">
+    <section className="flex  w-full items-center justify-center px-6 lg:px-16 py-6 lg:py-16">
       <div className="w-full">
-
         {/* Tab bar — no bottom margin so it sits flush above the card */}
-        <div className="mx-auto mb-0 flex w-fit flex-wrap items-center gap-0.5 rounded-full bg-gray-900 p-1.5">
-          {visibleTabs.map((tab) => (
-            <button
-              key={tab.id}
-              ref={(el) => { tabRefs.current[tab.id] = el; }}
-              onClick={() => setActiveId(tab.id)}
-              className={`rounded-full px-4 py-2 text-[13.5px] font-medium transition-colors duration-200 cursor-pointer ${
-                activeId === tab.id
-                  ? "bg-white text-gray-900"
-                  : "text-gray-400 hover:text-gray-100"
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-         {TABS.length > 4 ? ( <button
-            onClick={handleSeeMore}
-            className="flex items-center gap-1 rounded-full px-4 py-2 text-[13.5px] font-medium text-gray-400 transition-colors hover:text-gray-100"
-          >
-            {expanded ? "See Less " : "See More →"}
-          </button>) : "" }
+
+        <div className="mx-auto mb-0 w-full max-w-fit">
+          {/* Scrollable wrapper */}
+          <div className="overflow-x-auto scrollbar-hide">
+            <div className="flex w-max items-center gap-0.5 rounded-full bg-gray-900 p-1.5 mx-auto">
+              {visibleTabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  ref={(el) => {
+                    tabRefs.current[tab.id] = el;
+                  }}
+                  onClick={() => setActiveId(tab.id)}
+                  className={`shrink-0 rounded-full px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-[13.5px] font-medium transition-colors duration-200 cursor-pointer ${
+                    activeId === tab.id
+                      ? "bg-white text-gray-900"
+                      : "text-gray-400 hover:text-gray-100"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+              {TABS.length > 4 && (
+                <button
+                  onClick={handleSeeMore}
+                  className="shrink-0 flex items-center gap-1 rounded-full px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-[13.5px] font-medium text-gray-400 transition-colors hover:text-gray-100"
+                >
+                  {expanded ? "See Less" : "See More →"}
+                </button>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Feature card */}
@@ -143,32 +152,36 @@ export default function FeatureTabs({ TABS = [] }) {
           ref={cardRef}
           key={activeId}
           style={{ animation: "featureCardFadeUp 0.35s ease both" }}
-          className="relative flex flex-col items-center mt-10 border border-gray-300 gap-12 rounded-3xl bg-white p-8 shadow-lg md:flex-row md:p-12"
+          className="relative flex flex-col lg:flex-row items-center mt-10 border border-gray-300 gap-12 rounded-3xl bg-white p-8 shadow-lg md:flex-row lg:p-12"
         >
           {/* Concave notch cut into the top edge */}
           <Notch x={notchX} bgColor="#f5f5f3" />
 
           {/* Left: copy */}
-          <div className="flex-1">
-            <h2 className={`mb-4 text-4xl ${activeTab.headingStyle} font-bold leading-tight text-gray-900`}>
+          <div className=" flex-1 flex flex-col items-center justify-center">
+            <h2
+              className={`mb-4 text-2xl sm:text-4xl ${activeTab.headingStyle} font-bold leading-7 sm:leading-tight text-gray-900`}
+            >
               {activeTab.heading}{" "}
               <span className="text-gray-400">{activeTab.headingMuted}</span>
             </h2>
             {activeTab.description && (
               <div>
-                  <p className="mb-6 max-w-sm text-[15px] leading-relaxed text-gray-500">
-                    {activeTab.description}
-                  </p>
-                  <p className="mb-6 max-w-sm text-[15px] leading-relaxed text-gray-500">
-                    {activeTab.more_description}
-                   </p>
+                <p className="mb-6 text-[15px] leading-relaxed text-gray-500">
+                  {activeTab.description}
+                </p>
+                <p className="mb-6 max-w-sm text-[15px] leading-relaxed text-gray-500">
+                  {activeTab.more_description}
+                </p>
               </div>
-              
             )}
             {activeTab.bullets.length > 0 && (
               <ul className="mb-8 flex flex-col gap-3">
                 {activeTab.bullets.map((b) => (
-                  <li key={b.bold} className="flex items-start gap-2.5 text-sm text-black">
+                  <li
+                    key={b.bold}
+                    className="flex items-start gap-2.5 text-sm text-black"
+                  >
                     <Image src="/icons/Done.svg" width={18} height={18} />
                     <span>
                       <strong className="text-black">{b.bold}</strong> {b.text}
@@ -197,11 +210,15 @@ export default function FeatureTabs({ TABS = [] }) {
           </div>
 
           {/* Right: mockup */}
-          <div className="flex flex-1 items-center justify-center">
-            <Image src={activeTab.image} width={558} height={370} quality={100} />
+          <div className=" flex-1 hidden lg:flex">
+            <Image
+              src={activeTab.image}
+              width={558}
+              height={370}
+              quality={100}
+            />
           </div>
         </div>
-
       </div>
 
       <style>{`

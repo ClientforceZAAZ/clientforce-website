@@ -12,9 +12,9 @@ export default function LocalBusinessesHero() {
        Fill Calendars, Convert Trials, And Accelerate Revenue—Without Adding Headcount
     </>
     }
-      headlineStyle="text-5xl lg:text-6xl leading-12 mt-4"
+      headlineStyle="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  leading-6 sm:leading-8 md:leading-10 lg:leading-13 text-center lg:text-left"
       description={<><span className="font-bold">ClientForceAI Runs End-To-End SaaS Motions:</span> ICP Prospecting, Demo Booking, Trial Activation, Expansion Nudges, And Churn Win-Backs—Coordinated Across Email, LinkedIn, WhatsApp, And AI voice.</>}
-      descriptionStyle="text-[#676767] text-lg mt-4 mb-8"
+      descriptionStyle="text-[#676767] text-sm sm:text-lg text-center lg:text-left lg:mb-12 leading-5 sm:leading-7"
       primaryCTA={<PrimaryCTA variant="dark">Launch And Agent</PrimaryCTA>}
       secondaryCTA={<PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>}
       rightBg="bg-[#FFFFFF]"

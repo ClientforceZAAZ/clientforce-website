@@ -21,7 +21,7 @@ function useVisible(threshold = 0.1) {
 const TABS = [
   {
     label: "Prospect",
-    description: (<>Finder V2, Chrome Capture, And Embeddable <br /> Widgets Keep Your Pipeline Full.</>),
+    description: (<>Finder V2, Chrome Capture, And Embeddable <br className="hidden lg:block" /> Widgets Keep Your Pipeline Full.</>),
     image: "/images/how-it-works/prospect_bg.png",
     floatingLeft: { image: "/images/sales-loop/avatar_prospect.png", emoji: "👩🏼" },
     floatingRight: { avatars: ["👩", "🧔", "👩🏽"] },
@@ -84,11 +84,11 @@ function DashboardPreview({ tab }) {
     <div className="relative w-full">
 
       {/* Main dashboard card */}
-      <div className="relative mx-auto rounded-2xl border border-gray-300 py-8 px-16 overflow-hidden"
+      <div className="relative mx-auto rounded-2xl border border-gray-300 py-8 px-8 sm:px-16 overflow-hidden"
         style={{ minHeight: "320px", background: "#F8F8F8" }}
       >
          {/* Description */}
-        <p className="text-center text-black text-2xl mb-8 mx-auto leading-relaxed">
+        <p className="text-center text-black text-lg sm:text-xl md:text-2xl mb-8 mx-auto leading-6 sm:leading-relaxed">
           <span className="font-bold">{tab.label}:</span> {tab.description}
         </p>
         {tab.image ? (
@@ -200,7 +200,7 @@ export default function AlwaysOnSalesLoop() {
               borderColor: activeTab === i ? "#D0F56B" : "#00000033",
               transition: "all 0.25s ease",
             }}
-            className="px-5 py-2 rounded-full cursor-pointer border text-base font-bold hover:border-gray-400 hover:text-gray-800"
+            className="px-5 py-2 rounded-full cursor-pointer border text-sm sm:text-base font-bold hover:border-gray-400 hover:text-gray-800"
           >
             {tab.label}
           </button>

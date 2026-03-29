@@ -18,24 +18,6 @@ function useVisible(threshold = 0.15) {
   return [ref, visible];
 }
 
-// const STEPS = [
-//   {
-//     text: "Pick A Goal:",
-//     description: " Demos, Trial→Paid, Winback, High-Ticket, Or Local.",
-//     position: "bottom-left",
-//   },
-//   {
-//     text: "Choose A Build Path:",
-//     description: " Start With AI, DFY Playbook, Or From Scratch.",
-//     position: "top-center",
-//   },
-//   {
-//     text: "Launch:",
-//     description: " Connect Inbox/Number, Set Finder Rules, Embed Widget — Go Live.",
-//     position: "bottom-right",
-//   },
-// ];
-
 export default function HowToGetStarted() {
   const [ref, visible] = useVisible();
  
@@ -58,13 +40,13 @@ export default function HowToGetStarted() {
         }}
         className="flex justify-center mb-10"
       >
-        <div className=" border border-black rounded-full px-6 text-[46px] text-black font-bold font-degular shadow-sm">
+        <div className=" border border-black rounded-full px-6 text-3xl sm:text-4xl lg:text-[46px] text-black font-bold font-degular shadow-sm">
           How To Get Started
         </div>
       </div>
 
       {/* Three-column card grid */}
-      <div className="relative grid grid-cols-11 gap-6">
+      <div className="relative grid grid-cols-1  md:grid-cols-11 gap-6">
 
 
         {/* Card 1 — bottom-left text */}
@@ -76,7 +58,7 @@ export default function HowToGetStarted() {
             position: "relative",
             zIndex: 1,
           }}
-          className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-4"
+          className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-4"
         >
         
           <div>
@@ -100,7 +82,7 @@ export default function HowToGetStarted() {
             position: "relative",
             zIndex: 1,
           }}
-          className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-3"
+          className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-3"
         >
           <div>
             <p className="text-lg leading-6">
@@ -119,7 +101,7 @@ export default function HowToGetStarted() {
             position: "relative",
             zIndex: 1,
           }}
-          className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] col-span-4"
+          className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] col-span-1 md:col-span-4"
         >
           <div className="mt-auto">
             <p className="text-lg leading-6">

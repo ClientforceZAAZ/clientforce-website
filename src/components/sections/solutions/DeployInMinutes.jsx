@@ -14,21 +14,21 @@ export default function WhatsWorking() {
 
            <div className="bg-cover bg-center w-full pt-12 flex flex-col items-center justify-center"
           style={{ backgroundImage: "url('/images/agent_roi_bg2.png')" }}>   
-                <p className=" text-[44px] font-degular font-bold text-white mt-4 mb-6">Deploy In Minutes. <span className="text-[#D0F56B]">Watch It Run 24/7.</span></p> 
-                <Link href="#"  className="font-bold text-2xl bg-[#35E834] rounded-full px-8 py-2 border-[3px] border-white" style={{
+                <p className=" text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-degular font-bold text-white mt-4 mb-2 sm:mb-6">Deploy In Minutes. <span className="text-[#D0F56B]">Watch It Run 24/7.</span></p> 
+                <Link href="#"  className="font-bold text-base sm:text-lg md:text-2xl bg-[#35E834] rounded-full px-8 py-2 border-[3px] border-white" style={{
                     boxShadow: "0 0 18px 4px rgba(53,232,52,0.6), 0 0 40px 8px rgba(53,232,52,0.3)",
                     }}>Start Your First Agent →
                 </Link>
-                <div className="mt-12 relative">
+                <div className=" mt-6 sm:mt-12 relative">
                     <Image src="/images/analytics/whats_working.png" width={840} height={525} />
 
                     
                     <div className="absolute inset-0">
                          
-                         <div className="absolute bottom-[8%] left-[-110] z-30">
+                         <div className="absolute bottom-[8%] left-[-110] z-30 hidden md:block">
                                 <DropOffResponseCard />
                          </div>
-                         <div className="absolute top-[42%] right-[-140] z-30">
+                         <div className="absolute top-[42%] right-[-140] z-30 hidden md:block">
                                <img src="/images/analytics/card.png" alt=""  className="w-[300px]"/>
                          </div>
                     </div>

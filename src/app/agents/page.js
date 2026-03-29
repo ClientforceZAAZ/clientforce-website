@@ -9,6 +9,26 @@ import DeployAgent from "@/components/sections/agents/DeployAgent";
 import FAQ from "@/components/sections/shared/FrequentlyAskedQuestions";
 
 
+export const metadata = {
+  title: "AI Sales Agents | Clientforce AI",
+  description: "Build AI Sales Agents that prospect, engage, call and close end to end. One setup, a self-running sales machine.",
+  openGraph: {
+    title: "AI Sales Agents | Clientforce AI",
+    description: "Build AI Sales Agents that prospect, engage, call and close end to end.",
+    url: "https://clientforceai.com/agents",
+    siteName: "Clientforce AI",
+    images: [{ url: "https://clientforceai.com/images/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Sales Agents | Clientforce AI",
+    description: "Build AI Sales Agents that prospect, engage, call and close end to end.",
+    images: ["https://clientforceai.com/images/og-image.png"],
+  },
+};
+
+
 
 
 export default function Agentspage() {

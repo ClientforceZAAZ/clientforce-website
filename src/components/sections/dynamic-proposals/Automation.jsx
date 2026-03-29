@@ -37,10 +37,10 @@ const AVATARS = [
 
 // Card position mapping to Tailwind classes
 const CARD_POSITIONS = {
-  "top-left":     "top-[12%] left-[4%]  md:left-[22%]",
-  "top-right":    "top-[12%] right-[4%] md:right-[24%]",
-  "bottom-left":  "top-[43%] left-[4%]  md:left-[22%]",
-  "bottom-right": "top-[43%] right-[4%] md:right-[24%]",
+  "top-left":     "top-0 sm:top-[12%] left-[25%] sm:left-[4%]  lg:left-[22%] ",
+  "top-right":    "top-[25%] sm:top-[12%] right-[25%] sm:right-[4%] lg:right-[24%] ",
+  "bottom-left":  "top-[50%] sm:top-[43%] left-[25%] sm:left-[4%]  lg:left-[22%] ",
+  "bottom-right": "top-[75%] sm:top-[43%] right-[25%] sm:right-[4%] lg:right-[24%]",
 };
 
 // Slide-in direction per card
@@ -154,7 +154,7 @@ export default function AutomationsTiedToBuyerIntent() {
         }}
         className="relative z-10 mb-10 text-center"
       >
-        <h2 className=" text-white font-bold text-center mt-20 md:text-5xl">
+        <h2 className=" text-white font-bold text-center mt-10 sm:mt-20 text-3xl sm:text-4xl md:text-5xl font-degular">
           Automations Tied To <br /> Buyer Intent
         </h2>
       </div>
@@ -174,7 +174,7 @@ export default function AutomationsTiedToBuyerIntent() {
 
         {/* Person image — centered */}
         <div
-          className="absolute left-[65%] top-0 z-10 h-full -translate-x-1/2"
+          className=" hidden sm:block sm:absolute left-[65%] top-0 z-10 h-full -translate-x-1/2"
           style={{
             opacity:    isVisible ? 1 : 0,
             transform:  isVisible

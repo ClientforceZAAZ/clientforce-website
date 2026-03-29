@@ -62,12 +62,12 @@ export default function UseCases(
   }, []);
 
   return (
-    <section ref={sectionRef} className={`w-full bg-[#EEF9FA] px-6 py-16 md:px-16 ${bgColor}`}>
-      <h2 className={`mb-8 text-5xl font-bold text-black font-degular ${ cards.length === 4 ? "" : "text-center"}`}>{heading} <span className="text-[#787878]">
+    <section ref={sectionRef} className={`w-full bg-[#EEF9FA] px-6 py-6 sm:py-16 md:px-16 ${bgColor}`}>
+      <h2 className={`mb-8 text-3xl sm:text-5xl font-bold text-black font-degular ${ cards.length === 4 ? "" : "text-center"}`}>{heading} <span className="text-[#787878]">
             {highlightText}
           </span></h2>
 
-      <div className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${ cards.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3 px-26"} `}>
+      <div className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${ cards.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"} `}>
         {cards.map((uc, i) => (
           <UseCaseCard
             key={uc.id}

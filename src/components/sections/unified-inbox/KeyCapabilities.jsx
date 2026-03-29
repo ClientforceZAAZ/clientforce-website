@@ -37,7 +37,7 @@ function LongHorizontalCard({ image, imageAlt = "", title, description, classNam
       className={`rounded-2xl overflow-hidden flex ${imageLeft ? "flex-row" : "flex-row-reverse"} items-center ${className}`}
     >
       {image && (
-        <div className="w-[40%] overflow-hidden">
+        <div className="w-[40%] overflow-hidden hidden md:block">
           <Image
             src={image}
             alt={imageAlt}
@@ -270,12 +270,12 @@ function KeyCapabilitiesCards() {
   return (
     <div ref={ref} className="">
 
-      <h1 className="text-[#D0F56B] text-6xl font-bold text-center font-degular mb-10">
+      <h1 className="text-[#D0F56B] text-3xl sm:text-5xl lg:text-6xl font-bold text-center font-degular mb-5 md:mb-10">
         Key Capabilities
       </h1>
 
       {/* First Three cols Grid */}
-      <div className="grid grid-cols-11 gap-6 my-8">
+      <div className="grid grid-cols-1 md:grid-cols-11 gap-6 my-8">
 
         {/* Priority Queue */}
         <div
@@ -284,7 +284,7 @@ function KeyCapabilitiesCards() {
             transform: visible ? "translateY(0px)" : "translateY(24px)",
             transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
           }}
-          className="col-span-4 rounded-2xl overflow-hidden flex flex-col-reverse justify-center px-6 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
+          className=" col-span-1 md:col-span-4 rounded-2xl overflow-hidden flex flex-col-reverse justify-center px-6 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
         >
           <div className="mt-4">
             <h3 className="text-white font-bold text-xl leading-snug">Priority Queue</h3>
@@ -305,7 +305,7 @@ function KeyCapabilitiesCards() {
             transform: visible ? "translateY(0px)" : "translateY(24px)",
             transition: "opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s",
           }}
-          className="col-span-3 rounded-2xl overflow-hidden flex flex-col justify-center px-8 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
+          className=" col-span-1 md:col-span-3 rounded-2xl overflow-hidden flex flex-col justify-center px-8 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
         >
           <div className="mb-4">
             <h3 className="text-white font-bold text-xl leading-snug">AI Assist</h3>
@@ -326,7 +326,7 @@ function KeyCapabilitiesCards() {
             transform: visible ? "translateY(0px)" : "translateY(24px)",
             transition: "opacity 0.55s ease 0.3s, transform 0.55s ease 0.3s",
           }}
-          className="col-span-4 rounded-2xl overflow-hidden flex flex-col-reverse justify-center px-8 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
+          className=" col-span-1 md:col-span-4 rounded-2xl overflow-hidden flex flex-col-reverse justify-center px-8 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
         >
           <div className="mt-8">
             <h3 className="text-white font-bold text-xl leading-snug">One-Click Actions</h3>
@@ -349,7 +349,7 @@ function KeyCapabilitiesCards() {
       </div>
 
        {/* Second Three cols Grid */}
-        <div className="grid grid-cols-11 gap-6 my-8">
+        <div className="grid grid-cols-1 md:grid-cols-11 gap-6 my-8">
             {/* Search Filters */}
             <div
                 style={{
@@ -357,7 +357,7 @@ function KeyCapabilitiesCards() {
                 transform: visible ? "translateY(0px)" : "translateY(24px)",
                 transition: "opacity 0.55s ease 0.5s, transform 0.55s ease 0.5s",
                 }}
-                className="col-span-3 rounded-2xl overflow-hidden flex flex-col justify-center px-6 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
+                className=" col-span-1 md:col-span-3 rounded-2xl overflow-hidden flex flex-col justify-center px-6 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
             >
                 <div className="mb-8">
                 <h3 className="text-white font-bold text-xl leading-snug">
@@ -383,7 +383,7 @@ function KeyCapabilitiesCards() {
                 transform: visible ? "translateY(0px)" : "translateY(24px)",
                 transition: "opacity 0.55s ease 0.6s, transform 0.55s ease 0.6s",
                 }}
-                className="col-span-4 rounded-2xl overflow-hidden flex flex-col-reverse justify-center px-8 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
+                className=" col-span-1 md:col-span-4 rounded-2xl overflow-hidden flex flex-col-reverse justify-center px-8 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
             >
                 <div className="mb-4">
                 <h3 className="text-white font-bold text-xl leading-snug">
@@ -409,7 +409,7 @@ function KeyCapabilitiesCards() {
                 transform: visible ? "translateY(0px)" : "translateY(24px)",
                 transition: "opacity 0.55s ease 0.7s, transform 0.55s ease 0.7s",
                 }}
-                className="col-span-4 rounded-2xl overflow-hidden flex flex-col justify-center px-8 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
+                className=" col-span-1 md:col-span-4 rounded-2xl overflow-hidden flex flex-col justify-center px-8 py-6 bg-linear-to-br from-[#FFFFFF0D] from-30% to-[#D0F56B21] border border-[#FFFFFF0D]"
             >
                 <div className="mb-4">
                 <h3 className="text-white font-bold text-xl leading-snug">
@@ -431,167 +431,256 @@ function KeyCapabilitiesCards() {
 
 
     {/* Lead Timeline */}
-      <LongHorizontalCard
-        image="/images/unified-inbox/acquisition_finder.png"
-        title="Lead Timeline (Instant Truth)"
-        titleTextStyle="text-[35px] leading-12 mb-0"
-        description="A chronological, tamper-proof history of every signal"
-        descriptionTextTyle=" text-white mb-6"
-        delay="0.2s"
-        className="bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] 
-        p-8 gap-12 mb-10"
-        visible={visible}
-        imageLeft={false}
-        moreDescription={
-          <>
-            <div className="mt-2 flex flex-col gap-4 justify-between items-start w-full">
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/acquisition_finder.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  <span className="font-bold"> Acquisition:</span> Finder v2, Widget, Chrome Capture, CSV (with verification status)
-                </p>
-              </div>
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/engagements.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  <span className="font-bold">Engagement: </span> Sends, opens, clicks, reply types, WA templates sent/approved
-                </p>
-              </div>
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/voice_call.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  <span className="font-bold">Voice:</span>  Call placed/connected, outcome, transcript snippet, retry status
-                </p>
-              </div>
-               <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/proposals_meeting.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  <span className="font-bold">Proposals & Meetings:</span>  Proposal sent/viewed (time), booking created, payment link opened
-                </p>
-              </div>
-               <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/pipeline_event.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  <span className="font-bold">Pipeline events:</span>  Stage changes, owner changes, automations fired
-                </p>
-              </div>
-            </div>
-          </>
-        }
-      />
+     <LongHorizontalCard
+  image="/images/unified-inbox/acquisition_finder.png"
+  title="Lead Timeline (Instant Truth)"
+  titleTextStyle="text-2xl sm:text-[35px] leading-8 sm:leading-12 mb-0"
+  description="A chronological, tamper-proof history of every signal"
+  descriptionTextTyle="text-white text-xs sm:text-lg mb-6"
+  delay="0.2s"
+  className="bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] 
+  p-6 sm:p-8 gap-8 sm:gap-12 mb-10"
+  visible={visible}
+  imageLeft={false}
+  moreDescription={
+    <>
+      <div className="mt-2 flex flex-col gap-4 justify-between items-start w-full">
+        
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/acquisition_finder.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            <span className="font-bold">Acquisition:</span> Finder v2, Widget, Chrome Capture, CSV (with verification status)
+          </p>
+        </div>
 
-      {/* For Agencies & Teams */}
-      <LongHorizontalCard
-        image="/images/unified-inbox/agencies_teams.png"
-        title="For Agencies & Teams"
-        titleTextStyle="text-[35px] leading-12 mb-0"
-        description=""
-        descriptionTextTyle=" text-white mb-6"
-        delay="0.2s"
-        className="bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] p-8 gap-12 mb-10"
-        visible={visible}
-        imageLeft={true}
-        moreDescription={
-          <>
-            <div className="mt-2 flex flex-col gap-4 justify-between items-start w-full">
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/client_workspace.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  <span className="font-bold"> Client workspaces:</span>  Switch accounts fast; keep data cleanly separated.
-                </p>
-              </div>
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/permissions.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  <span className="font-bold">Permissions: </span>  Roles for owners, reps, collaborators, and read-only clients.
-                </p>
-              </div>
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/SLA.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  <span className="font-bold">SLA dashboards:</span>  First-response time, backlog, owner workload, hot-lead queue.
-                </p>
-              </div>
-            </div>
-          </>
-        }
-      />
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/engagements.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            <span className="font-bold">Engagement:</span> Sends, opens, clicks, reply types, WA templates sent/approved
+          </p>
+        </div>
 
-      {/* Analyytics */}
-        <LongHorizontalCard
-        image="/images/unified-inbox/analytics_that_matter.png"
-        title="Analytics That Matter"
-        titleTextStyle="text-[35px] leading-12 mb-0"
-        description=""
-        descriptionTextTyle=" text-white mb-6"
-        delay="0.2s"
-        className="bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] p-8 gap-12 mb-10"
-        visible={visible}
-        imageLeft={false}
-        moreDescription={
-          <>
-            <div className="mt-2 flex flex-col gap-4 justify-between items-start w-full">
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/response_time.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  Response time & win rate by channel
-                </p>
-              </div>
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/lead_to_meeting.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  Lead-to-meeting velocity and meeting-to-close influence
-                </p>
-              </div>
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/two_objection.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  <span className="font-bold block">Top objection patterns and assist usage</span> (what AI suggested vs what closed)
-                </p>
-              </div>
-            </div>
-          </>
-        }
-      />
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/voice_call.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            <span className="font-bold">Voice:</span> Call placed/connected, outcome, transcript snippet, retry status
+          </p>
+        </div>
 
-      {/* How it works with Agents */}
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/proposals_meeting.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            <span className="font-bold">Proposals & Meetings:</span> Proposal sent/viewed (time), booking created, payment link opened
+          </p>
+        </div>
 
-       <LongHorizontalCard
-        image="/images/unified-inbox/how_it_works_with_agents.png"
-        title="How it works with your Agents"
-        titleTextStyle="text-[35px] leading-12 mb-0"
-        description=""
-        descriptionTextTyle=" text-white mb-6"
-        delay="0.2s"
-        className="bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] p-8
-         gap-12"
-        visible={visible}
-        imageLeft={true}
-        moreDescription={
-          <>
-            <div className="mt-2 flex flex-col gap-4 justify-between items-start w-full">
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/pause.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  Agents pause automation when a human engages, <br /> and resume if it goes quiet.
-                </p>
-              </div>
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/agents_can_auto.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  Agents can auto-reply within guardrails or escalate to <br /> human with context.
-                </p>
-              </div>
-              <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                <Image src="/images/unified-inbox/icons/every_action.svg" width={45} height={45} />
-                <p className="text-white text-lg font-light w-full">
-                  Every action is logged to the Lead Timeline for complete visibility.
-                </p>
-              </div>
-            </div>
-          </>
-        }
-      />
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/pipeline_event.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            <span className="font-bold">Pipeline events:</span> Stage changes, owner changes, automations fired
+          </p>
+        </div>
+
+      </div>
+    </>
+  }
+/>
+{/* For Agencies & Teams */}
+<LongHorizontalCard
+  image="/images/unified-inbox/agencies_teams.png"
+  title="For Agencies & Teams"
+  titleTextStyle="text-2xl sm:text-[35px] leading-8 sm:leading-12 mb-0"
+  description=""
+  descriptionTextTyle="text-white text-xs sm:text-lg mb-6"
+  delay="0.2s"
+  className="bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] p-6 sm:p-8 gap-8 sm:gap-12 mb-10"
+  visible={visible}
+  imageLeft={true}
+  moreDescription={
+    <>
+      <div className="mt-2 flex flex-col gap-4 justify-between items-start w-full">
+        
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/client_workspace.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            <span className="font-bold">Client workspaces:</span> Switch accounts fast; keep data cleanly separated.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/permissions.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            <span className="font-bold">Permissions:</span> Roles for owners, reps, collaborators, and read-only clients.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/SLA.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            <span className="font-bold">SLA dashboards:</span> First-response time, backlog, owner workload, hot-lead queue.
+          </p>
+        </div>
+
+      </div>
+    </>
+  }
+/>
+
+     {/* Analytics */}
+<LongHorizontalCard
+  image="/images/unified-inbox/analytics_that_matter.png"
+  title="Analytics That Matter"
+  titleTextStyle="text-2xl sm:text-[35px] leading-8 sm:leading-12 mb-0"
+  description=""
+  descriptionTextTyle="text-white text-xs sm:text-lg mb-6"
+  delay="0.2s"
+  className="bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] p-6 sm:p-8 gap-8 sm:gap-12 mb-10"
+  visible={visible}
+  imageLeft={false}
+  moreDescription={
+    <>
+      <div className="mt-2 flex flex-col gap-4 justify-between items-start w-full">
+        
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/response_time.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            Response time & win rate by channel
+          </p>
+        </div>
+
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/lead_to_meeting.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            Lead-to-meeting velocity and meeting-to-close influence
+          </p>
+        </div>
+
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/two_objection.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            <span className="font-bold block sm:inline">
+              Top objection patterns and assist usage
+            </span>{" "}
+            (what AI suggested vs what closed)
+          </p>
+        </div>
+
+      </div>
+    </>
+  }
+/>
+{/* How it works with Agents */}
+<LongHorizontalCard
+  image="/images/unified-inbox/how_it_works_with_agents.png"
+  title="How it works with your Agents"
+  titleTextStyle="text-2xl sm:text-[35px] leading-8 sm:leading-12 mb-0"
+  description=""
+  descriptionTextTyle="text-white text-xs sm:text-lg mb-6"
+  delay="0.2s"
+  className="bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] p-6 sm:p-8 gap-8 sm:gap-12"
+  visible={visible}
+  imageLeft={true}
+  moreDescription={
+    <>
+      <div className="mt-2 flex flex-col gap-4 justify-between items-start w-full">
+        
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/pause.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            Agents pause automation when a human engages,
+            <span className="block sm:inline"> and resume if it goes quiet.</span>
+          </p>
+        </div>
+
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/agents_can_auto.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            Agents can auto-reply within guardrails or escalate to
+            <span className="block sm:inline"> human with context.</span>
+          </p>
+        </div>
+
+        <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
+          <Image 
+            src="/images/unified-inbox/icons/every_action.svg" 
+            width={45} 
+            height={45}
+            className="w-8 h-8 sm:w-[45px] sm:h-[45px]"
+          />
+          <p className="text-white text-xs sm:text-lg font-light w-full">
+            Every action is logged to the Lead Timeline for complete visibility.
+          </p>
+        </div>
+
+      </div>
+    </>
+  }
+/>
 
     </div>
   );

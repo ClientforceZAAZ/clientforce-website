@@ -129,14 +129,14 @@ export default function WhatYouGet() {
         }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl lg:text-5xl font-bold font-degular text-gray-900">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-degular text-gray-900">
           What You Get{" "}
           <span className="font-normal">(At A Glance)</span>
         </h2>
       </div>
 
       {/* Cards */}
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {ITEMS.map((item) => (
           <GlanceCard key={item.title} {...item} visible={visible} />
         ))}

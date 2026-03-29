@@ -45,7 +45,7 @@ function FeautureCard ({ image, title, description, index, isVisible }) {
             <div className="w-full overflow-hidden">
                 <Image src={image} alt={title} width={660} height={480} className="w-full h-auto"/>
             </div>
-            <div>
+            <div className="px-2">
                 <p className=" font-bold text-black text-lg">{title}</p>
                 <p className=" text-lg text-black px-2">{description}</p>
             </div>
@@ -78,16 +78,16 @@ export default function WhyClientForce() {
 
 
   return (
-    <section ref={sectionRef} className=" w-full py-16 px-12 relative">
-      <div className="max-w-6xl mx-auto grid grid-cols-4 gap-8">
+    <section ref={sectionRef} className=" w-full py-8 sm:py-16 px-6 sm:px-12 relative">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {feautures.map((feauture, i) => (
           <FeautureCard key={feauture.title} index={i} isVisible={isVisible} {...feauture} />
         ))}
       </div>
-      <h1 className="text-center font-bold font-degular text-[50px] mt-24">
+      <h1 className="text-center font-bold font-degular leading-8 text-4xl lg:text-[50px] mt-24">
         Why Clientforce & <span className=" text-[#787878]">Ai Sales Agents</span>
       </h1>
-      <div className="max-w-[850px] mt-14 mx-auto grid grid-cols-2 gap-12 font-dm">
+      <div className="max-w-[850px] mt-14 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12 font-dm">
         <div className=" flex flex-col items-center text-center gap-3 border-gray-200 border-[0.5px] rounded-[18.53px]">
           <div className="w-full overflow-hidden">
             <Image
@@ -119,13 +119,12 @@ export default function WhyClientForce() {
             <p className=" text-base text-[#00000099] pr-4 mt-2">Slow replies, forgotten threads, and one-channel outreach leave money on the table. ClientForce <span className="font-bold">follows up across every channel and never misses a step.</span></p>
           </div>
         </div>
-
-
       </div>
-      <div className="absolute left-0 top-26">
+
+      <div className="absolute left-0 top-26 -z-10">
         <img src="images/blur_169.png" alt="" />
       </div>
-      <div className="absolute right-0 top-26">
+      <div className="absolute right-0 top-26 -z-10">
         <img src="images/blur_170.png" alt="" />
       </div>
 

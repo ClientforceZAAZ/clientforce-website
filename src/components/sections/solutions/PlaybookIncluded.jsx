@@ -163,7 +163,7 @@ export default function PlaybooksIncluded() {
   }
 
   return (
-    <section ref={ref} className="py-16 px-6 lg:px-16 bg-[#EEF9FA]">
+    <section ref={ref} className="py-8 md:py-16 px-6 lg:px-16 bg-[#EEF9FA]">
 
       {/* Heading + arrows */}
       <div

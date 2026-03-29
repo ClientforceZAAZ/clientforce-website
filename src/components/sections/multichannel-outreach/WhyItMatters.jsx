@@ -106,7 +106,7 @@ export default function WhyItMatters() {
   const [ref, visible] = useVisible();
 
   return (
-    <section ref={ref} className="py-16 px-6 lg:px-16 bg-[#EEF9FA]">
+    <section ref={ref} className="py-6 md:py-16 px-6 lg:px-16 bg-[#EEF9FA]">
 
       {/* Heading */}
       <div
@@ -126,7 +126,7 @@ export default function WhyItMatters() {
       </div>
 
       {/* Cards */}
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {BENEFITS.map((benefit) => (
           <BenefitCard
             key={benefit.title}

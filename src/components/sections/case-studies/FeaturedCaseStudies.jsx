@@ -39,7 +39,7 @@ function FilterSelect({ label, options, value, onChange }) {
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="appearance-none border border-gray-200 bg-white rounded-lg pl-3 pr-8 py-1.5 text-lg text-black font-semibold outline-none cursor-pointer hover:border-gray-400 transition-colors"
+          className="appearance-none border border-gray-200 bg-white rounded-lg pl-3 pr-8 py-1.5 text-sm sm:text-lg text-black font-semibold outline-none cursor-pointer hover:border-gray-400 transition-colors"
         >
           {options.map((o) => <option key={o}>{o}</option>)}
         </select>
@@ -148,24 +148,44 @@ export default function FeaturedCaseStudies() {
   });
 
   return (
-    <section ref={ref} className="py-12 px-6 lg:px-16 bg-gray-50">
+    <section ref={ref} className="py-6 md:py-12 px-6 lg:px-16 bg-gray-50">
 
       {/* Header row */}
       <div
-        style={{
-          opacity: visible ? 1 : 0,
-          transform: visible ? "translateY(0)" : "translateY(-12px)",
-          transition: "opacity 0.5s ease, transform 0.5s ease",
-        }}
-        className="flex flex-row items-center justify-between gap-4 mb-12"
-      >
-        <h2 className="text-4xl font-bold font-degular text-black">Featured Case Studies</h2>
-        <div className="flex flex-wrap items-center gap-4">
-          <FilterSelect label="Industry:" options={INDUSTRIES} value={industry} onChange={setIndustry} />
-          <FilterSelect label="Goal:" options={GOALS} value={goal} onChange={setGoal} />
-          <FilterSelect label="Sort by:" options={SORT_OPTIONS} value={sort} onChange={setSort} />
-        </div>
-      </div>
+  style={{
+    opacity: visible ? 1 : 0,
+    transform: visible ? "translateY(0)" : "translateY(-12px)",
+    transition: "opacity 0.5s ease, transform 0.5s ease",
+  }}
+  className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8 sm:mb-12"
+>
+  {/* Title */}
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-degular text-black text-center sm:text-left">
+    Featured Case Studies
+  </h2>
+
+  {/* Filters */}
+  <div className="flex flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+    <FilterSelect
+      label="Industry:"
+      options={INDUSTRIES}
+      value={industry}
+      onChange={setIndustry}
+    />
+    <FilterSelect
+      label="Goal:"
+      options={GOALS}
+      value={goal}
+      onChange={setGoal}
+    />
+    <FilterSelect
+      label="Sort by:"
+      options={SORT_OPTIONS}
+      value={sort}
+      onChange={setSort}
+    />
+  </div>
+</div>
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

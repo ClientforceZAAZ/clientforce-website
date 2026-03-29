@@ -6,9 +6,11 @@ export default function Hero() {
   return (
     <PageHero
       badge="Lead Acquisition Suite"
-      headline={<>Never Run Out <br /> Of Leads <p className="text-5xl">Lead Acquisition Suite</p></>}
-      headlineStyle="text-5xl lg:text-[76px] leading-16"
+      badgeBg="#F6F6F6"
+      headline={<>Never Run Out <br className="hidden lg:block" /> Of Leads <p className="text-2xl sm:text-4xl lg:text-5xl">Lead Acquisition Suite</p></>}
+      headlineStyle="text-3xl sm:text-5xl lg:text-[76px] leading-8 sm:leading-10 lg:leading-16 text-center lg:text-left"
       description="Turn Prospecting Into A Background Process. ClientForce’s Lead Acquisition Suite Continuously Discovers, Captures, Validates, And Routes Fresh Prospects Straight Into The Right AI Agent Campaign—No Spreadsheets, No Copy-Paste, No Manual Chasing."
+      descriptionStyle="text-sm sm:text-lg text-center lg:text-left pr-0 lg:pr-20"
       primaryCTA={<PrimaryCTA variant="dark">Get Started</PrimaryCTA>}
       secondaryCTA={<PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>}
       rightBg = "bg-[linear-gradient(320deg,#e3f5f7_0%,#e3f3f5_25%,#f6f6f6_50%,#99e9d2_60%,#88e6c6_85%,#2ddc7a_100%)]"

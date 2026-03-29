@@ -6,6 +6,26 @@ import UseCases from "@/components/sections/shared/UseCases";
 import FAQ from "@/components/sections/shared/FrequentlyAskedQuestions";
 import Generate from "@/components/sections/dynamic-proposals/Generate";
 
+
+export const metadata = {
+  title: "Dynamic Proposals | Clientforce AI",
+  description: "Create tailored proposals automatically for every lead, effortlessly. AI-generated proposals that close deals faster.",
+  openGraph: {
+    title: "Dynamic Proposals | Clientforce AI",
+    description: "AI-generated proposals tailored to every lead automatically.",
+    url: "https://clientforceai.com/dynamic-proposals",
+    siteName: "Clientforce AI",
+    images: [{ url: "https://clientforceai.com/images/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dynamic Proposals | Clientforce AI",
+    description: "AI-generated proposals tailored to every lead automatically.",
+    images: ["https://clientforceai.com/images/og-image.png"],
+  },
+};
+
 export default function DynamicProposals() {
   return (
     <main>

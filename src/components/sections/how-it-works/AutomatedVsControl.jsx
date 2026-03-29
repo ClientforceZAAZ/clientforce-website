@@ -22,7 +22,7 @@ export default function AutomatedVsControl() {
   const [ref, visible] = useVisible();
 
   return (
-    <section ref={ref} className="py-20 px-6 lg:px-50 bg-white">
+    <section ref={ref} className=" py-10 md:py-20 px-6 lg:px-50 bg-white">
 
       {/* Heading */}
       <div
@@ -31,7 +31,7 @@ export default function AutomatedVsControl() {
           transform: visible ? "translateY(0)" : "translateY(-14px)",
           transition: "opacity 0.5s ease, transform 0.5s ease",
         }}
-        className="text-center mb-10"
+        className="text-center mb-5 md:mb-10"
       >
         <h2 className="text-3xl lg:text-[40px] font-degular font-bold text-black">
           What Gets Automated{" "}

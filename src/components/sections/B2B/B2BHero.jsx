@@ -8,12 +8,12 @@ export default function LocalBusinessesHero() {
       badge="B2B (Mid-Market & Enterprise)"
       badgeIcon=""
       headline={<>
-       Account-Smart <br /> Pipeline Creation With Autonomous Multi-Channel Orchestration
+       Account-Smart <br className="hidden lg:block" /> Pipeline Creation With Autonomous Multi-Channel Orchestration
     </>
     }
-      headlineStyle="text-6xl leading-12"
+      headlineStyle="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  leading-6 sm:leading-8 md:leading-10 lg:leading-13 text-center lg:text-left"
       description={<><span className="font-bold"> ClientForceAI Turns Your Website Visitors And Local Searches Into Booked Jobs</span> With Instant Replies, Smart Follow-Ups, And AI Voice Callbacks—So You Never Miss Another Opportunity.</>}
-      descriptionStyle="text-[#676767] text-lg mb-12"
+      descriptionStyle="text-[#676767]  text-sm sm:text-lg text-center lg:text-left lg:mb-12 leading-5 sm:leading-7"
       primaryCTA={<PrimaryCTA variant="dark">Launch And Agent</PrimaryCTA>}
       secondaryCTA={<PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>}
       rightBg="bg-[#FFFFFF]"

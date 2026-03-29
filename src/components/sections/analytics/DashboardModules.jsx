@@ -324,7 +324,7 @@ export default function DashboardsModules() {
           opacity: visible ? 1 : 0,
           transition: "opacity 0.6s ease 0.2s",
         }}
-        className="flex flex-col lg:flex-row gap-6 max-w-5xl mx-auto"
+        className="flex flex-col lg:flex-row items-center gap-6 max-w-5xl mx-auto"
       >
 
         {/* Left — Module List */}
@@ -389,10 +389,10 @@ export default function DashboardsModules() {
 
 
       
-      <Image src="/images/guardrails/Ellipse_guardrails_right.png" width={400} height={250} className="absolute bottom-[-20] left-0" />
-      <Image src="/images/guardrails/Ellipse_guardrails_left.png" width={400} height={250} className="absolute bottom-[-20] right-0" />
+      <Image src="/images/guardrails/Ellipse_guardrails_right.png" width={400} height={250} className="absolute bottom-[-20] left-0 -z-10" />
+      <Image src="/images/guardrails/Ellipse_guardrails_left.png" width={400} height={250} className="absolute bottom-[-20] right-0 -z-10" />
 
-      <Image src="/images/guardrails/icons/right.svg" width={50} height={50} className="absolute top-50 right-0" />
+      <Image src="/images/guardrails/icons/right.svg" width={50} height={50} className="absolute top-50 right-0 " />
       <Image src="/images/guardrails/icons/left.svg" width={50} height={50} className="absolute top-50 left-0" />
 
       <style>{`

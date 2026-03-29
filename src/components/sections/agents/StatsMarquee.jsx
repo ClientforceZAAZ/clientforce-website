@@ -41,13 +41,14 @@ const BOTTOM_STATS = [
 
 function StatCard({ value, description, lightText }) {
   return (
-    <div className="flex-shrink-0 w-[200px] bg-white rounded-2xl border border-[#00000033] px-5 py-2 mx-2">
-      <p className="text-3xl font-extrabold text-[#00000099] leading-tight">{value}</p>
-      <p className="text-[12px] text-[#00000099] font-bold mt-1 leading-relaxed">{description} <span className="font-normal">{lightText}</span></p>
+    <div className="flex-shrink-0 w-[160px] sm:w-[180px] md:w-[200px] bg-white rounded-2xl border border-[#00000033] px-3 sm:px-5 py-2 mx-2">
+      <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#00000099] leading-tight">{value}</p>
+      <p className="text-[10px] sm:text-[11px] md:text-[12px] text-[#00000099] font-bold mt-1 leading-snug">
+        {description} <span className="font-normal">{lightText}</span>
+      </p>
     </div>
   );
 }
-
 function MarqueeRow({ stats, direction = "left", speed = 40 }) {
   // Duplicate for seamless loop
   const items = [...stats, ...stats];
@@ -75,7 +76,7 @@ export default function StatsMarquee() {
   return (
     <section
       ref={ref}
-      className="w-full py-16 overflow-hidden"
+      className="w-full py-10 md:py-16 overflow-hidden"
       style={{
         opacity: visible ? 1 : 0,
         transition: "opacity 0.8s ease",

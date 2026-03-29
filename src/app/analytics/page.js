@@ -9,6 +9,25 @@ import Integrations from "@/components/sections/analytics/Integrations";
 import FAQ from "@/components/sections/shared/FrequentlyAskedQuestions";
 import WhatsWorking from "@/components/sections/analytics/WhatsWorking";
 
+export const metadata = {
+  title: "Analytics & Reporting | Clientforce AI",
+  description: "Transform interactions into insights and optimize with a click. Full-funnel visibility from first touch to closed-won.",
+  openGraph: {
+    title: "Analytics & Reporting | Clientforce AI",
+    description: "Full-funnel visibility from first touch to closed-won.",
+    url: "https://clientforceai.com/analytics",
+    siteName: "Clientforce AI",
+    images: [{ url: "https://clientforceai.com/images/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Analytics & Reporting | Clientforce AI",
+    description: "Full-funnel visibility from first touch to closed-won.",
+    images: ["https://clientforceai.com/images/og-image.png"],
+  },
+};
+
 export default function Analytics() {
   return (
     <main>

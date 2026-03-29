@@ -58,7 +58,7 @@ export function FeatureSection({
   const [ref, visible] = useVisible(0.15);
 
   return (
-    <section ref={ref} className={`rounded-3xl overflow-hidden shadow-xl mb-14 mt-4 px-10 py-6 bg-cover bg-center ${ borderSetting }`} style={{  backgroundImage: FeatureSectionBg}}>
+    <section ref={ref} className={`rounded-3xl overflow-hidden shadow-xl mb-14 mt-4 px-6 md:px-10 py-6 bg-cover bg-center ${ borderSetting }`} style={{  backgroundImage: FeatureSectionBg}}>
       <div className={`flex flex-col lg:flex-row ${reverse ? "lg:flex-row-reverse" : ""} items-stretch gap-8`}>
 
         {/* Text Side */}
@@ -73,7 +73,7 @@ export function FeatureSection({
             <h2 className="text-3xl lg:text-[35px] font-bold text-black leading-tight">
               {title}
             </h2>
-            <p className="text-[18px] text-[#787878] mt-1 mb-2 leading-relaxed max-w-sm">
+            <p className="text-[18px] text-[#787878] mt-1 mb-2 leading-6 md:leading-relaxed max-w-sm">
               {subtitle}
             </p>
           </div>
@@ -93,7 +93,7 @@ export function FeatureSection({
 
         {/* Image Side */}
         <div
-          className={`flex-1 flex items-center justify-center`}
+          className={`flex-1 md:flex items-center justify-center hidden`}
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0px)" : "translateY(40px)",

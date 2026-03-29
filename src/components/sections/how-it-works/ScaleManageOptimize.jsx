@@ -1,32 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import Image from "next/image";
 
-// function useVisible(threshold = 0.15) {
-//   const ref = useRef(null);
-//   const [visible, setVisible] = useState(false);
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) { setVisible(true); observer.disconnect(); }
-//       },
-//       { threshold }
-//     );
-//     if (ref.current) observer.observe(ref.current);
-//     return () => observer.disconnect();
-//   }, [threshold]);
-//   return [ref, visible];
-// }
 
-
+// pl-10 py-32
+// px-16 py-38
 
 // Dashboard mockup
 function DashboardMockup({ visible }) {
   return (
     <div
-      className="relative w-full h-full flex items-center justify-center pl-10 py-32"
+      className="relative w-full h-[700px] pl-10 flex items-center justify-center"
       style={{
         background: "#EBD7FF",
       }}
@@ -68,7 +53,7 @@ function DashboardMockup({ visible }) {
         style={{
           position: "absolute",
           top: "6rem",
-          left: "20rem",
+          left: "18rem",
         }}
       />
     </div>
@@ -85,21 +70,21 @@ export default function ScaleManageOptimize() {
       <div className=" flex flex-col lg:flex-row items-center">
 
         {/* Left — dashboard */}
-        <div className=" w-[50%]" style={{ }}>
+        <div className=" lg:w-[50%] hidden lg:block" style={{ }}>
           <DashboardMockup />
         </div>
 
         {/* Right — text */}
-        <div className=" w-[50%] px-16 py-40 bg-[#E1F1F2]">
+        <div className=" w-full lg:w-[50%] h-fit lg:h-[700px] bg-[#E1F1F2] flex items-center justify-center py-10 sm:py-20 px-8">
           <div>
-            <h2 className="text-3xl lg:text-[40px] font-extrabold text-black leading-12 mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-black leading-8 sm:leading-10 lg:leading-12 mb-4">
               Scale, Manage &<br />Optimize
             </h2>
-            <p className="text-base text-black leading-relaxed mb-8">
-              Enjoy The Bookings And Sales While Staying In Control: Monitor <br /> Everything In The Unified Inbox, Use AI "Next Best Action" <br /> Recommendations (Or Override Manually), And Improve <br /> Results With Step-Level Analytics, A/B Tests, And Simple <br /> Tweaks To Timing, Caps, And Channels.
+            <p className="text-base text-black leading-6 sm:leading-relaxed mb-8">
+              Enjoy The Bookings And Sales While Staying In Control: Monitor <br className="hidden sm:block" /> Everything In The Unified Inbox, Use AI "Next Best Action" <br className="hidden sm:block" /> Recommendations (Or Override Manually), And Improve <br className="hidden sm:block" /> Results With Step-Level Analytics, A/B Tests, And Simple <br className="hidden sm:block" /> Tweaks To Timing, Caps, And Channels.
             </p>
 
-            <h3 className="text-3xl font-bold text-black mb-8">Ready To See It Run?</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-black mb-8">Ready To See It Run?</h3>
 
             <div className="flex items-center gap-4">
              <PrimaryCTA> Get Started Now</PrimaryCTA>

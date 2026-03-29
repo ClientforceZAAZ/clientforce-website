@@ -57,12 +57,12 @@ const AVATARS = [
 
 // Card position mapping to Tailwind classes
 const CARD_POSITIONS = {
-  "top-left":     "top-[20%] left-[24%]",
-  "top-right":    "top-[20%] right-[20%]",
-  "left-middle":  "top-[40%] left-[24%]",
-  "right-middle": "top-[40%] right-[20%]",
-  "bottom-left":  "top-[60%] left-[24%]",
-  "bottom-right": "top-[60%] right-[20%]",
+  "top-left":     "top-[5%] md:top-[20%] left-[8%] lg:left-[24%]",
+  "top-right":    "top-[25%] md:top-[20%] right-[8%] lg:right-[20%]",
+  "left-middle":  "top-[40%] md:top-[40%] left-[8%] lg:left-[24%]",
+  "right-middle": "top-[63%] md:top-[40%] right-[8%] lg:right-[20%]",
+  "bottom-left":  "top-[85%] md:top-[60%] left-[8%] lg:left-[24%]",
+  "bottom-right": "top-[100%]      md:top-[60%]       right-[8%] lg:right-[20%]",
 };
 
 // Slide-in direction per card
@@ -108,10 +108,10 @@ function AutomationCard({ card, isVisible }) {
     >
       <div className="rounded-2xl bg-white flex items-center justify-center border border-[#0AD855] backdrop-blur-sm p-3 shadow-xl gap-2">
         {/* Green thumb icon */}
-        <div className="mb-2 flex h-20 w-20 items-center justify-center text-xs">
+        <div className="mb-2 flex h-10 w-10 md:h-15 md:w-15 items-center justify-center text-xs">
           <Image src={card.icon} width={45} height={45} />
         </div>
-        <p className="text-sm leading-5 text-black"> <span className="font-bold">{card.boldText}</span>{card.text}</p>
+        <p className=" text-xs md:text-sm leading-5 text-black"> <span className="font-bold">{card.boldText}</span>{card.text}</p>
       </div>
     </div>
   );
@@ -167,7 +167,7 @@ export default function AutomationsTiedToBuyerIntent() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-[#EEF9FA]"
+      className="relative w-full overflow-hidden bg-[#EEF9FA] px-6"
     >
 
       {/* Heading */}
@@ -179,11 +179,11 @@ export default function AutomationsTiedToBuyerIntent() {
         }}
         className="relative z-10 mb-10 text-center"
       >
-        <h2 className=" text-black font-degular font-bold text-center mt-20 mb-1 md:text-5xl">
+        <h2 className=" text-black font-degular font-bold text-center mt-10 md:mt-20 mb-1 text-2xl sm:text-3xl md:text-5xl">
           What Makes ClientForce Different
         </h2>
-        <p className=" text-[#00000099] text-2xl mb-3">One setup → Perpetual campaigns.</p>
-        <p className="text-black text-sm text-center">Agents don’t just automate tasks — they run the entire revenue cycle: find leads, engage across channels, <br /> handle objections on calls, send proposals, book meetings, and close. You oversee everything from a Unified <br /> Inbox with Lead Activity Timeline, Analytics, and DFY compliance guardrails.</p>
+        <p className=" text-[#00000099] text-lg sm:text-xl md:text-2xl mb-3">One setup → Perpetual campaigns.</p>
+        <p className="text-black text-xs sm:text-sm text-center">Agents don’t just automate tasks — they run the entire revenue cycle: find leads, engage across channels, <br className="hidden md:block"  /> handle objections on calls, send proposals, book meetings, and close. You oversee everything from a Unified <br className="hidden md:block" /> Inbox with Lead Activity Timeline, Analytics, and DFY compliance guardrails.</p>
       </div>
 
       {/* Main visual area */}
@@ -214,6 +214,7 @@ export default function AutomationsTiedToBuyerIntent() {
             height={551}
             className=""
             priority
+          
           />
         </div>
 

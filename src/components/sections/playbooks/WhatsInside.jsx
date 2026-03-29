@@ -29,7 +29,7 @@ function WhatsInsideSection() {
   return (
     <div ref={ref} className="">
         <div className="flex justify-center">
-            <h1 className="text-black bg-[#D0F56B] text-5xl px-6 py-2 rounded-lg font-bold text-center font-degular mb-10">
+            <h1 className="text-black bg-[#D0F56B] text-3xl md:text-4xl lg:text-5xl px-6 py-2 rounded-lg font-bold text-center font-degular mb-10">
                 What's Inside
             </h1>
         </div>

@@ -1,9 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import Automation from "@/components/sections/dynamic-proposals/Automation";
-import { BsPatchCheckFill } from "react-icons/bs";
 
 
 function useVisible(threshold = 0.15) {
@@ -31,134 +28,156 @@ function FeatureGrid() {
   return (
     <div ref={ref} className="px-6 lg:px-20">
         <div className="flex justify-center">
-            <h1 className="text-black border text-5xl px-6 py-2 rounded-full font-bold text-center font-degular mb-10">
+            <h1 className="text-black border text-2xl sm:text-3xl md:text-4xl lg:text-5xl px-6 py-2 rounded-full font-bold text-center font-degular mb-10">
                 Messaging Consent & Privacy
             </h1>
         </div>
 
-      <div className="grid grid-cols-9 gap-6">
-        {/* Card Takes 2 cols, full height */}
+      <div className="grid grid-cols-1 lg:grid-cols-9 gap-6">
+  
+  {/* LEFT SIDE */}
+  <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-col gap-6">
 
-        {/* Left Container */}
-        <div className="col-span-6 flex flex-col gap-6">
-          {/* Top Right */}
-          <div
-            style={{
-              opacity: visible ? 1 : 0,
-              transform: visible ? "translateY(0px)" : "translateY(24px)",
-              transition: "opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s",
-            }}
-            className=" bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-row gap-4 p-6"
-          >
-            <div className="flex-1">
-              <h3 className="text-black font-bold text-xl leading-snug">
-               GDPR/CCPA/TCPA-ready Capture
-              </h3>
-              <p className="text-sm text-[#00000099]">Embeddable forms/widgets with consent checkboxes, purpose notes, IP + timestamp logs.</p>
-            </div>
-            <div className=" flex-shrink-0">
-              <img
-                src="/images/guardrails/"
-                alt="Verification & Hygiene"
-                //   width={323}
-                //   height={179}
-                //   quality={100}
-                className=" object-contain rounded-lg w-[330px] h-[200px] bg-[#0000001A]"
-              />
-            </div>
-          </div>
-
-            {/* WhatsApp Compliance AND DNC Management  */}
-          <div className="flex gap-6">
-            {/*WhatsApp Compliance*/}
-            <div
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0px)" : "translateY(24px)",
-                transition:
-                  "opacity 0.55s ease 0.4s, transform 0.55s ease 0.4s",
-              }}
-              className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col items-center p-6 pb-0"
-            >
-              <div className=" flex-1">
-                <h3 className="text-black font-bold text-xl leading-snug">
-                WhatsApp Compliance
-                </h3>
-                <p className="text-sm text-[#00000099]">Template approval tracking with automatic email fallback if pending/denied.</p>
-              </div>
-              <div className=" flex-shrink-0 mt-4">
-                <img
-                  src="/images/guardrails/.png"
-                  alt=""
-                  //   width={274}
-                  //   height={143}
-                  //   quality={100}
-                  className=" object-contain rounded-lg w-full h-full bg-[#0000001A]"
-                />
-              </div>
-            </div>
-
-            {/*   DNC Management */}
-            <div
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0px)" : "translateY(24px)",
-                transition:
-                  "opacity 0.55s ease 0.3s, transform 0.55s ease 0.3s",
-              }}
-              className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col p-6 items-center"
-            >
-              <div className="flex-1 overflow-hidden">
-                <img
-                  src="/images/guardrails/"
-                  alt=""
-                  //   width={200}
-                  //   height={134}
-                  //   quality={100}
-                  className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
-                />
-              </div>
-              <div className="mt-4">
-                <h3 className="text-black font-bold text-xl leading-snug">
-                 DNC Management
-                </h3>
-                 <p className="text-sm text-[#00000099]">Global and campaign-level DNC lists with per-channel suppression.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-         {/* RIGHT — Container: takes 3 cols */}
-         <div
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0px)" : "translateY(24px)",
-            transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
-          }}
-          className="col-span-3 rounded-2xl overflow-hidden flex flex-col justify-center px-8 py-6 bg-white border border-[#00000024]"
-        >
-          <div className="">
-            <h3 className="text-black font-bold text-xl leading-snug">
-              Proof of Consent Ledger
-            </h3>
-            <p className="text-sm text-[#00000099]">Versioned records for opt-ins/opt-outs, exportable for audits.</p>
-          </div>
-          <div className=" overflow-hidden mt-auto flex items-center justify-center">
-            <img
-              src="/images/guardrails/"
-              alt="domain_auth"
-              // width={323}
-              // height={342}
-              // quality={100}
-              className="object-cover rounded-xl h-[430px] w-full bg-[#0000001A]"
-            />
-          </div>
-        </div>
-
-
-
+    {/* BIG CARD (mobile/tablet ONLY) */}
+    <div
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0px)" : "translateY(24px)",
+        transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
+      }}
+      className="col-span-1 rounded-2xl overflow-hidden lg:hidden flex flex-col items-center justify-center px-6 py-6 bg-white border border-[#00000024]"
+    >
+      <div className="mb-4">
+        <h3 className="text-black font-bold text-xl leading-snug">
+          Proof of Consent Ledger
+        </h3>
+        <p className="text-sm text-[#00000099]">
+          Versioned records for opt-ins/opt-outs, exportable for audits.
+        </p>
       </div>
+
+      <div className="overflow-hidden">
+        <img
+          src="/images/guardrails/"
+          alt="Proof of Consent Ledger"
+          className="object-cover rounded-xl h-[220px] w-full bg-[#0000001A]"
+        />
+      </div>
+    </div>
+
+    {/* Top card */}
+    <div
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0px)" : "translateY(24px)",
+        transition: "opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s",
+      }}
+      className="col-span-1 bg-white border border-[#00000024] rounded-2xl overflow-hidden flex lg:flex-row flex-col items-center justify-center gap-4 p-6"
+    >
+      <div className="flex-1">
+        <h3 className="text-black font-bold text-xl leading-snug">
+          GDPR/CCPA/TCPA-ready Capture
+        </h3>
+        <p className="text-sm text-[#00000099]">
+          Embeddable forms/widgets with consent checkboxes, purpose notes, IP + timestamp logs.
+        </p>
+      </div>
+
+      <div className="flex-shrink-0">
+        <img
+          src="/images/guardrails/"
+          alt="Capture"
+          className="object-contain rounded-lg w-[330px] h-[200px] bg-[#0000001A]"
+        />
+      </div>
+    </div>
+
+    {/* Bottom row */}
+    <div className="sm:flex sm:flex-row flex-col gap-6 col-span-1 sm:col-span-2">
+
+      {/* WhatsApp Compliance */}
+      <div
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateY(0px)" : "translateY(24px)",
+          transition: "opacity 0.55s ease 0.4s, transform 0.55s ease 0.4s",
+        }}
+        className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col items-center p-6 mb-6 sm:mb-0"
+      >
+        <div className="flex-1">
+          <h3 className="text-black font-bold text-xl leading-snug">
+            WhatsApp Compliance
+          </h3>
+          <p className="text-sm text-[#00000099]">
+            Template approval tracking with automatic email fallback if pending/denied.
+          </p>
+        </div>
+
+        <div className="flex-shrink-0 mt-4 sm:mt-0">
+          <img
+            src="/images/guardrails/.png"
+            alt="WhatsApp Compliance"
+            className="object-contain rounded-lg w-full h-full bg-[#0000001A]"
+          />
+        </div>
+      </div>
+
+      {/* DNC Management */}
+      <div
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateY(0px)" : "translateY(24px)",
+          transition: "opacity 0.55s ease 0.3s, transform 0.55s ease 0.3s",
+        }}
+        className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col p-6 items-center"
+      >
+        <div className="flex-1 overflow-hidden">
+          <img
+            src="/images/guardrails/"
+            alt="DNC Management"
+            className="object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+          />
+        </div>
+
+        <div className="mt-4">
+          <h3 className="text-black font-bold text-xl leading-snug">
+            DNC Management
+          </h3>
+          <p className="text-sm text-[#00000099]">
+            Global and campaign-level DNC lists with per-channel suppression.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* RIGHT — Large card (ONLY visible on lg+) */}
+  <div
+    style={{
+      opacity: visible ? 1 : 0,
+      transform: visible ? "translateY(0px)" : "translateY(24px)",
+      transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
+    }}
+    className="col-span-3 rounded-2xl overflow-hidden hidden lg:flex flex-col justify-center px-8 py-6 bg-white border border-[#00000024]"
+  >
+    <div>
+      <h3 className="text-black font-bold text-xl leading-snug">
+        Proof of Consent Ledger
+      </h3>
+      <p className="text-sm text-[#00000099]">
+        Versioned records for opt-ins/opt-outs, exportable for audits.
+      </p>
+    </div>
+
+    <div className="overflow-hidden mt-auto flex items-center justify-center">
+      <img
+        src="/images/guardrails/"
+        alt="Proof of Consent Ledger"
+        className="object-cover rounded-xl h-[430px] w-full bg-[#0000001A]"
+      />
+    </div>
+  </div>
+</div>
 
     </div>
   );

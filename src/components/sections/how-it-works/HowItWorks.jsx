@@ -93,7 +93,7 @@ function StepCard({ step, index }) {
               transition:
                 "opacity 0.65s ease 0.15s, transform 0.65s ease 0.15s",
             }}
-            className="lg:w-[50%] relative overflow-hidden max-w-44"
+            className="lg:w-[50%] relative overflow-hidden hidden lg:block"
           >
             {/* <div className="absolute inset-0 bg-gradient-to-br from-[#0a2a1a] to-[#061a0a]" /> */}
             <Image
@@ -116,7 +116,7 @@ function StepCard({ step, index }) {
                 : "translateX(-24px)",
             transition: "opacity 0.65s ease 0.2s, transform 0.65s ease 0.2s",
           }}
-          className={`lg:w-[50%] flex flex-col justify-center ${step.imageLeft ? "pr-8" : "pl-6"}`}
+          className={`lg:w-[50%] flex flex-col justify-center ${step.imageLeft ? "px-6 sm:px-8" : "px-6 sm:px-8"}`}
         >
           {/* Title */}
           <h2 className="text-2xl lg:text-3xl font-bold text-white leading-snug mb-2">
@@ -129,7 +129,10 @@ function StepCard({ step, index }) {
           </p>
 
           {/* Bullets */}
-          <div className="space-y-3 mb-6 p-3 shadow-md border border-[#FFFFFF0D] rounded-2xl" style={{ background: "#FFFFFF0D"}}>
+          <div
+            className="space-y-3 mb-6 p-3 shadow-md border border-[#FFFFFF0D] rounded-2xl"
+            style={{ background: "#FFFFFF0D" }}
+          >
             {step.bullets.map((b, i) => (
               <div
                 key={i}
@@ -156,7 +159,9 @@ function StepCard({ step, index }) {
           {/* Outcome */}
           <div className="">
             <p className="text-base text-white">
-              <span className="font-bold" style={{ color: "#63E5FB"}}>Outcome: </span>
+              <span className="font-bold" style={{ color: "#63E5FB" }}>
+                Outcome:{" "}
+              </span>
               {step.outcome}
             </p>
           </div>
@@ -171,7 +176,7 @@ function StepCard({ step, index }) {
               transition:
                 "opacity 0.65s ease 0.15s, transform 0.65s ease 0.15s",
             }}
-            className="lg:w-[50%] relative overflow-hidden"
+            className="lg:w-[50%] relative overflow-hidden hidden lg:block"
           >
             {/* <div className="absolute inset-0 bg-gradient-to-br from-[#0a2a1a] to-[#061a0a]" /> */}
             <Image
@@ -185,13 +190,12 @@ function StepCard({ step, index }) {
 
         {/* Step Tag */}
         <div
-          style={{
-            position: "absolute",
-            top: "-1.4rem",
-            left: step.imageLeft ? "33rem" : "1.5rem",
-          }}
-        >
-          {step.image}
+                className={`
+          absolute top-[-1.4rem]
+          ${step.imageLeft ? "lg:left-[35rem] left-[1.5rem]" : "left-[1.5rem]"}
+        `}
+              >
+                {step.image}
         </div>
       </div>
     </div>
@@ -203,12 +207,12 @@ function StepCard({ step, index }) {
 export default function HowItWorks() {
   return (
     <section
-      className="py-16 px-6 lg:px-16"
+      className="py-8 md:py-16 px-6 lg:px-16"
       style={{ background: "linear-gradient(to bottom, #001508 0%,#001508 70%, #034a1d 100%)" }}
     >
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl lg:text-6xl font-bold font-degular text-white">
+        <h2 className=" text-3xl sm:text-4xl lg:text-6xl font-bold font-degular text-white">
           How It Works <span className="text-[#08A541]">(Simple Steps)</span>
         </h2>
       </div>

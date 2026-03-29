@@ -14,23 +14,27 @@ export default function AgentRoi() {
     <section className="relative">
         <div className="bg-cover bg-center pt-18 flex flex-col items-center justify-center z-10"
           style={{ backgroundImage: "url('/images/agent_roi_bg.png')" }}>
-            <h1 className="mb-10 font-bebas text-center font-bold text-[50px] leading-12 text-white"><span className="block text-[#0EBE4F]">Calculate Your AI Agent ROI</span> See What’s Truly Possible</h1>
+            <h1 className="mb-10 font-bebas text-center font-bold text-4xl sm:text-[50px] leading-8 sm:leading-12 text-white"><span className="block text-[#0EBE4F]">Calculate Your AI Agent ROI</span> See What’s Truly Possible</h1>
            <AgentRoiCard />
 
-           <div className="bg-cover bg-center w-full mt-30 pt-12 flex flex-col items-center justify-center"
+           <div className="bg-cover bg-center w-full mt-30 pt-12 px-6 flex flex-col items-center justify-center"
           style={{ backgroundImage: "url('/images/agent_roi_bg2.png')" }}>   
-                <h1 className="font-bold text-6xl font-degular text-center text-white max-w-[840px] leading-16">Simple, Honest Plans for Teams That Want Momentum</h1>
-                <p className=" text-2xl text-[#FFFFFF99] my-6">Start With The Plan That Fits Today—Upgrade As You Scale.</p> 
-                <Link href="#"  className="font-bold text-2xl bg-[#35E834] rounded-full px-8 py-2">View Pricing
+                <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl font-degular text-center text-white max-w-[840px] leading-8 md:leading-12 lg:leading-16">Simple, Honest Plans for Teams That Want Momentum</h1>
+                <p className=" text-base sm:text-xl md:text-2xl text-[#FFFFFF99] py-2 sm:my-6 text-center">Start With The Plan That Fits Today—Upgrade As You Scale.</p> 
+                <Link href="#"  className="font-bold text-base sm:text-xl md:text-2xl bg-[#35E834] rounded-full px-4 sm:px-8 py-2 hover:scale-105 transition-all ease-in-out">View Pricing
                 </Link>
                 <div className="mt-16 relative">
                     <Image src="/images/agent_roi_bg3.png" width={840} height={525} />
 
                     
-                    <div className="absolute inset-0">
-                        <GraphCard />
-                        <SidebarCard />
-                         <div className="absolute bottom-[4%] right-[-54] w-[40%] z-30">
+                    <div className="hidden md:block md:absolute inset-0">
+                        <div className="absolute right-[85] lg:right-0 w-full z-30">
+                          <GraphCard />
+                        </div>
+                        <div className="absolute bottom-[4%] left-[100] lg:left-0 w-full z-30">
+                          <SidebarCard />
+                        </div>
+                         <div className="absolute bottom-[4%] right-[30] lg:right-[-54] w-[40%] z-30">
                             <AgentRoiLiveFeed />
                          </div>
                     </div>

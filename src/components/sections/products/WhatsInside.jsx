@@ -216,11 +216,21 @@ const SECTIONS = [
 
 export default function WhatsInside() {
   return (
-    <section className=" pt-20 px-16 pb-16">
-        <div className="flex items-center justify-center">
-            <h1 className="font-bold font-degular text-5xl max-w-[640px] text-center leading-14"><span className=" bg-[#D0F56B] rounded-xl pl-2 pr-1">What’s Inside </span>(Everything You Need To Sell On Autopilot)</h1>
-        </div>
-        <div className="space-y-4 py-8">
+    <section className="pt-10 sm:pt-20 px-8 md:px-16 pb-6 md:pb-16">
+        <div className="flex items-center justify-center px-4">
+  <h1 className="font-bold font-degular text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-[640px] text-center leading-tight">
+    
+    <span className="bg-[#D0F56B] rounded-lg px-2 py-1 inline-block">
+      What’s Inside
+    </span>{" "}
+    
+    <span className="block sm:inline">
+      (Everything You Need To Sell On Autopilot)
+    </span>
+
+  </h1>
+</div>
+        <div className="space-y-4 py-5 md:py-8">
             {SECTIONS.map((section) => (
                 <FeatureSection key={section.title} {...section} />
             ))}

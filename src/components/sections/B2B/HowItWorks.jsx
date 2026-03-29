@@ -47,12 +47,12 @@ export default function HowItWorks() {
             }}
             className="flex justify-center mb-10"
             >
-            <div className=" border border-white rounded-full px-6 text-[46px] text-white font-bold font-degular shadow-sm">
+            <div className=" border border-white rounded-full px-6 text-3xl sm:text-4xl lg:text-[46px] text-white font-bold font-degular shadow-sm">
                 How It Works <span className="text-[#D0F56B] font-normal">(3 steps)</span>
             </div>
             </div>
                 {/* Three-column card grid */}
-            <div className="relative grid grid-cols-11 gap-6">
+            <div className="relative grid grid-cols-1 md:grid-cols-11 gap-6 px-8">
                 {/* Card 1 — bottom-left text */}
                 <div
                 style={{
@@ -62,7 +62,7 @@ export default function HowItWorks() {
                     position: "relative",
                     zIndex: 1,
                 }}
-                className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-4"
+                className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-4"
                 >
                 <div>
                     <img src="" alt="" className=" h-[280px]" />
@@ -84,7 +84,7 @@ export default function HowItWorks() {
                     position: "relative",
                     zIndex: 1,
                 }}
-                className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-3"
+                className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-3"
                 >
                 <div>
                     <p className="text-lg leading-6">
@@ -102,7 +102,7 @@ export default function HowItWorks() {
                     position: "relative",
                     zIndex: 1,
                 }}
-                className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] col-span-4"
+                className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] col-span-1 md:col-span-4"
                 >
                 <div className="mt-auto">
                     <p className="text-lg leading-6">
@@ -114,6 +114,7 @@ export default function HowItWorks() {
 
         </div>
 
+{/* Orchestrate B2B Pipeline */}
   
       <div
         className="bg-cover bg-center flex flex-col items-center justify-center z-10"
@@ -123,12 +124,12 @@ export default function HowItWorks() {
           className="bg-cover bg-center w-full pt-12 flex flex-col items-center justify-center"
           style={{ backgroundImage: "url('/images/agent_roi_bg2.png')" }}
         >
-          <p className=" text-[44px] font-degular font-bold text-white mt-4 mb-6">
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] text-center font-degular font-bold text-white mt-4 mb-2 sm:mb-6">
            Orchestrate B2B Pipeline With ClientForceAI 
           </p>
           <Link
             href="#"
-            className="font-bold text-2xl bg-[#35E834] rounded-full px-8 py-2 border-[3px] border-white"
+            className="font-bold text-base sm:text-lg md:text-2xl bg-[#35E834] rounded-full px-8 py-2 border-[3px] border-white"
             style={{
               boxShadow:
                 "0 0 18px 4px rgba(53,232,52,0.6), 0 0 40px 8px rgba(53,232,52,0.3)",
@@ -143,7 +144,7 @@ export default function HowItWorks() {
               height={525}
             />
 
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 hidden lg:block">
               <div className="absolute bottom-[8%] left-[-110] z-30">
                 <DropOffResponseCard />
               </div>

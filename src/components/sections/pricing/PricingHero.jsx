@@ -195,14 +195,14 @@ export default function PricingSection() {
   return (
     <section
       ref={ref}
-      className="mt-21  relative"
+      className="mt-18 md:mt-21  relative"
     >
       {/* Top Hero Section */}
-      <div className="z-30 pt-12 bg-cover bg-center " style={{ backgroundImage: "url('/images/pricing/pricing_heroBg.png')", }}>
+      <div className="pt-6 sm:pt-12 bg-cover bg-center " style={{ backgroundImage: "url('/images/pricing/pricing_heroBg.png')", }}>
         
         <div
           style={{ opacity: visible ? 1 : 0, transition: "opacity 0.5s ease" }}
-          className="flex justify-center mb-5"
+          className="flex justify-center mb-3 sm:mb-5"
         >
           <div className="flex items-center justify-center mb-2">
             <div className="relative p-0.5 rounded-full bg-[linear-gradient(270deg,#F437AB,#08A541,#08A541,#FF9D7C)]">
@@ -222,10 +222,10 @@ export default function PricingSection() {
           }}
           className="text-center mb-4"
         >
-          <h1 className="text-4xl lg:text-6xl font-bold font-degular text-black leading-14 mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-degular text-black leading-8 md:leading-12 lg:leading-14 mx-auto z-30">
             Simple Plans To Launch Your <br /> First AI Sales Agent Today
           </h1>
-          <p className="text-gray-500 mt-4 text-[22px] font-medium">
+          <p className="text-gray-500 mt-2 sm:mt-4 text-lg md:text-[22px] font-medium z-30">
             Start In Minutes. Scale When You're Ready.
           </p>
         </div>
@@ -253,7 +253,7 @@ export default function PricingSection() {
             </button>
             {/* Save badge */}
            <div className="flex items-center justify-center" style={{
-                opacity: annual ? 0 : 1,
+                opacity: annual ? 1 : 1,
                 transition: "opacity 0.3s ease",
                 position: "absolute",
                 top: "-0.5rem",
@@ -270,12 +270,15 @@ export default function PricingSection() {
         </div>
       </div>
 
-      <div className="absolute top-50 -z-10">
+      <div className=""  style={{
+                position: "absolute",
+                top: "12rem",  
+              }}>
         <img src="/images/pricing/Vector_pricing_hero.png" alt="" />
       </div>
 
       {/* Plan cards */}
-      <div className="z-30 flex flex-col lg:flex-row gap-10 px-20 mx-auto items-stretch">
+      <div className="z-30 flex flex-col lg:flex-row gap-10 px-6 sm:px-20 mx-auto items-stretch">
         {PLANS.map((plan, i) => (
           <PlanCard
             key={plan.name}

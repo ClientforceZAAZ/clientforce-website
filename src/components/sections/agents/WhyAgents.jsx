@@ -202,8 +202,8 @@ export default function WhyAgents() {
   const [ref, visible] = useVisible(0.15);
 
   return (
-    <section ref={ref} className="relative w-full  py-16">
-        <style>{`
+    <section ref={ref} className="relative w-full px-6 py-8  md:py-16">
+      <style>{`
             @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
@@ -214,50 +214,50 @@ export default function WhyAgents() {
             }
         `}</style>
 
-        <div>
-            <h1 className=" text-6xl font-degular text-center">
-            <span className="font-bold bg-[#6BE8FD] px-2 rounded-xl">
-                Why Agents?
-            </span>{" "}
-            <span className=" font-normal text-[#787878]">
-                (Not Just Automation)
-            </span>
-            </h1>
-            <p className="font-bold text-2xl text-center mt-8">
-            Manual Prospecting Is Slow. Follow-Ups Slip. Revenue Leaks.
-            </p>
-            <p className="text-center text-[#676767] text-xl mt-4">
-            ClientForce Agents Run Perpetual Campaigns That Find Leads, Engage,{" "}
-            <br /> And Close—Without You Chasing Tasks Or Juggling Tools.
-            </p>
-        </div>
+      <div>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-degular text-center flex items-center justify-center flex-col md:flex-row">
+          <span className="font-bold w-fit bg-[#6BE8FD] px-2 rounded-xl">
+            Why Agents?
+          </span>{" "}
+          <span className=" font-normal text-[#787878]">
+            (Not Just Automation)
+          </span>
+        </h1>
+        <p className="font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl text-center mt-6 sm:mt-8 leading-snug">
+          Manual Prospecting Is Slow. Follow-Ups Slip. Revenue Leaks.
+        </p>
+        <p className="text-center text-[#676767] text-base sm:text-lg md:text-xl lg:text-xl mt-3 sm:mt-4 leading-relaxed">
+          ClientForce Agents Run Perpetual Campaigns That Find Leads, Engage,{" "}
+          <br className="hidden sm:block" /> And Close—Without You Chasing Tasks
+          Or Juggling Tools.
+        </p>
+      </div>
 
-        <div 
-        className="relative rounded-3xl mx-50 overflow-hidden mt-10 min-h-[520px] bg-cover bg-center"
+      <div
+        className=" hidden md:block  md:relative rounded-3xl mx-50 overflow-hidden mt-10 min-h-[520px] bg-cover bg-center"
         style={{ backgroundImage: "url('/images/agents/garden_nature.png')" }}
-        >
-            {/* Dashboard panel image — right side */}
-            <img
-                src="/images/agents/whyAgent_dashboard.png"
-                alt="Agent Dashboard"
-                className="absolute top-8 right-0 w-[57%] h-auto object-contain drop-shadow-xl"
-            />
+      >
+        {/* Dashboard panel image — right side */}
+        <img
+          src="/images/agents/whyAgent_dashboard.png"
+          alt="Agent Dashboard"
+          className="absolute top-8 right-0 w-[57%] h-auto object-contain drop-shadow-xl"
+        />
 
-            {/* Floating Cards — left side */}
-            <div className="absolute top-8 left-8 flex flex-col gap-4">
-                <ScheduleCard visible={visible} />
-                <VideoCallCard visible={visible} />
-            </div>
-
-            <div className="absolute top-50 left-48 w-[370px]">
-                <img
-                src="/images/agents/stats.png"
-                alt="Agent Dashboard"
-                className=" drop-shadow-xl"
-                />
-            </div>
+        {/* Floating Cards — left side */}
+        <div className="absolute top-8 left-8 flex flex-col gap-4">
+          <ScheduleCard visible={visible} />
+          <VideoCallCard visible={visible} />
         </div>
-        
+
+        <div className="absolute top-50 left-48 w-[370px]">
+          <img
+            src="/images/agents/stats.png"
+            alt="Agent Dashboard"
+            className=" drop-shadow-xl"
+          />
+        </div>
+      </div>
     </section>
   );
 }

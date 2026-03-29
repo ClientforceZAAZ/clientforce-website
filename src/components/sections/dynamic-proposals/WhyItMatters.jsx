@@ -65,7 +65,7 @@ export default function WhyItMatters() {
   const [ref, visible] = useVisible();
 
   return (
-    <section ref={ref} className="py-16 px-6 lg:px-40 bg-[#EEF9FA]">
+    <section ref={ref} className="py-8 sm:py-16 px-6 lg:px-40 bg-[#EEF9FA]">
 
       {/* Heading */}
       <div
@@ -85,7 +85,7 @@ export default function WhyItMatters() {
       </div>
 
       {/* Grid — 2x2 equal cards */}
-      <div className="grid grid-cols-1 md:grid-cols-11 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-11 gap-4 md:gap-8">
         <BenefitCard
           image="/images/dynamic-proposals/personalization_at-scale.png"
           imageAlt="Personalization At Scale"
@@ -115,7 +115,7 @@ export default function WhyItMatters() {
       </div>
 
        {/* Grid — 2x2 equal cards */}
-      <div className="grid grid-cols-1 md:grid-cols-11 gap-8 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-11 gap-4 md:gap-8 mt-4 md:mt-8">
         <BenefitCard
           image="/images/dynamic-proposals/benefit_live_intent.png"
           imageAlt="Live Intent Signals"

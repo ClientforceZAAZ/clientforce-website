@@ -77,18 +77,19 @@ const HOME_TABS = [
 
 export default function FeauturesBenefits() {
   return (
-    <section className="pt-50 relative">
+    <section className=" pt-10 xl:pt-50 relative">
         <div className=" flex flex-col items-center">
-            <p className=" text-[28px] font-degular">The Value</p>
-            <h1 className=" font-bold text-6xl font-degular">Feature → Benefit</h1>
+            <p className=" text-xl sm:text-[28px] font-degular">The Value</p>
+            <h1 className=" font-bold text-5xl sm:text-6xl font-degular">Feature → Benefit</h1>
             <FeatureTabs TABS={HOME_TABS} />
         </div>
-        <div className="">
+
+        <div className="hidden xl:block">
           <Image src="/icons/feauturesBenefit.svg" width={1280} height={160} className="absolute top-20" />
 
-          <Image src="/icons/feauturesBenefit_rect.svg" width={51} height={51} className="absolute top-48 right-18" />
+          <Image src="/icons/feauturesBenefit_rect.svg" width={51} height={51} className="absolute top-54 right-10" />
           <Image src="/icons/feauturesBenefit_rect1.svg" width={51} height={51} className="absolute top-20 right-100" />
-          <Image src="/icons/feauturesBenefit_rect2.svg" width={51} height={51} className="absolute top-16 left-100" />
+          <Image src="/icons/feauturesBenefit_rect2.svg" width={51} height={51} className="absolute top-18 left-100" />
           <Image src="/icons/feauturesBenefit_rect3.svg" width={51} height={51} className="" style={{
               position: "absolute",
               top: "12rem",

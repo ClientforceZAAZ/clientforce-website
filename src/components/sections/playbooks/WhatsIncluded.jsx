@@ -46,7 +46,7 @@ export default function TabbedFeatureSection() {
           className={`flex flex-col md:flex-row`}
         >
           {/* Left — image */}
-          <div className="md:w-[50%] p-6 flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
+          <div className="md:w-[50%] p-6 items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 hidden md:flex">
               <img
                 src=""
                 alt=""
@@ -56,7 +56,7 @@ export default function TabbedFeatureSection() {
 
           {/* Right — text */}
           <div className="md:w-[50%] p-8 flex flex-col justify-center">
-            <h2 className="text-2xl lg:text-4xl font-bold text-black leading-10 mb-6">
+            <h2 className=" text-2xl lg:text-4xl font-bold text-black leading-8 lg:leading-10 mb-6">
               What’s Included <br /> (At A Glance)
             </h2>
             <div className="space-y-4">

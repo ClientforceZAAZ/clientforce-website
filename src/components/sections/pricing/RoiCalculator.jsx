@@ -133,16 +133,16 @@ export default function ROICalculator() {
 
         {/*  Top bar  */}
         <div className="flex flex-row items-center justify-between gap-4 mb-6">
-          <h3 className="text-2xl font-bold text-black font-degular">Estimate Your ROI</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-black font-degular">Estimate Your ROI</h3>
           <div className="flex items-center gap-3 flex-wrap">
             {/* Plan selector */}
             <div className="flex items-center gap-2">
-              <span className="text-base font-medium font-pjs text-gray-500">Plan For ROI</span>
+              <span className="text-sm sm:text-base font-medium font-pjs text-gray-500">Plan For ROI</span>
               <div className="relative">
                 <select
                   value={planIdx}
                   onChange={(e) => setPlanIdx(Number(e.target.value))}
-                  className="appearance-none border border-gray-200 rounded-xl px-3 py-2 pr-8 text-sm font-medium text-gray-700 outline-none cursor-pointer hover:border-gray-400 transition-colors bg-white"
+                  className="appearance-none border border-gray-200 rounded-xl px-3 py-2 pr-8 text-xs sm:text-sm font-medium text-gray-700 outline-none cursor-pointer hover:border-gray-400 transition-colors bg-white"
                 >
                   {PLANS.map((p, i) => (
                     <option key={p.label} value={i}>{p.label}</option>
@@ -159,7 +159,7 @@ export default function ROICalculator() {
                 <button
                   key={t}
                   onClick={() => setAnnual(t === "Annual")}
-                  className={`px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  className={`px-4 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 ${
                     (t === "Annual") === annual
                       ? "bg-[#35E834] text-black shadow-sm"
                       : "text-gray-500"
@@ -224,7 +224,7 @@ export default function ROICalculator() {
         </div>
 
         {/* ── Bottom bar ── + Button */}
-        <div className="flex flex-row items-center justify-between gap-4 mt-6 pt-6 border-t border-gray-100">
+        <div className="flex flex-col sm:flex-row  items-center justify-between gap-4 mt-6 pt-6 border-t border-gray-100">
           <div className="flex gap-8">
             {[
               { bold: "30-Day Money-Back:", text: (<>Love <br /> It Or Get A Full Refund.</>) },
@@ -241,7 +241,7 @@ export default function ROICalculator() {
           </div>
 
           <button
-            className="flex-shrink-0 bg-[#35E834] cursor-pointer text-black font-bold font-degular px-16 py-3 rounded-full text-lg transition-all duration-200 hover:scale-105 hover:brightness-110"
+            className="flex-shrink-0 bg-[#35E834] cursor-pointer text-black font-bold font-degular px-8 sm:px-16 py-1.5  sm:py-3 rounded-full text-sm sm:text-lg transition-all duration-200 hover:scale-105 hover:brightness-110"
             style={{ boxShadow: "0 0 18px 4px rgba(8,165,65,0.4)" }}
           >
             Get Started →

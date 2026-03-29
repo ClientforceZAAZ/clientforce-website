@@ -32,14 +32,14 @@ function ActionCard({ children, title, description, delay, visible, className = 
         transition: `opacity 0.6s ease ${delay}, transform 0.6s ease ${delay}, box-shadow 0.3s ease`,
         boxShadow: hovered ? "0 16px 48px rgba(0,0,0,0.10)" : "0 2px 16px rgba(0,0,0,0.05)",
       }}
-      className={`rounded-4xl border border-gray-300 overflow-hidden ${className}`}
+      className={`rounded-[40px] border border-gray-300 overflow-hidden ${className} w-fit`}
     >
       {/* Animation Area */}
       <div className="flex-1">
          {cardImage}
       </div>
       {/* Text */}
-      <div className=" pb-4 mt-6">
+      <div className=" p-4 mt-6">
         <p className="text-lg text-black leading-relaxed">{description}</p>
       </div>
     </div>
@@ -70,7 +70,7 @@ export default function NextBestActions() {
       </div>
 
       {/* Top row — 3 equal cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 place-items-center">
         <ActionCard
           delay="0.1s"
           visible={visible}
@@ -102,7 +102,7 @@ export default function NextBestActions() {
       </div>
 
       {/* Bottom row — left narrower, right wider */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 place-items-center">
         <ActionCard
           delay="0.4s"
           visible={visible}
@@ -116,9 +116,9 @@ export default function NextBestActions() {
         <ActionCard
           delay="0.5s"
           visible={visible}
-          className="md:col-span-3 flex bg-[#CBE7E9] items-center"
-          description={<p className="px-10"><span className="font-bold ">Clone</span> Top-Performing <br /> Campaigns To New <br /> Segments</p>}
-          cardImage={<Image src="/images/analytics/clone.png" width={542} height={459} />}
+          className="md:col-span-3 flex-col sm:flex sm:flex-row p-8 sm:p-0 bg-[#CBE7E9] h-full items-center"
+          description={<p className="px-10 "><span className="font-bold ">Clone</span> Top-Performing <br /> Campaigns To New <br /> Segments</p>}
+          cardImage={<Image src="/images/analytics/clone.png" width={542} height={459} className="" />}
         >
           {/* <CloneAnimation visible={visible} /> */}
         </ActionCard>

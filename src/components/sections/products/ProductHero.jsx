@@ -22,11 +22,18 @@ export default function ProductHero() {
     <PageHero
       headline={
         <>
-          Meet The <br /> ClientForceAI <br /> Product Suite
+          Meet The <br className="hidden lg:block" /> ClientForceAI{" "}
+          <br className="hidden md:block" /> Product Suite
         </>
       }
-      headlineStyle="text-5xl lg:text-[80px] leading-17"
-      description="Launch Self-Running AI Sales Agents That Prospect, Engage, And Close — End To End."
+      headlineStyle="text-4xl sm:text-6xl lg:text-[80px] leading-8 sm:leading-12 lg:leading-18 text-center lg:text-left"
+      descriptionStyle=" text-sm sm:text-lg text-center lg:text-left"
+      description={
+        <>
+          Launch Self-Running AI Sales Agents That Prospect, Engage,{" "}
+          <br className="block md:hidden" /> And Close — End To End.
+        </>
+      }
       primaryCTA={<PrimaryCTA variant="dark">Get Started</PrimaryCTA>}
       secondaryCTA={
         <Link
@@ -40,13 +47,13 @@ export default function ProductHero() {
       }
       metrics={
         <>
-          <div className="flex items-center justify-center gap-2 mb-30">
-            <span className="inline-block">
+          <div className="flex items-center justify-center gap-2 mb-10 lg:mb-30">
+            <span className="relative inline-block w-[100px] sm:w-[120px] md:w-[140px] aspect-[140/55]">
               <Image
                 src="/images/face notifications.png"
                 alt="Logo"
-                width={140}
-                height={55}
+                fill
+                className="object-contain"
               />
             </span>
             <span>★★★★★ 2,000+ USERS</span>
@@ -68,34 +75,36 @@ export default function ProductHero() {
       rightBg="bg-[#242E26]"
       leftBg="bg-linear-to-b from-[#EFFFF5] to-[#DAF4FF]"
       rightBgImage="url('/images/products/hero_bg_overlay.png')"
-
-      floatingCards={<>
-            <div className="absolute bottom-[12%] left-[8%] w-[45%] z-30"><StartBuildingCard /></div>
-            <div className="absolute bottom-[12%] right-[-8%] w-[45%] z-30"><LeadMagnetCard /></div>
-            <div className="absolute top-[4%] right-[20%] w-fit z-30">
-              <HeroTag
-              icon={<PiChatsLight size={26} strokeWidth={10}/>}
+      floatingCards={
+        <>
+          <div className="absolute bottom-[12%] left-[8%] w-[45%] z-30">
+            <StartBuildingCard />
+          </div>
+          <div className="absolute bottom-[12%] right-[-8%] w-[45%] z-30">
+            <LeadMagnetCard />
+          </div>
+          <div className="absolute top-[4%] right-[20%] w-fit z-30">
+            <HeroTag
+              icon={<PiChatsLight size={26} strokeWidth={10} />}
               text="Follow Ups"
               bgColor="bg-[#CE6ABA]"
-              />
-            </div>
-            <div className="absolute top-[50%] left-[7%] w-fit z-30">
-              <HeroTag
+            />
+          </div>
+          <div className="absolute flex gap-2 top-[50%] left-[7%] w-fit z-30">
+            <HeroTag
               icon={<BiSearchAlt2 size={20} />}
               text="Finds Prospects"
               bgColor="bg-[#0FB6C7]"
-              />
-            </div>
-            <div className="absolute top-[50%] left-[34%] w-fit z-30">
-              <HeroTag
+            />
+
+            <HeroTag
               icon={<LiaPhoneAltSolid size={20} />}
               text="Calls"
               bgColor="bg-[#B18DD7]"
-              />
-            </div>
-            
-        </>}
-      
+            />
+          </div>
+        </>
+      }
     />
   );
 }

@@ -23,8 +23,8 @@ function useVisible(threshold = 0.15) {
 // Shared Components
 function SectionHead({ children, headBgColor }) {
   return (
-    <div className="flex justify-center mb-14">
-      <div className={`${headBgColor} rounded-full px-5 py-2 font-degular text-white text-4xl font-semibold`}>
+    <div className="flex justify-center mb-6 md:mb-14">
+      <div className={`${headBgColor} rounded-full px-5 py-2 font-degular  text-white text-lg sm:text-2xl md:text-4xl font-semibold`}>
         {children}
       </div>
     </div>
@@ -72,7 +72,7 @@ function LongHorizontalCard({ image, imageAlt = "", title, description, classNam
       className={`rounded-2xl overflow-hidden flex ${imageLeft ? "flex-row" : "flex-row-reverse"} items-center ${className}`}
     >
       {image && (
-        <div className="w-[40%] overflow-hidden">
+        <div className="w-[40%] overflow-hidden hidden md:block">
           <Image
             src={image}
             alt={imageAlt}
@@ -99,9 +99,9 @@ function LongHorizontalCard({ image, imageAlt = "", title, description, classNam
 function WhatAgentDoes() {
   const [ref, visible] = useVisible();
   return (
-    <div ref={ref} className="mb-18">
+    <div ref={ref} className="mb-8 md:mb-18">
       <SectionHead headBgColor="bg-[#6BE8FD36]">What An Agent Does All Day</SectionHead>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {[
           {
             image: "/images/agents/auto_prospecting.png",
@@ -151,12 +151,12 @@ function WhatAgentDoes() {
 function StartAnAgent() {
   const [ref, visible] = useVisible();
   return (
-    <div ref={ref} className="mb-14">
+    <div ref={ref} className="mb-8 md:mb-18">
       <SectionHead headBgColor="bg-[#6BE8FD36]">
         <span className="text-white font-bold">Start An Agent</span>{" "}
         <span className="text-[#FFFFFF99] font-normal">(3 Build Paths)</span>
       </SectionHead>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {[
           {
             image: "/images/agents/start_ai.png",
@@ -192,15 +192,15 @@ function TeachYourAgent(){
             <LongHorizontalCard
             image="/images/agents/teach_your_agent.png"
             title="Teach Your Agent (Knowledge & Positioning)"
-            titleTextStyle="text-[40px] max-w-[530px] leading-12 mb-4"
+            titleTextStyle="text-2xl md:text-[40px] max-w-[530px] leading-8 md:leading-12 mb-4"
             description="Upload PDFs, URLs, Docs and your Agent will extract product, pricing, proof, objections, and differentiators—so every email, WA, call script, and proposal sounds like your best closer."
-            descriptionTextTyle="text-[#FFFFFF99] text-base max-w-[520px] font-normal"
+            descriptionTextTyle="text-[#FFFFFF99] text-[14px] md:text-base max-w-[520px] font-normal"
             delay="0.2s"
             className="bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#6BE8FD33] border border-[#FFFFFF0D] p-6"
             visible={visible}
             imageLeft={false}
             moreDescription={<>
-                <div className="mt-12 flex flex-col gap-2 justify-between items-start">
+                <div className="mt-8 md:mt-12 flex flex-col gap-2 justify-between items-start">
                     <p className="text-white text-xs font-light flex items-center gap-1"><IoIosCheckmarkCircle size={16} className="inline-block" /><span className="font-bold">ICP & Tone:</span> industry, roles, geo, voice.</p>
                     <p  className="text-white text-xs font-light flex items-center gap-1"><IoIosCheckmarkCircle size={16} className="inline-block" /><span className="font-bold">Variables:</span> first_name, company, industry, pain_point, proof_snippet, booking_link.
                     </p>
@@ -310,90 +310,123 @@ function LeadSources() {
         </span>
       </SectionHead>
 
+      <div className="grid grid-cols-1 lg:grid-cols-9 gap-6">
+        {/*  Finder V2: takes 2 cols, full height visible from lg: above */}
+        <div
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0px)" : "translateY(24px)",
+            transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
+          }}
+          className="col-span-3 bg-[#0d1f0d] rounded-2xl overflow-hidden hidden lg:flex flex-col justify-center p-6 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] "
+        >
+          <div className="">
+            <h3 className="text-white font-bold text-xl leading-snug">
+              Finder V2 — <br />
+              Automated Discovery
+            </h3>
+            <p className="text-[#FFFFFF99] text-sm mt-2 leading-relaxed">
+              Define Keywords, Geo, Industry, Frequency: Auto-Ingest Verified
+              Leads Daily Or Route For Review.
+            </p>
+          </div>
+          <div className="mt-auto overflow-hidden">
+            <Image
+              src="/images/agents/leads_finder.png"
+              alt="Finder V2"
+              width={323}
+              height={342}
+              quality={100}
+              className="object-cover rounded-t-xl"
+            />
+          </div>
+        </div>
 
-        <div className="grid grid-cols-9 gap-6">
-
-          {/*  Finder V2: takes 2 cols, full height */}
+        {/* RIGHT — Container: takes 3 cols */}
+        <div className=" lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-col gap-6">
+          {/*  Finder V2: visible at lg and below */}
           <div
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? "translateY(0px)" : "translateY(24px)",
               transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
             }}
-            className="col-span-3 bg-[#0d1f0d] rounded-2xl overflow-hidden flex flex-col justify-center p-6 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D]"
+            className=" col-span-1 bg-[#0d1f0d] rounded-2xl overflow-hidden lg:hidden flex flex-col items-center justify-center p-6 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] "
           >
-            <div className="">
+            <div className="mb-4">
               <h3 className="text-white font-bold text-xl leading-snug">
-                Finder V2 — <br />Automated Discovery
+                Finder V2 — <br />
+                Automated Discovery
               </h3>
               <p className="text-[#FFFFFF99] text-sm mt-2 leading-relaxed">
-                Define Keywords, Geo, Industry, Frequency: Auto-Ingest Verified Leads Daily Or Route For Review.
+                Define Keywords, Geo, Industry, Frequency: Auto-Ingest Verified
+                Leads Daily Or Route For Review.
               </p>
             </div>
-            <div className="mt-auto overflow-hidden">
+            <div className=" overflow-hidden">
               <Image
                 src="/images/agents/leads_finder.png"
                 alt="Finder V2"
-                width={323}
-                height={342}
+                width={200}
+                height={210}
                 quality={100}
                 className="object-cover rounded-t-xl"
               />
             </div>
           </div>
 
-          {/* RIGHT — Container: takes 3 cols */}
-          <div className="col-span-6 flex flex-col gap-6">
+          {/* Top Left — Chrome Capture: text left, image right */}
 
-            {/* Top Left — Chrome Capture: text left, image right */}
-            <div
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0px)" : "translateY(24px)",
-                transition: "opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s",
-              }}
-              className=" bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-row gap-4 p-6"
-            >
-              <div className="flex-1">
-                <h3 className="text-white font-bold text-xl leading-snug">
-                  Chrome Capture — One-Click Prospecting
-                </h3>
-                <p className="text-[#FFFFFF99] text-sm mt-2 leading-relaxed">
-                  Grab Contact Data From LinkedIn/GMB/ Any Site And Drop Leads Straight Into The Right Agent Playbook.
-                </p>
-              </div>
-              <div className=" flex-shrink-0">
-                <Image
-                  src="/images/agents/leads_chrome.png"
-                  alt="Chrome Capture"
-                  width={323}
-                  height={179}
-                  quality={100}
-                  className=" object-contain rounded-lg"
-                />
-              </div>
+          <div
+            style={{
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0px)" : "translateY(24px)",
+              transition: "opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s",
+            }}
+            className=" col-span-1 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex lg:flex-row flex-col items-center justify-center gap-4 p-6"
+          >
+            <div className="flex-1">
+              <h3 className="text-white font-bold text-xl leading-snug">
+                Chrome Capture — One-Click Prospecting
+              </h3>
+              <p className="text-[#FFFFFF99] text-sm mt-2 leading-relaxed">
+                Grab Contact Data From LinkedIn/GMB/ Any Site And Drop Leads
+                Straight Into The Right Agent Playbook.
+              </p>
             </div>
- 
+            <div className=" flex-shrink-0">
+              <Image
+                src="/images/agents/leads_chrome.png"
+                alt="Chrome Capture"
+                width={323}
+                height={179}
+                quality={100}
+                className=" object-contain rounded-lg"
+              />
+            </div>
+          </div>
 
-            <div className="flex gap-6">
-                {/* CSV: text left, image right */}
+          <div className="sm:flex sm:flex-row flex-col gap-6 col-span-1 sm:col-span-2">
+            {/* CSV: text left, image right */}
             <div
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0px)" : "translateY(24px)",
-                transition: "opacity 0.55s ease 0.4s, transform 0.55s ease 0.4s",
+                transition:
+                  "opacity 0.55s ease 0.4s, transform 0.55s ease 0.4s",
               }}
-              className="bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-col items-center p-6"
+              className="bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-col items-center p-6 mb-6 sm:mb-0"
             >
               <div className=" flex-1">
                 <h3 className="text-white font-bold text-xl leading-snug">
                   CSV Import & Validation
                 </h3>
                 <p className="text-[#FFFFFF99] text-sm mt-2 leading-relaxed">
-                  Drag-And-Drop Lists; We Map Fields, Dedupe, And Verify Emails To Protect Reputation.
+                  Drag-And-Drop Lists; We Map Fields, Dedupe, And Verify Emails
+                  To Protect Reputation.
                 </p>
               </div>
-              <div className=" flex-shrink-0">
+              <div className=" flex-shrink-0 mt-4 sm:mt-0">
                 <Image
                   src="/images/agents/leads_csv.png"
                   alt="CSV Import"
@@ -405,12 +438,13 @@ function LeadSources() {
               </div>
             </div>
 
-             {/*  Embeddable Widgets: image top, text bottom */}
+            {/*  Embeddable Widgets: image top, text bottom */}
             <div
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0px)" : "translateY(24px)",
-                transition: "opacity 0.55s ease 0.3s, transform 0.55s ease 0.3s",
+                transition:
+                  "opacity 0.55s ease 0.3s, transform 0.55s ease 0.3s",
               }}
               className="bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-col p-6 items-center"
             >
@@ -429,15 +463,15 @@ function LeadSources() {
                   Embeddable Widgets — Chat & Callback
                 </h3>
                 <p className="text-[#FFFFFF99] text-sm mt-1 leading-relaxed">
-                  Add Branded Widgets To Your Site For Live Chat, Email Capture, Or "Call Me Back"—Every Submission Goes To The Correct Campaign, Tagged And Ready.
+                  Add Branded Widgets To Your Site For Live Chat, Email Capture,
+                  Or "Call Me Back"—Every Submission Goes To The Correct
+                  Campaign, Tagged And Ready.
                 </p>
               </div>
             </div>
-            </div>
-
           </div>
-          
         </div>
+      </div>
     </div>
   );
 }
@@ -452,9 +486,9 @@ function UnifiedInbox(){
             <LongHorizontalCard
             image="/images/agents/unified_inbox.png"
             title="Unified Inbox(Every Conversation, One Place)"
-            titleTextStyle="text-[30px] max-w-[480px] leading-12 mb-4"
+            titleTextStyle="text-2xl md:text-[30px] max-w-[480px] leading-8 md:leading-12 mb-4"
             description="Auto-Generate Personalized, On-Brand Proposals With Company, Industry, And Pain-Point Context—Send Thousands With One Click, Tracked To Close."
-            descriptionTextTyle="text-[#FFFFFF99] text-base max-w-[520px] font-normal"
+            descriptionTextTyle="text-[#FFFFFF99] text-[14px] md:text-base max-w-[520px] font-normal"
             delay="0.2s"
             className="bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] p-6"
             visible={visible}
@@ -462,7 +496,7 @@ function UnifiedInbox(){
            
             />
 
-            <div className="grid grid-cols-2 gap-10 my-18">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 my-8 md:my-18">
               {/* Dynamic Proposals */}
               <div
                 style={{
@@ -483,10 +517,10 @@ function UnifiedInbox(){
                   />
                 </div>
                 <div className="mt-8">
-                  <h3 className="text-white font-bold text-4xl leading-10">
+                  <h3 className="text-white font-bold text-2xl sm:text-4xl leading-8 sm:leading-10">
                     Dynamic Proposals <br /> At Scale
                   </h3>
-                  <p className="text-[#FFFFFF99] text-base mt-3 leading-relaxed">
+                  <p className="text-[#FFFFFF99] text-sm sm:text-base mt-3 leading-relaxed">
                     Auto-Generate Personalized, On-Brand Proposals With Company, Industry,
                     And Pain-Point Context—Send Thousands With One Click, Tracked To Close.
                   </p>
@@ -513,10 +547,10 @@ function UnifiedInbox(){
                   />
                 </div>
                 <div className="mt-8">
-                  <h3 className="text-white font-bold text-4xl leading-10">
+                  <h3 className="text-white font-bold text-2xl sm:text-4xl leading-8 sm:leading-10">
                     Analytics & <br /> Optimization
                   </h3>
-                  <p className="text-[#FFFFFF99] text-base mt-3 leading-relaxed">
+                  <p className="text-[#FFFFFF99] text-sm sm:text-base mt-3 leading-relaxed">
                     See What Books Calls And Closes Revenue: Subject A/Bs, Step Performance,
                     Reply/Booking Rates, Deliverability Health, And Number Reputation.
                     Double-Down On What Works.
@@ -529,7 +563,7 @@ function UnifiedInbox(){
           <LongHorizontalCard
             image="/images/agents/compliance.png"
             title="Compliance & Deliverability"
-            titleTextStyle="text-[35px] leading-12 mb-4"
+            titleTextStyle="text-2xl  sm:text-[35px] leading-8 sm:leading-12 mb-4"
             description=""
             descriptionTextTyle=""
             delay="0.2s"
@@ -539,16 +573,28 @@ function UnifiedInbox(){
             moreDescription={<>
                 <div className="mt-2 flex flex-col gap-4 justify-between items-start w-full">
                     <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                        <Image src="/images/agents/icons/compliance_email.svg" width={45} height={45} />
-                        <p className="text-white text-lg font-light w-full"><span className="font-bold">Email:</span> domain verification, warm-up, send caps, automatic unsub.</p>
+                       <Image
+                          src="/images/agents/icons/compliance_email.svg"
+                          alt="Compliance Email"
+                          width={45}
+                          height={45}
+                          className="w-8 h-8  sm:w-[45px] sm:h-[45px]"
+                        />
+                        <p className="text-white text-xs sm:text-lg font-light w-full"><span className="font-bold">Email:</span> domain verification, warm-up, send caps, automatic unsub.</p>
                     </div>
                     <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                        <Image src="/images/agents/icons/compliance_whatsapp.svg" width={45} height={45} />
-                        <p className="text-white text-lg font-light w-full"><span className="font-bold">WhatsApp:</span>  template approvals + email fallback.</p>
+                        <Image src="/images/agents/icons/compliance_whatsapp.svg" 
+                        width={45}
+                          height={45}
+                          className="w-8 h-8  sm:w-[45px] sm:h-[45px]" />
+                        <p className="text-white text-xs sm:text-lg font-light w-full"><span className="font-bold">WhatsApp:</span>  template approvals + email fallback.</p>
                     </div>
                     <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-                        <Image src="/images/agents/icons/compliance_voice.svg" width={45} height={45} />
-                        <p className="text-white text-lg font-light w-full"><span className="font-bold">Voice:</span>  reputation monitoring, DNC honoring, polite retry policy.</p>
+                        <Image src="/images/agents/icons/compliance_voice.svg" 
+                          width={45}
+                          height={45}
+                          className="w-8 h-8  sm:w-[45px] sm:h-[45px]"/>
+                        <p className="text-white text-xs sm:text-lg font-light w-full"><span className="font-bold">Voice:</span>  reputation monitoring, DNC honoring, polite retry policy.</p>
                     </div>
                 </div>
               </>}
@@ -566,7 +612,7 @@ function UnifiedInbox(){
 export default function AgentDeepDive() {
   return (
     <section
-      className="w-full px-6 lg:px-20 py-20"
+      className="w-full px-6 lg:px-20 py-10 md:py-20"
       style={{
         background: "linear-gradient(to bottom, #000000, #0F2212)",
       }}

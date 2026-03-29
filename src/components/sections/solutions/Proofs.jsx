@@ -221,9 +221,9 @@ export function AnalyticsScrollRow({ cards = [], title, subtitle }) {
   }
 
   return (
-    <section ref={ref} className="pt-18 pb-10 px-6 lg:px-16 bg-[#EEF9FA]">
+    <section ref={ref} className=" pt-8 md:pt-18 pb-8 md:pb-10 px-6 lg:px-16 bg-[#EEF9FA]">
 
-     <h1 className="text-5xl font-bold text-center mb-12 font-degular">Proof That Moves The Needle</h1>
+     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 font-degular">Proof That Moves The Needle</h1>
 
       {/* Scrollable row */}
       <div
@@ -265,7 +265,7 @@ export function AnalyticsScrollRow({ cards = [], title, subtitle }) {
             </button>
           </div>
 
-          <p className=" text-[#606060] text-[27px] text-center font-degular my-4">(Results vary by niche, list quality, and offer strength.)</p>
+          <p className=" text-[#606060] text-lg sm:text-xl md:text-2xl lg:text-[27px] text-center font-degular my-4">(Results vary by niche, list quality, and offer strength.)</p>
     </section>
   );
 }
