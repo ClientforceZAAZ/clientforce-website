@@ -158,7 +158,7 @@ export default function FeatureTabs({ TABS = [] }) {
           <Notch x={notchX} bgColor="#f5f5f3" />
 
           {/* Left: copy */}
-          <div className=" flex-1 flex flex-col items-center justify-center">
+          <div className=" flex-1 flex flex-col justify-center">
             <h2
               className={`mb-4 text-2xl sm:text-4xl ${activeTab.headingStyle} font-bold leading-7 sm:leading-tight text-gray-900`}
             >
