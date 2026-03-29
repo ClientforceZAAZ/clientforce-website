@@ -203,7 +203,7 @@ export default function FeatureTabs({ TABS = [] }) {
               </div>
             )}
             {activeTab.btn && (
-              <button className="flex items-center justify-center gap-2 rounded-md border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-900 transition hover:border-gray-900 hover:bg-gray-50">
+              <button className="flex items-center justify-center gap-2 w-fit rounded-md border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-900 transition hover:border-gray-900 hover:bg-gray-50">
                 Learn More <Image src="/icons/→.svg" width={11} height={15} />
               </button>
             )}
