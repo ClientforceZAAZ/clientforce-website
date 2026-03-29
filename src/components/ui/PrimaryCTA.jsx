@@ -37,7 +37,7 @@ export default function CTA({
       
       {/* Bottom extension */}
       <span
-        className={`absolute left-1/2 -translate-x-1/2 top-full mt-[-7.5] w-[97%] h-3 bg-[#0AD855] rounded-md transition-all duration-300 group-hover:mt-[-12] ${selected.extension}`}
+        className={`absolute left-1/2 -translate-x-1/2 top-full mt-[-7.5] w-[97%] h-3 bg-[#0AD855] rounded-lg transition-all duration-300 group-hover:mt-[-12] ${selected.extension}`}
       ></span>
 
       <Link

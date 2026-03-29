@@ -31,7 +31,7 @@ export default function PricingSection() {
       {/* Top Hero Section */}
 
       <div
-        className="flex-col lg:flex lg:flex-row items-center justify-between px-8 sm:px-16 z-30 pt-6 md:pt-12 pb-16 lg:pb-0 bg-cover bg-center gap-6"
+        className="flex-col lg:flex lg:flex-row justify-between px-8 sm:px-16 z-30 pt-6 md:pt-12 pb-16 lg:pb-0 bg-cover bg-center gap-6"
         style={{ backgroundImage: "url('/images/pricing/pricing_heroBg.png')" }}
       >
         {/* LEFT */}
@@ -67,7 +67,7 @@ export default function PricingSection() {
 
           <div className="flex items-center justify-center lg:justify-start gap-2 mt-4 z-30">
             <div
-              className="flex items-center bg-white rounded-xl px-4 py-4 gap-1.5 sm:gap-3 
+              className="flex items-center bg-white rounded-lg px-4 py-4 gap-1.5 sm:gap-3 
              shadow-sm border border-gray-200 w-full max-w-60 sm:max-w-md lg:max-w-xl"
             >
               <svg
@@ -89,7 +89,7 @@ export default function PricingSection() {
                 className="flex-1 text-xs sm:text-sm text-gray-600 placeholder-[#787878] outline-none bg-transparent z-30"
               />
             </div>
-            <button className="bg-[linear-gradient(90deg,#6d6f46,#3c413c,#3d423e,#3e5548,#3a7d47)] text-white text-xs sm:text-sm font-semibold px-5 py-4 rounded-lg hover:bg-gray-700 duration-200 flex-shrink-0 z-30 hover:scale-105 transition-all ease-in-out">
+            <button className="bg-[linear-gradient(90deg,#6d6f46,#3c413c,#3d423e,#3e5548,#3a7d47)] text-white text-xs sm:text-sm font-semibold px-5 py-4 rounded-sm hover:bg-gray-700 duration-200 flex-shrink-0 z-30 hover:scale-105 transition-all ease-in-out">
               Search
             </button>
           </div>
