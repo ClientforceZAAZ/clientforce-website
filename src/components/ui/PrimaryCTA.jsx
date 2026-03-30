@@ -37,12 +37,12 @@ export default function CTA({
       
       {/* Bottom extension */}
       <span
-        className={`absolute left-1/2 -translate-x-1/2 top-full mt-[-7.5] w-[97%] h-3 bg-[#0AD855] rounded-md transition-all duration-300 group-hover:mt-[-12] ${selected.extension}`}
+        className={`absolute left-1/2 -translate-x-1/2 top-full mt-[-7.5] w-[97%] h-3 bg-[#0AD855] rounded transition-all duration-300 group-hover:mt-[-12] ${selected.extension}`}
       ></span>
 
       <Link
         href={href}
-        className={`relative inline-flex items-center justify-center px-2 sm:px-4 py-3 rounded-md font-bold transition-transform duration-300 hover:-translate-y-1 ${selected.text} ${selected.border} ${className}`}
+        className={`relative inline-flex items-center justify-center px-2 sm:px-4 py-3 rounded font-bold transition-transform duration-300 hover:-translate-y-1 ${selected.text} ${selected.border} ${className}`}
       >
         {/* Background layer */}
         <span
