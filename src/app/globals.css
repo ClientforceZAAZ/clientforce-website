@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Required for Turbopack + Tailwind v4 */
+@source "../app/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../lib/**/*.{js,ts,jsx,tsx}";
+@source "../hooks/**/*.{js,ts,jsx,tsx}";
+@source "../sanity/**/*.{js,ts,jsx,tsx}";
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,7 +18,6 @@
   --font-pjs: var(--font-pjs);
   --font-bebas: var(--font-bebas);
   --font-source-serif: var(--font-source-serif);
-
 }
 
 
