@@ -11,12 +11,14 @@ import { client } from "@/sanity/lib/client";
 
 
 export async function generateStaticParams() {
-  const slugs = await sanityFetch({
+  const result = await sanityFetch({
     query: ALL_POST_SLUGS_QUERY,
   });
-
-  if (!slugs) return []; // fallback
-
+  
+  const slugs = result?.data || []; // ADD .data
+  
+  if (!slugs.length) return [];
+  
   return slugs.map((item) => ({
     slug: item.slug,
   }));
@@ -37,12 +39,14 @@ function formatDate(dateString) {
 // Generate metadata dynamically per post
 export async function generateMetadata({ params }) {
   try {
-      const post = await sanityFetch({
+    const result = await sanityFetch({
       query: POST_BY_SLUG_QUERY,
       params: { slug: (await params).slug },
     });
-
-    if (!post) return [];
+    
+    const post = result?.data; // ADD .data
+    
+    if (!post) return {};
 
     const coverImageUrl = post.coverImage
       ? urlForImage(post.coverImage).width(1200).height(630).url()
@@ -84,9 +88,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const slug = (await params).slug;
+ const slug = (await params).slug;
 
-   // Fetch post and recent posts in parallel with error handling
   let post = null;
   let recentPosts = [];
 
@@ -96,14 +99,12 @@ export default async function BlogPostPage({ params }) {
       sanityFetch({ query: RECENT_POSTS_QUERY }),
     ]);
     
-    post = postResult;
-    recentPosts = recentResult || [];
+    post = postResult?.data; //  ADD .data
+    recentPosts = recentResult?.data || []; //  ADD .data
   } catch (error) {
     console.error('Failed to fetch blog data:', error);
-    // post remains null, recentPosts remains empty
   }
 
-  // Show 404 if post not found
   if (!post) notFound();
 
   const coverImageUrl = post?.coverImage

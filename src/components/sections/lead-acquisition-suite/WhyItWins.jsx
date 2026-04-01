@@ -135,12 +135,13 @@ export default function WhyItWins() {
           }}
           className="flex items-center gap-4 md:gap-20"
         >
-          <span><Image src="/images/lead-acquisition-suite/icons/WhyItWins-left.svg" width={50} height={50} /></span>
+          <span><Image src="/images/lead-acquisition-suite/icons/whyItWins-left.svg" width={50} height={50} /></span>
           <h2 className=" text-3xl md:text-5xl lg:text-6xl font-extrabold text-white font-degular">
             Why It Wins
           </h2>
-          <span><Image src="/images/lead-acquisition-suite/icons/WhyItWins-right.svg" width={50} height={50} /></span>
+          <span><Image src="/images/lead-acquisition-suite/icons/whyItWins-right.svg" width={50} height={50} /></span>
         </div>
+
 
         {/* Cards Row — two on left*/}
         <div className="w-full flex-col md:flex md:flex-row items-center justify-center md:justify-between  absolute top-70 md:top-108 px-14">

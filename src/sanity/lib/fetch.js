@@ -14,9 +14,9 @@ import { client } from './client'
 export async function sanityFetch({ query, params = {} }) {
   try {
     const data = await client.fetch(query, params)
-    return data
+    return { data } // Return object with data property
   } catch (error) {
     console.error('Sanity fetch failed:', error)
-    return null
+    return { data: null } // Consistent return shape
   }
 }

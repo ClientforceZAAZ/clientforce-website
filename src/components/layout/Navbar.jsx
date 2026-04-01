@@ -42,7 +42,7 @@ const NAV_ITEMS = [
   { label: "Solutions", key: "solutions", href: "/solutions" },
   { label: "Pricing",   key: "",          href: "/pricing"   },
   { label: "Resources", key: "resources", href: "#"          },
-   { label: "Blog", key: "", href: "/blog"},
+  { label: "Blog", key: "", href: "/blog"},
 ];
 
 // ─── MenuItem ──────────────────────────────────────────────────────────────────
@@ -267,32 +267,40 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <ul className="hidden lg:flex items-center gap-2 lg:gap-8 font-medium text-[#787878] text-base">
-          {NAV_ITEMS.map((item) => (
-            <li
-              key={item.label}
-              onMouseEnter={() => { setActiveMenu(item.key); setHoveredItem(item.key); }}
-              onMouseLeave={() => setHoveredItem(null)}
-              className="cursor-pointer"
-              style={{
-                backgroundColor: hoveredItem === item.key ? "#A4A4A41F" : "",
-                border: hoveredItem === item.key ? "1px solid #DBD9DF" : "1px solid transparent",
-                color: hoveredItem === item.key ? "black" : "",
-                padding: "6px 12px",
-                borderRadius: "8px",
-                transition: "color 0.2s, background-color 0.2s, border-color 0.2s",
-              }}
-            >
-              <Link href={item.href} className="flex items-center gap-0.5">
-                {item.label}
-                {item.key && (
-                  <ChevronDown
-                    className="w-4 h-4 transition-transform duration-200"
-                    style={{ transform: activeMenu === item.key ? "rotate(180deg)" : "rotate(0deg)" }}
-                  />
-                )}
-              </Link>
-            </li>
-          ))}
+
+{NAV_ITEMS.map((item) => (
+  <li
+    key={item.label}
+    onMouseEnter={() => { 
+      if (item.key) {
+        setActiveMenu(item.key);  // Has dropdown: set active menu
+      } else {
+        setActiveMenu(null);       // No dropdown: close any open dropdown
+      }
+      setHoveredItem(item.label);
+    }}
+    onMouseLeave={() => setHoveredItem(null)}
+    className="cursor-pointer"
+    style={{
+      backgroundColor: hoveredItem === item.label ? "#A4A4A41F" : "",  // Check against label
+      border: hoveredItem === item.label ? "1px solid #DBD9DF" : "1px solid transparent",
+      color: hoveredItem === item.label ? "black" : "",
+      padding: "6px 12px",
+      borderRadius: "8px",
+      transition: "color 0.2s, background-color 0.2s, border-color 0.2s",
+    }}
+  >
+    <Link href={item.href} className="flex items-center gap-0.5">
+      {item.label}
+      {item.key && (  // Only show chevron if key exists
+        <ChevronDown
+          className="w-4 h-4 transition-transform duration-200"
+          style={{ transform: activeMenu === item.key ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
+      )}
+    </Link>
+  </li>
+))}
         </ul>
 
         {/* Desktop auth buttons */}
