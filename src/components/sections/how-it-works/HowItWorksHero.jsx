@@ -9,7 +9,7 @@ const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 export default function HowItWorksHero() {
   return (
     <section
-      className="mt-21 pt-6 md:pt-12 bg-cover bg-center "
+      className="mt-18 lg:mt-21 pt-6 md:pt-12 bg-cover bg-center "
       style={{
         backgroundImage: "url('/images/how-it-works/howItWorks_hero.png')",
       }}

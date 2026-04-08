@@ -50,7 +50,7 @@ const SOCIAL_LINKS = [
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/clientforcehq?igsh=MTJ5MmNiMzVudnBwbQ==",
     icon: (
       <svg viewBox="0 0 24 24" className="h-4 w-4 stroke-white fill-none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -156,10 +156,10 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 text-xs text-gray-500 sm:flex-row">
           <p>Copyright © 2025. Clientforce AI. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="transition hover:text-white">
+            <Link href="https://clientforce.io/launch/terms-and-condition/" className="transition hover:text-white">
               Terms &amp; Conditions
             </Link>
-            <Link href="#" className="transition hover:text-white">
+            <Link href="https://clientforce.io/launch/privacy-policy-2/" className="transition hover:text-white">
               Privacy Policy
             </Link>
           </div>

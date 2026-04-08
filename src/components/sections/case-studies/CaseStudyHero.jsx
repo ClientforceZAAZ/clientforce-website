@@ -27,7 +27,7 @@ export default function PricingSection() {
   const [annual, setAnnual] = useState(false);
 
   return (
-    <section ref={ref} className="mt-18 md:mt-21  relative">
+    <section ref={ref} className="mt-18 lg:mt-21  relative">
       {/* Top Hero Section */}
 
       <div

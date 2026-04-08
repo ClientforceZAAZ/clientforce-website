@@ -9,7 +9,7 @@ const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 export default function AgentsHero() {
   return (
     <section
-      className="mt-21 pt-12 bg-cover bg-center"
+      className="mt-18 lg:mt-21 pt-12 bg-cover bg-center"
       style={{ backgroundImage: "url('/images/agents/agentHero_bg.png')" }}
     >
       <div>

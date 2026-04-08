@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function DynamicProposalsHero() {
   return (
-    <section className='mt-21 pt-12 bg-cover bg-center' style={{ backgroundImage: "url('/images/dynamic-proposals/dynamic_proposal_hero_bg.png')"}}>
+    <section className='mt-18 lg:mt-21 pt-12 bg-cover bg-center' style={{ backgroundImage: "url('/images/dynamic-proposals/dynamic_proposal_hero_bg.png')"}}>
         <div>
             <div className="flex items-center justify-center mb-2">
               <div className="relative p-0.5 rounded-full bg-[linear-gradient(270deg,#F437AB,#08A541,#08A541,#FF9D7C)]">

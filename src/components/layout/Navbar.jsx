@@ -34,7 +34,7 @@ const RESOURCES_ITEMS = [
   { icon: <Image src="/images/navbar/icons/case_studies.svg" width={22} height={22} />, title: "Case Studies", description: "Unified communication view with AI for managing leads and actions.", href: "/case-studies" },
   { icon: <Image src="/images/navbar/icons/integrationss.svg" width={22} height={22} />, title: "Integrations", description: "Transform interactions into insights and optimize with a click.", href: "/integrations" },
   { icon: <Image src="/images/navbar/icons/legal.svg" width={22} height={22} />, title: "Legal", description: "Create tailored proposals automatically for every lead, effortlessly.", href: "/legal" },
-  { icon: <Image src="/images/navbar/icons/customer-support.svg" width={22} height={22} />, title: "Help Center", description: "ClientForce ensures compliance and deliverability for seamless 24/7 operations.", href: "/help" },
+  { icon: <Image src="/images/navbar/icons/customer-support.svg" width={22} height={22} />, title: "Help Center", description: "ClientForce ensures compliance and deliverability for seamless 24/7 operations.", href: "https://clientforce.io/launch/go/resource-center" },
 ];
 
 const NAV_ITEMS = [
@@ -310,7 +310,7 @@ export default function Navbar() {
               Login
             </button>
           </Link>
-          <Link href="https://app.clientforce.io/signup">
+          <Link href="https://clientforce.io/launch/join">
             <button className="bg-[#35E834] text-black px-2.5 py-2.5 rounded-md text-sm lg:text-base cursor-pointer shadow-md flex items-center gap-2 hover:brightness-110 transition-all">
               Sign Up
               <Image src="/icons/signUpArrow.svg" alt="arrow" width={28} height={28} />
@@ -377,7 +377,7 @@ export default function Navbar() {
               </button>
             </Link>
             
-            <Link href="https://app.clientforce.io/signup">
+            <Link href="https://clientforce.io/launch/join">
               <button className="w-full bg-[#35E834] text-black px-4 py-3 rounded-md text-base font-bold cursor-pointer shadow-md flex items-center justify-center gap-2 hover:brightness-110 transition-all">
                 Sign Up
                 <Image src="/icons/signUpArrow.svg" alt="arrow" width={28} height={28} />

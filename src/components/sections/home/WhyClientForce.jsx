@@ -36,10 +36,6 @@ function FeautureCard ({ image, title, description, index, isVisible }) {
     return(
         <div 
           style={ {
-            transitionDelay: isVisible ? `${index * 120}ms` : "0ms",
-            transition: "opacity 0.6s ease, transform 0.6s ease",
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(32px)",
           }}
          className="font-degular flex flex-col items-center text-center gap-3 transition ease-in-out border border-gray-200 rounded-3xl pb-4 shadow-md">
             <div className="w-full overflow-hidden">

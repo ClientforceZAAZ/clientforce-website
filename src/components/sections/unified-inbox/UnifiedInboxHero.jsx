@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function UnifiedInboxHero() {
   return (
-    <section className="relative mt-21 pt-12 bg-cover bg-center bg-gradient-to-b from-white via-white/50 to-[#35E834]/22">
+    <section className="relative mt-18 lg:mt-21 pt-12 bg-cover bg-center bg-gradient-to-b from-white via-white/50 to-[#35E834]/22">
       <div>
         <div className="flex items-center justify-center">
           <div className="relative p-0.5 rounded-full bg-[linear-gradient(270deg,#F437AB,#08A541,#08A541,#FF9D7C)]">

@@ -18,7 +18,7 @@ export default function PageHero({
   rightBgImage
 }) {
   return (
-    <section className="relative overflow-hidden mt-20">
+    <section className="relative overflow-hidden mt-18 lg:mt-20">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* LEFT */}
         <div
