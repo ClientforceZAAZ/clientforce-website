@@ -156,10 +156,10 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 text-xs text-gray-500 sm:flex-row">
           <p>Copyright © 2025. Clientforce AI. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="https://clientforce.io/launch/terms-and-condition/" className="transition hover:text-white">
+            <Link href="/terms-of-service" className="transition hover:text-white">
               Terms &amp; Conditions
             </Link>
-            <Link href="https://clientforce.io/launch/privacy-policy-2/" className="transition hover:text-white">
+            <Link href="/privacy-policy" className="transition hover:text-white">
               Privacy Policy
             </Link>
           </div>
