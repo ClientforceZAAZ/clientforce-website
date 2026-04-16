@@ -10,7 +10,7 @@ export default function Hero() {
       headline={<>Reach Every <br className="hidden lg:block" /> Prospect Where <br className="hidden md:block" /> They Actually Reply.</>}
       headlineStyle="text-4xl sm:text-[50px] lg:text-[66px] leading-10 sm:leading-12  lg:leading-16 text-center lg:text-left"
       description={<>Email, WhatsApp, LinkedIn, SMS, and AI Voice, Orchestrated In One Flow To Book Meetings And Close Deals, With Smart Timing, Fallbacks, And Compliance Built-In.</>}
-      descriptionStyle="text-sm sm:text-lg text-center lg:text-left"
+      descriptionStyle="text-sm sm:text-lg text-center lg:text-left pr-0 lg:pr-10"
       primaryCTA={<PrimaryCTA variant="dark">Get Started</PrimaryCTA>}
       secondaryCTA={<PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>}
       metrics={<>
@@ -26,7 +26,7 @@ export default function Hero() {
       rightBg=""
       rightBgImage="url('/images/multichannel-outreach/multichannel_rightBgImage.png')"
       floatingCards={<>
-        <div className="absolute top-[4%] left-[58%] w-[34%] z-30"> <Image src="/images/multichannel-outreach/linkedin_hero.svg" alt="Dashboard Preview" height={282} width={306} className="w-full h-auto" priority /></div>
+        <div className="absolute top-[4%] left-[58%] w-[34%] z-30"> <Image src="/images/multichannel-outreach/linkedIn_hero.svg" alt="Dashboard Preview" height={282} width={306} className="w-full h-auto" priority /></div>
         <div className="absolute top-[60%] left-[12%] w-[34%] z-30"> <Image src="/images/multichannel-outreach/multichannel_hero_face.png" alt="Dashboard Preview" height={282} width={306} className="w-full h-auto" priority /></div>
 
 

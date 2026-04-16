@@ -54,6 +54,8 @@ function Notch({ x, bgColor = "#f5f5f3" }) {
         width: NOTCH_W,
         height: NOTCH_H,
       }}
+
+      className="hidden sm:block"
     >
       <svg
         width={NOTCH_W}

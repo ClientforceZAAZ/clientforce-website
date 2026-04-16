@@ -51,7 +51,7 @@ export default function AgentsHero() {
           <PrimaryCTA variant="light">Watch 2-minutes Demo</PrimaryCTA>
         </div>
         <div>
-          <div className="flex items-center justify-center gap-2 mb-10 lg:mb-30">
+          <div className="flex items-center justify-center gap-2 mb-10 lg:mb-10">
             <span className="relative inline-block w-[100px] sm:w-[120px] md:w-[140px] aspect-[140/55]">
               <Image
                 src="/images/face notifications.png"
@@ -65,7 +65,7 @@ export default function AgentsHero() {
         </div>
 
         {/* Video Container */}
-        <div className="relative mt-14">
+        <div className="relative mt-0">
           <div className="absolute left-[42%] sm:left-[40%] md:left-[45%] top-[35%]">
             <div className="relative flex items-center justify-center w-15 h-15 sm:w-30 sm:h-30">
               {/* Pulse Ring */}

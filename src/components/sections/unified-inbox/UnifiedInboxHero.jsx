@@ -33,7 +33,7 @@ export default function UnifiedInboxHero() {
           <PrimaryCTA variant="light">Watch 2-minutes Demo</PrimaryCTA>
         </div>
         <div>
-          <div className="flex items-center justify-center gap-2 mb-10 lg:mb-20">
+          <div className="flex items-center justify-center gap-2 mb-10 lg:mb-10">
             <span className="relative inline-block w-[100px] sm:w-[120px] md:w-[140px] aspect-[140/55]">
               <Image
                 src="/images/face notifications.png"
@@ -49,7 +49,7 @@ export default function UnifiedInboxHero() {
         </div>
 
         {/* Video Container */}
-        <div className="relative mt-14">
+        <div className="relative mt-0">
           <div className="absolute  left-[40%] sm:left-[45%] top-[35%]">
             <div className="relative flex items-center justify-center w-20 sm:w-30 h-20 sm:h-30">
               {/* Pulse Ring */}

@@ -31,7 +31,7 @@ export default function DynamicProposalsHero() {
             </div>
 
             {/* Video Container */}
-            <div className="relative mt-14">
+            <div className="relative mt-10">
 
                 <div className="absolute left-[38%] sm:left-[40%] md:left-[45%] top-[35%]">
                     <div className="relative flex items-center justify-center w-20 sm:w-30 h-20 sm:h-30">

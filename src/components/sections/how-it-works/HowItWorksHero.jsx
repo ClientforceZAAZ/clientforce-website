@@ -103,7 +103,7 @@ export default function HowItWorksHero() {
         </div>
 
         <div>
-          <div className="flex items-center justify-center gap-2 mb-0 sm:mb-10 lg:mb-20">
+          <div className="flex items-center justify-center gap-2 mb-0 sm:mb-10">
             <span className="relative inline-block w-[100px] sm:w-[120px] md:w-[140px] aspect-[140/55]">
               <Image
                 src="/images/face notifications.png"
@@ -119,7 +119,7 @@ export default function HowItWorksHero() {
         </div>
 
         {/* Dashboard Preview */}
-        <div className="relative mt-6">
+        <div className="relative mt-0">
           <div className="flex items-center justify-center">
             <div className="p-4  rounded-2xl ">
               <Image
