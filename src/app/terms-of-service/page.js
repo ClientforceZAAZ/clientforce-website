@@ -7,6 +7,7 @@ const sections = [
   { id: "user-accounts", title: "User Accounts" },
   { id: "payments", title: "Payments" },
   { id: "intellectual-property", title: "Intellectual Property" },
+   { id: "Third-Party Data Sharing and Disclosure", title: "Third-Party Data Sharing and Disclosure" },
   { id: "liability", title: "Limitation of Liability" },
   { id: "termination", title: "Termination" },
   { id: "governing-law", title: "Governing Law" },
@@ -156,7 +157,7 @@ export default function TermsPage() {
               </Section>
 
               {/* PAYMENTS */}
-              <Section id="payments" title="User Accounts">
+              <Section id="payments" title="User Accounts(Payments)">
                 <ol className="list-decimal pl-6 space-y-4 text-justify">
                   <li>
                     <strong>Payment Obligation:</strong> By using Clientforce
@@ -306,6 +307,29 @@ export default function TermsPage() {
                     </ul>
                   </li>
                 </ol>
+              </Section>
+
+              {/* THIRD-PARTY DATA SHARING AND DISCLOSURE */}
+              <Section
+                id="Third-Party Data Sharing and Disclosure"
+                title="Third-Party Data Sharing and Disclosure"
+              >
+                {" "}
+                <p>
+                  Clientforce does not sell, rent, or share Google user data
+                  with third parties for advertising or marketing purposes.
+                </p>
+                <p>
+                  Google user data is only used to provide the core
+                  functionality of the platform, specifically to enable users to
+                  send emails on their own behalf. We do not access, read, or
+                  store Gmail inbox content. We may process and transmit limited
+                  data necessary to deliver the service, such as sending email
+                  requests through Google’s API. This data is not stored beyond
+                  what is required for service functionality. We do not use
+                  Google user data for profiling, analytics unrelated to the
+                  service, or any unauthorized purposes.
+                </p>{" "}
               </Section>
 
               {/* LIABILITY */}
