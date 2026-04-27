@@ -28,8 +28,13 @@ function FeatureGrid() {
   return (
     <div ref={ref} className="px-6 lg:px-20">
         <div className="flex justify-center">
-            <h1 className="text-black bg-[#D0F56B] text-3xl md:text-4xl lg:text-5xl px-6 py-2 rounded-full font-bold text-center font-degular mb-10">
+            <h1 className="text-[#D0F56B] text-3xl md:text-4xl lg:text-5xl px-6 py-2 rounded-full font-bold text-center font-degular">
                 What You See
+            </h1>
+        </div>
+        <div className="flex justify-center">
+            <h1 className="text-white border border-white text-2xl sm:text-3xl md:text-4xl px-6 py-2 rounded-full font-bold text-center font-degular mb-10">
+                Email Deliverability Shield
             </h1>
         </div>
 
@@ -41,22 +46,22 @@ function FeatureGrid() {
       transform: visible ? "translateY(0px)" : "translateY(24px)",
       transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
     }}
-    className="col-span-3 rounded-2xl overflow-hidden hidden lg:flex flex-col justify-center px-8 py-6 bg-white border border-[#00000024]"
+    className="col-span-3 rounded-2xl overflow-hidden hidden lg:flex flex-col justify-center px-8 py-6 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D]"
   >
     <div>
-      <h3 className="text-black font-bold text-xl leading-snug">
+      <h3 className="text-white font-bold text-xl leading-snug">
         Domain & Auth Checks
       </h3>
-      <p className="text-sm text-[#00000099]">
+      <p className="text-sm text-gray-300">
         DKIM/SPF/DMARC status, per-sender health, auto-warmup visibility.
       </p>
     </div>
 
     <div className="overflow-hidden mt-auto flex items-center justify-center">
       <img
-        src="/images/guardrails/"
+        src="/images/guardrails/domain_auth.png"
         alt="domain_auth"
-        className="object-cover rounded-xl h-[430px] w-full bg-[#0000001A]"
+        className="object-cover rounded-xl w-full bg-[#0000001A]"
       />
     </div>
   </div>
@@ -71,22 +76,22 @@ function FeatureGrid() {
         transform: visible ? "translateY(0px)" : "translateY(24px)",
         transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
       }}
-      className="col-span-1 rounded-2xl overflow-hidden lg:hidden flex flex-col items-center justify-center px-6 py-6 bg-white border border-[#00000024]"
+      className="col-span-1 rounded-2xl overflow-hidden lg:hidden flex flex-col items-center justify-center px-6 py-6 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D]"
     >
       <div className="mb-4">
-        <h3 className="text-black font-bold text-xl leading-snug">
+        <h3 className="text-white font-bold text-xl leading-snug">
           Domain & Auth Checks
         </h3>
-        <p className="text-sm text-[#00000099]">
+        <p className="text-sm text-gray-300">
           DKIM/SPF/DMARC status, per-sender health, auto-warmup visibility.
         </p>
       </div>
 
       <div className="overflow-hidden">
         <img
-          src="/images/guardrails/"
+          src="/images/guardrails/domain_auth.png"
           alt="domain_auth"
-          className="object-cover rounded-xl h-[220px] w-full bg-[#0000001A]"
+          className="object-cover rounded-xl w-full bg-[#0000001A]"
         />
       </div>
     </div>
@@ -98,20 +103,20 @@ function FeatureGrid() {
         transform: visible ? "translateY(0px)" : "translateY(24px)",
         transition: "opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s",
       }}
-      className="col-span-1 bg-white border border-[#00000024] rounded-2xl overflow-hidden flex lg:flex-row flex-col items-center justify-center gap-4 p-6"
+      className="col-span-1 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex lg:flex-row flex-col items-center lg:items-start justify-center gap-4 p-6"
     >
       <div className="flex-1">
-        <h3 className="text-black font-bold text-xl leading-snug">
+        <h3 className="text-white font-bold text-xl leading-snug">
           Verification & Hygiene
         </h3>
-        <p className="text-sm text-[#00000099]">
+        <p className="text-sm text-gray-300">
           Built-in email verification and bounce/complaint thresholds that auto-pause risky sends.
         </p>
       </div>
 
       <div className="flex-shrink-0">
         <img
-          src="/images/guardrails/"
+          src="/images/guardrails/Verification & Hygiene.png"
           alt="Verification & Hygiene"
           className="object-contain rounded-lg w-[330px] h-[200px] bg-[#0000001A]"
         />
@@ -128,22 +133,22 @@ function FeatureGrid() {
           transform: visible ? "translateY(0px)" : "translateY(24px)",
           transition: "opacity 0.55s ease 0.4s, transform 0.55s ease 0.4s",
         }}
-        className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col items-center p-6 mb-6 sm:mb-0"
+        className="bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-col items-center p-6 mb-6 sm:mb-0"
       >
         <div className="flex-1">
-          <h3 className="text-black font-bold text-xl leading-snug">
+          <h3 className="text-white font-bold text-xl leading-snug">
             Smart Pacing
           </h3>
-          <p className="text-sm text-[#00000099]">
+          <p className="text-sm text-gray-300">
             Daily caps, per-domain/mailbox limits, send-time windows, and jitter to keep patterns human.
           </p>
         </div>
 
         <div className="flex-shrink-0 mt-4 sm:mt-0">
           <img
-            src="/images/guardrails/.png"
+            src="/images/guardrails/Smart Pacing.png"
             alt="Smart Pacing"
-            className="object-contain rounded-lg w-full h-full bg-[#0000001A]"
+            className="object-contain rounded-lg w-full h-[200px] bg-[#0000001A]"
           />
         </div>
       </div>
@@ -155,21 +160,21 @@ function FeatureGrid() {
           transform: visible ? "translateY(0px)" : "translateY(24px)",
           transition: "opacity 0.55s ease 0.3s, transform 0.55s ease 0.3s",
         }}
-        className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col p-6 items-center"
+        className="bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-col p-6 items-center"
       >
         <div className="flex-1 overflow-hidden">
           <img
-            src="/images/guardrails/"
+            src="/images/guardrails/Unsub & Preferences.png"
             alt="Unsub & Preferences"
-            className="object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+            className="object-contain rounded-lg w-[315px] h-[200px] bg-[#0000001A]"
           />
         </div>
 
         <div className="mt-4">
-          <h3 className="text-black font-bold text-xl leading-snug">
+          <h3 className="text-white font-bold text-xl leading-snug">
             Unsub & Preferences
           </h3>
-          <p className="text-sm text-[#00000099]">
+          <p className="text-sm text-gray-300">
             One-click unsubscribe, footer injection, global suppression & per-campaign opt-out.
           </p>
         </div>
@@ -189,9 +194,9 @@ function FeatureGrid() {
 export default function WhatYouSee() {
   return (
     <section
-      className="w-full  py-10"
+      className="w-full pt-0 sm:pt-12  pb-10"
         style={{
-        background: "#F4F9FA",
+        background: "#010101",
       }}
     >
       <FeatureGrid />

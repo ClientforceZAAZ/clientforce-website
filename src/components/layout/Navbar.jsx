@@ -34,14 +34,14 @@ const RESOURCES_ITEMS = [
   { icon: <Image src="/images/navbar/icons/case_studies.svg" width={22} height={22} />, title: "Case Studies", description: "Unified communication view with AI for managing leads and actions.", href: "/case-studies" },
   { icon: <Image src="/images/navbar/icons/integrationss.svg" width={22} height={22} />, title: "Integrations", description: "Transform interactions into insights and optimize with a click.", href: "/integrations" },
   { icon: <Image src="/images/navbar/icons/legal.svg" width={22} height={22} />, title: "Legal", description: "Create tailored proposals automatically for every lead, effortlessly.", href: "/legal" },
-  { icon: <Image src="/images/navbar/icons/customer-support.svg" width={22} height={22} />, title: "Help Center", description: "ClientForce ensures compliance and deliverability for seamless 24/7 operations.", href: "https://clientforce.io/launch/go/resource-center" },
+  { icon: <Image src="/images/navbar/icons/customer-support.svg" width={22} height={22} />, title: "Help Center", description: "ClientForce ensures compliance and deliverability for seamless 24/7 operations.", href: "/help" },
 ];
 
 const NAV_ITEMS = [
   { label: "Products",  key: "products",  href: "/products"  },
   { label: "Solutions", key: "solutions", href: "/solutions" },
   { label: "Pricing",   key: "",          href: "/pricing"   },
-  { label: "Resources", key: "resources", href: "#"          },
+  { label: "Resources", key: "resources", href: "/resources" },
   { label: "Blog", key: "", href: "/blog"},
 ];
 

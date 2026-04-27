@@ -42,50 +42,65 @@ export default function Home() {
       <AllSimpleSteps
         heading={
           <>
-            All in{" "}
-            <span className="text-transparent bg-linear-to-r from-[#13D111] to-[#0FC6D8] bg-clip-text">
-              3 Simple Steps
+           <span className="text-white"> All in</span>{" "}
+            <span className="bg-gradient-to-r from-[#52be2f] to-[#da7d3d] text-transparent bg-clip-text">
+              4 Simple Steps
             </span>
           </>
         }
-        bgColor="bg-[#EEF9FA]"
+        bgColor="bg-[#041308]"
         steps={[
           {
             image: "/images/all_simple_steps_card1.png",
             badgeIcon: "/icons/all_simple_step1.svg",
-            title: "Create Your AI Sales Agent",
-            description1: "Pick a DFY playbook or use chat-style setup.",
+            title: "Launch Your AI Sales Agent",
+            description1: "Choose a DFY playbook or start from scratch.",
             description2: (
               <>
-                Your Agent learns from your PDFs/links And{" "}
-                <span className="font-bold">adopts your positioning, pricing, and proof.</span>
+                Tell your Agent the outcome you want — like booking demos, reviving cold leads, or closing more deals.
               </>
             ),
           },
           {
             image: "/images/all_simple_steps_card2.png",
             badgeIcon: "/icons/all_simple_step2.svg",
-            title: "Connect Lead Sources",
+            title: "Teach It Your Offer",
             description1: (
               <>
-                Enable the Finder for auto-prospecting, add{" "}
-                <span className="font-bold">widgets</span> to your site, or capture from
-                LinkedIn/GMB via <span className="font-bold">Chrome Extension</span> or
-                upload your CSV
+               Upload your pricing pages, PDFs, case studies, links, and business details so your Agent understands what you sell, how to position it, and how to respond.
               </>
             ),
           },
           {
             image: "/images/all_simple_steps_card3.png",
             badgeIcon: "/icons/all_simple_steps3.svg",
-            title: "Launch a Perpetual Campaign",
+            title: "Turn On Automated Pipeline Filling",
             description1: (
               <>
-                Your Agent runs a goal-aligned sequence (email → WhatsApp → voice), sends{" "}
-                <span className="font-bold">dynamic proposals</span>, and books calls and
-                close sales—<span className="font-bold">24/7</span> with compliance guardrails.
+               Your Agent starts auto-prospecting on schedule,
+                continuously bringing in new leads based on
+                your targeting rules.
               </>
             ),
+            description2: (
+              <>You can also feed it more opportunities through
+Chrome Capture, your embedded website agent
+widget, and imported lists — so the pipeline never stops moving.</>
+            )
+          },
+           {
+            image: "/images/all_simple_steps_card4.png",
+            badgeIcon: "/icons/all_simple_steps4.svg",
+            title: "Watch the Campaign Turn Leads Into Sales",
+            description1: (
+              <>
+                Your Agent follows up, makes AI voice calls, sends
+                proposals, books meetings, collects payments, and keeps every conversation moving toward revenue. Meetings As It Runs. You Just Monitor Results.
+              </>
+            ),
+            description2: (
+              <>That means more replies, more booked calls, more proposals sent, and more sales coming in — without you having to manually push every step.</>
+            )
           },
         ]}
       />

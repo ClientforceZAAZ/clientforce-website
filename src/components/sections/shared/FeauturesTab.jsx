@@ -162,7 +162,7 @@ export default function FeatureTabs({ TABS = [] }) {
           {/* Left: copy */}
           <div className=" flex-1 flex flex-col justify-center">
             <h2
-              className={`mb-4 text-2xl sm:text-4xl ${activeTab.headingStyle} font-bold leading-7 sm:leading-tight text-gray-900`}
+              className={`mb-4 text-2xl sm:text-4xl ${activeTab.headingStyle} font-bold leading-6 sm:leading-tight text-gray-900`}
             >
               {activeTab.heading}{" "}
               <span className="text-gray-400">{activeTab.headingMuted}</span>

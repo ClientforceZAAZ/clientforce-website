@@ -6,7 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function WatchDemo() {
   return (
-    <section className="py-0 lg:py-15 pl-6 flex items-center justify-center">
+    <section className="py-0 lg:py-15 pl-0 lg:pl-6 flex items-center justify-center">
       <div
           className="bg-cover bg-center bg-none lg:bg-[url('/images/watch_demo_bg.png')] "
         >

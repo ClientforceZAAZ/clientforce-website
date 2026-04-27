@@ -39,22 +39,15 @@ export default function TabbedFeatureSection() {
           transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s",
           boxShadow: "0 8px 40px rgba(0,0,0,0.07)",
         }}
-        className={`bg-white border border-gray-300 rounded-3xl overflow-hidden `}
+        className={` bg-gradient-to-b from-[#a7f6fd] to-[#fffff] to-80% border border-gray-300 rounded-3xl overflow-hidden `}
       >
         <div
           style={{ animation: "tabFadeIn 0.35s ease" }}
-          className={`flex flex-col md:flex-row`}
+          className={`flex flex-col items-center justify-between md:flex-row`}
         >
-          {/* Left — image */}
-          <div className="md:w-[50%] p-6 items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 hidden md:flex">
-              <img
-                src=""
-                alt=""
-                className="w-full h-full object-cover rounded-2xl"
-              />
-          </div>
+         
 
-          {/* Right — text */}
+          {/* Left — text */}
           <div className="md:w-[50%] p-8 flex flex-col justify-center">
             <h2 className=" text-2xl lg:text-4xl font-bold text-black leading-8 lg:leading-10 mb-6">
               What’s Included <br /> (At A Glance)
@@ -130,6 +123,18 @@ export default function TabbedFeatureSection() {
             </div>
     
           </div>
+
+           {/* Right — image */}
+          <div className="md:w-[50%] p-6 items-center justify-center hidden md:flex">
+              <img
+                src="/images/dfy/whats_included.png"
+                alt="Whats Included"
+                className="w-full h-full object-cover shadow-lg"
+              />
+          </div>
+
+
+
         </div>
       </div>
 

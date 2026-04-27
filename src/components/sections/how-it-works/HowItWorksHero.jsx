@@ -44,7 +44,7 @@ export default function HowItWorksHero() {
 
           {/* Curved Line */}
           <Image
-            src="/icons/feauturesBenefit.svg"
+            src="/icons/feauturesBenefitt.svg"
             width={1280}
             height={160}
            style={{
@@ -56,7 +56,7 @@ export default function HowItWorksHero() {
           />
 
           {/* Avatars */}
-          <Image
+          {/* <Image
             src="/icons/feauturesBenefit_rect.svg"
             width={51}
             height={51}
@@ -99,7 +99,7 @@ export default function HowItWorksHero() {
               left: "2rem",
             }}
             className="hidden xl:block"
-          />
+          /> */}
         </div>
 
         <div>

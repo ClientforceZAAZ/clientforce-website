@@ -24,24 +24,28 @@ function useVisible(threshold = 0.15) {
 
 const CARD_DATA =[
     {
-        title: (<>End-to-End, Not “Tool <br /> Soup”:</>),
-        description: (<>One Agent Runs The Entire Motion—Prospect To Close.</>),
-        image: "/images/how-it-works/why-it-wins1.png"
+        title: (<>End-to-End, Not “Tool Soup”: <span className="font-normal">One Agent Runs The Entire Motion—Prospect To Close.</span></>),
+        description: "",
+        image: "/images/how-it-works/why-it-winss1.png",
+        flexCol: true
     },
     {
         title: "True Multichannel:",
         description: (<>Email + WhatsApp/SMS + LinkedIn + Voice — Coordinated, Not Siloed.</>),
-         image: "/images/how-it-works/why-it-wins2.png"
+         image: "/images/how-it-works/why-it-winss2.png",
+         flexCol: false
     },
     {
         title: "Perpetual:",
         description: (<>Agents Never Sleep; Your Pipeline Never Stalls.</>),
-        image: "/images/how-it-works/why-it-wins3.png"
+        image: "/images/how-it-works/why-it-winss3.png",
+        flexCol: false
     },
     {
         title: "Human-Level Selling: ",
         description: (<>Objections Handled, Proposals Personalized, Calls That Actually Close.</>),
-         image: "/images/how-it-works/why-it-wins4.png"
+         image: "/images/how-it-works/why-it-winss4.png",
+         flexCol: false
     },
 ]
 
@@ -70,11 +74,11 @@ export default function WhyItWins() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto sm:px-30 md:px-0">
             { CARD_DATA.map( ( card, i ) => (
-                <div key={i} className="flex items-center p-4 border border-gray-300 bg-white shadow-md rounded-2xl gap-8">
-                    <div className="w-[50%]">
-                        <Image src={card.image} width={203} height={203} />
+                <div key={i} className={`flex items-center p-4 border border-gray-300 bg-white shadow-md rounded-2xl gap-8 ${ card.flexCol ? "flex-col" : ""}`}>
+                    <div className={`${card.flexCol ? "" : "w-[50%] "}`}>
+                        <img src={card.image} />
                     </div>
-                    <div className=" w-[50%]">
+                    <div className={`${card.flexCol ? "" : "w-[50%]"}`}>
                         <h2 className="text-black font-bold text-sm sm:text-base mb-3">{card.title}</h2>
                         <p className="text-black font-normal text-sm sm:text-base">{card.description}</p>
                     </div>

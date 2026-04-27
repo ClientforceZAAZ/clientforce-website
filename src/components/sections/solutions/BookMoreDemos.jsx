@@ -97,7 +97,7 @@ export default function BookMoreDemos() {
       <div className="flex flex-col gap-6">
 
         <UseCaseCard
-          image="/images/use-cases/cold_prospects.png"
+          image="/images/solutions/cold_prospects.png"
           imageLeft={true}
           title="Turn Cold Prospects Into Booked Meetings On Autopilot."
           intro="Turn cold prospects into booked meetings on autopilot."
@@ -111,7 +111,7 @@ export default function BookMoreDemos() {
         />
 
         <UseCaseCard
-          image="/images/use-cases/card2.png"
+          image="/images/solutions/convert_free_trials.png"
           imageLeft={false}
           title="Convert Free Trials To Paid"
           intro="Stop trial decay with timely nudges that feel human."
@@ -125,7 +125,7 @@ export default function BookMoreDemos() {
         />
 
         <UseCaseCard
-          image="/images/use-cases/card3.png"
+          image="/images/solutions/close_high_tickets.png"
           imageLeft={true}
           title="Close High-Ticket Services & Agencies"
           intro="Let your top closer clone themselves."
@@ -139,7 +139,7 @@ export default function BookMoreDemos() {
         />
 
         <UseCaseCard
-          image="/images/use-cases/card4.png"
+          image="/images/solutions/capture_and_convert.png"
           imageLeft={false}
           title="Capture & Convert Local Leads (Phone-First)"
           intro="Turn website visits and inbound calls into jobs booked."
@@ -153,7 +153,7 @@ export default function BookMoreDemos() {
         />
 
         <UseCaseCard
-          image="/images/use-cases/card5.png"
+          image="/images/solutions/dfy_playbooks.png"
           imageLeft={true}
           title="DFY Playbooks & Templates Library (by Industry & Goal)"
           intro="Launch winning campaigns in minutes — not weeks."

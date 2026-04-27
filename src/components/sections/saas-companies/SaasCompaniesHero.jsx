@@ -22,8 +22,8 @@ export default function LocalBusinessesHero() {
       metrics=""
       rightImage={
           <>
-            <div className="relative pt-10 pl-10">
-              <Image src="/images/solutions/solutions_rightBg.png" alt="Dashboard Preview" height={1198} width={950} className="w-full h-auto" priority />
+            <div className="relative pl-0 lg:pl-10">
+              <Image src="/images/saas-companies/saas_companies_hero.png" alt="Dashboard Preview" height={1198} width={950} className="w-full h-auto" priority />
             </div>
           </>
           }

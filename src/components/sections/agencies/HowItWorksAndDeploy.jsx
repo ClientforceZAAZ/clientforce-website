@@ -43,11 +43,12 @@ export default function WhatsWorking() {
           }}
           className="flex justify-center mb-10"
         >
-          <div className=" border border-white rounded-full px-6 text-3xl sm:text-4xl lg:text-[46px] text-white font-bold font-degular shadow-sm">
+          <div className=" border border-white rounded-full px-6 py-2 text-3xl sm:text-4xl lg:text-[42px] text-white font-bold font-degular shadow-sm">
             How It Works{" "}
             <span className="text-[#D0F56B] font-normal">(3 steps)</span>
           </div>
         </div>
+
         {/* Three-column card grid */}
         <div className="relative grid grid-cols-1 md:grid-cols-11 gap-6">
           {/* Card 1 — bottom-left text */}
@@ -63,15 +64,15 @@ export default function WhatsWorking() {
             className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-4"
           >
             <div>
-              <img src="" alt="" className=" h-[280px]" />
+              <img src="/images/agencies/pick_a_playbook.png" alt="pick a playbook" className="" />
             </div>
 
-            <div className="mt-auto">
+            <div className="mt-4">
               <p className=" text-lg leading-6">
                 <span className="font-bold">
-                  Pick A Playbook (Or Start <br /> With AI):
+                  Pick A Playbook (Or Start <br className="hidden md:block" /> With AI):
                 </span>{" "}
-                Choose The Goal + Niche, <br /> Upload PDFs For Context.
+                Choose The Goal + Niche, <br className="hidden md:block" /> Upload PDFs For Context.
               </p>
             </div>
           </div>
@@ -85,13 +86,19 @@ export default function WhatsWorking() {
               position: "relative",
               zIndex: 1,
             }}
-            className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-3"
+            className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col-reverse col-span-1 md:col-span-3"
           >
+
             <div>
+              <img src="/images/agencies/connect_sourcess.png" alt="connect sources" className="" />
+            </div>
+
+
+            <div className="mb-4">
               <p className="text-lg leading-6">
                 <span className="font-bold">Connect Sources:</span> Import{" "}
-                <br /> Lists, Enable Finder v2, Add <br /> Site Widgets, Flip On
-                WA/ <br />
+                <br className="hidden md:block" /> Lists, Enable Finder v2, Add <br /> Site Widgets, Flip On
+                WA/ <br className="hidden md:block" />
                 Voice.
               </p>
             </div>
@@ -109,7 +116,12 @@ export default function WhatsWorking() {
             }}
             className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] col-span-1 md:col-span-4"
           >
-            <div className="mt-auto">
+
+            <div>
+              <img src="/images/agencies/launch_and_prove.png" alt="launch and prove" className="" />
+            </div>
+
+            <div className="mt-4">
               <p className="text-lg leading-6">
                 <span className="font-bold">Launch & Prove:</span> Track
                 Meetings/Revenue; Share White-Label Dashboards With Clients.

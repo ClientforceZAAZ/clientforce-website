@@ -4,6 +4,8 @@ export default function PageHero({
   badge,
   badgeIcon,
   badgeBg,
+  badgeTextColor,
+  BadgeBorder,
   headline,
   headlineStyle,
   description,
@@ -27,13 +29,13 @@ export default function PageHero({
           {badge && (
             <div className="flex items-center justify-center lg:justify-start">
               <div className="w-fit">
-                <div className="relative p-0.5 rounded-full bg-[linear-gradient(270deg,#F437AB,#08A541,#FF9D7C,#F437AB)]">
+                <div className={` ${BadgeBorder ? BadgeBorder : "bg-[linear-gradient(270deg,#F437AB,#08A541,#FF9D7C,#F437AB)]"} relative p-0.5 rounded-full`}>
                   <div
                     className={` ${badgeBg ? badgeBg : "bg-white"} rounded-full px-3 py-1 flex items-center justify-center`}
                     style={{ background: badgeBg ? badgeBg : "white" }}
                   >
                     {badgeIcon}
-                    <span className="text-xs sm:text-sm font-bold bg-linear-to-r from-black to-[#C521D1] bg-clip-text text-transparent">
+                                        <span className={`text-xs sm:text-sm font-bold ${badgeTextColor || "bg-linear-to-r from-black to-[#C521D1] bg-clip-text text-transparent"}`}>
                       {badge}
                     </span>
                   </div>

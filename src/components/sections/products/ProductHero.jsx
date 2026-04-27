@@ -27,7 +27,7 @@ export default function ProductHero() {
         </>
       }
       headlineStyle="text-4xl sm:text-6xl lg:text-[80px] leading-8 sm:leading-12 lg:leading-18 text-center lg:text-left"
-      descriptionStyle=" text-sm sm:text-lg text-center lg:text-left"
+      descriptionStyle=" text-sm sm:text-lg text-center lg:text-left pr-0 lg:pr-5"
       description={
         <>
           Launch Self-Running AI Sales Agents That Prospect, Engage,{" "}
@@ -47,7 +47,7 @@ export default function ProductHero() {
       }
       metrics={
         <>
-          <div className="flex items-center justify-center gap-2 mb-10 lg:mb-30">
+          <div className="flex items-center justify-center gap-2 mb-0">
             <span className="relative inline-block w-[100px] sm:w-[120px] md:w-[140px] aspect-[140/55]">
               <Image
                 src="/images/face notifications.png"
@@ -77,10 +77,10 @@ export default function ProductHero() {
       rightBgImage="url('/images/products/hero_bg_overlay.png')"
       floatingCards={
         <>
-          <div className="absolute bottom-[12%] left-[8%] w-[45%] z-30">
+          <div className="absolute bottom-[8%] left-[8%] w-[45%] z-30">
             <StartBuildingCard />
           </div>
-          <div className="absolute bottom-[12%] right-[-8%] w-[45%] z-30">
+          <div className="absolute bottom-[8%] right-[-8%] w-[45%] z-30">
             <LeadMagnetCard />
           </div>
           <div className="absolute top-[4%] right-[20%] w-fit z-30">
@@ -90,7 +90,7 @@ export default function ProductHero() {
               bgColor="bg-[#CE6ABA]"
             />
           </div>
-          <div className="absolute flex gap-2 top-[50%] left-[7%] w-fit z-30">
+          <div className="absolute flex gap-2 top-[55%] left-[7%] w-fit z-30">
             <HeroTag
               icon={<BiSearchAlt2 size={20} />}
               text="Finds Prospects"

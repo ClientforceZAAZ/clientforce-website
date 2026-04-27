@@ -57,12 +57,12 @@ const AVATARS = [
 
 // Card position mapping to Tailwind classes
 const CARD_POSITIONS = {
-  "top-left":     "top-[5%] md:top-[20%] left-[8%] lg:left-[24%]",
-  "top-right":    "top-[25%] md:top-[20%] right-[8%] lg:right-[20%]",
-  "left-middle":  "top-[40%] md:top-[40%] left-[8%] lg:left-[24%]",
-  "right-middle": "top-[63%] md:top-[40%] right-[8%] lg:right-[20%]",
-  "bottom-left":  "top-[85%] md:top-[60%] left-[8%] lg:left-[24%]",
-  "bottom-right": "top-[100%]      md:top-[60%]       right-[8%] lg:right-[20%]",
+  "top-left":     "top-[5%] md:top-[20%] left-[8%] lg:left-[10%]",
+  "top-right":    "top-[25%] md:top-[20%] right-[8%] lg:right-[10%]",
+  "left-middle":  "top-[40%] md:top-[40%] left-[8%] lg:left-[10%]",
+  "right-middle": "top-[63%] md:top-[40%] right-[8%] lg:right-[10%]",
+  "bottom-left":  "top-[85%] md:top-[60%] left-[8%] lg:left-[10%]",
+  "bottom-right": "top-[100%]      md:top-[60%]       right-[8%] lg:right-[10%]",
 };
 
 // Slide-in direction per card
@@ -187,7 +187,7 @@ export default function AutomationsTiedToBuyerIntent() {
       </div>
 
       {/* Main visual area */}
-      <div className="relative">
+      <div className="relative hidden sm:block">
 
         {/* Floating avatars */}
         {AVATARS.map((avatar, i) => (

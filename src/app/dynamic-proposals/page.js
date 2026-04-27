@@ -34,32 +34,67 @@ export default function DynamicProposals() {
          <AllSimpleSteps
           heading={
             <>
-              How It Works{" "}
-              <span className="text-[#787878]">
-                (3 Steps)
+              <span className="text-white">How It Works</span>{" "}
+              <span className="bg-gradient-to-r from-[#52be2f] to-[#da7d3d] text-transparent bg-clip-text">
+                (4 Steps)
               </span>
             </>
           }
-          steps={[
-            {
-              image: "/images/all_simple_steps_card1.png",
-              badgeIcon: "/icons/all_simple_step1.svg",
-              title: "Connect knowledge",
-              description1: "Upload Pricing Sheets, Pitch Decks, FAQs—ClientForce Learns Your Offer, Benefits, Proof, And Objections.",
-            },
-            {
-              image: "/images/all_simple_steps_card2.png",
-              badgeIcon: "/icons/all_simple_step2.svg",
-              title: "Choose A Template & Rules",
-              description1: "Pick A Playbook (e.g., “High-Ticket Consult,” “Local Service Quote,” “Trial→Paid”), Set Variables And Conditional Sections."
-            },
-            {
-              image: "/images/all_simple_steps_card3.png",
-              badgeIcon: "/icons/all_simple_steps3.svg",
-              title: "Launch At Scale",
-              description1: "Your Agent Sends Proposals Via Multichannel Sequences; Tracking And Automations Handle The Rest."
-            },
-          ]}
+           bgColor="bg-[#041308]"
+        steps={[
+          {
+            image: "/images/all_simple_steps_card1.png",
+            badgeIcon: "/icons/all_simple_step1.svg",
+            title: "Launch Your AI Sales Agent",
+            description1: "Choose a DFY playbook or start from scratch.",
+            description2: (
+              <>
+                Tell your Agent the outcome you want — like booking demos, reviving cold leads, or closing more deals.
+              </>
+            ),
+          },
+          {
+            image: "/images/all_simple_steps_card2.png",
+            badgeIcon: "/icons/all_simple_step2.svg",
+            title: "Teach It Your Offer",
+            description1: (
+              <>
+               Upload your pricing pages, PDFs, case studies, links, and business details so your Agent understands what you sell, how to position it, and how to respond.
+              </>
+            ),
+          },
+          {
+            image: "/images/all_simple_steps_card3.png",
+            badgeIcon: "/icons/all_simple_steps3.svg",
+            title: "Turn On Automated Pipeline Filling",
+            description1: (
+              <>
+               Your Agent starts auto-prospecting on schedule,
+                continuously bringing in new leads based on
+                your targeting rules.
+              </>
+            ),
+            description2: (
+              <>You can also feed it more opportunities through
+Chrome Capture, your embedded website agent
+widget, and imported lists — so the pipeline never stops moving.</>
+            )
+          },
+           {
+            image: "/images/all_simple_steps_card4.png",
+            badgeIcon: "/icons/all_simple_steps4.svg",
+            title: "Watch the Campaign Turn Leads Into Sales",
+            description1: (
+              <>
+                Your Agent follows up, makes AI voice calls, sends
+                proposals, books meetings, collects payments, and keeps every conversation moving toward revenue. Meetings As It Runs. You Just Monitor Results.
+              </>
+            ),
+            description2: (
+              <>That means more replies, more booked calls, more proposals sent, and more sales coming in — without you having to manually push every step.</>
+            )
+          },
+        ]}
         />
         <HowItWorks />
         <UseCases

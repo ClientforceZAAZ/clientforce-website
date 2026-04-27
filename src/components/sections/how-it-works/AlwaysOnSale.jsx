@@ -30,7 +30,7 @@ const TABS = [
   {
     label: "Engage",
     description: "Multichannel Sequences — Email, WhatsApp, LinkedIn, Voice — Run On Autopilot.",
-    image: "/images/sales-loop/engage.png",
+    image: "/images/how-it-works/engage_bg.png",
     floatingLeft: { emoji: "📧" },
     floatingRight: { avatars: ["👨", "👩🏾", "🧑"] },
     searchBar: false,
@@ -38,7 +38,7 @@ const TABS = [
   {
     label: "Propose",
     description: "Dynamic Proposals Auto-Built From Your Offer Docs And Sent With One Click.",
-    image: "/images/sales-loop/propose.png",
+    image: "/images/how-it-works/propose_bg.png",
     floatingLeft: { emoji: "📄" },
     floatingRight: { avatars: ["👩", "👨🏿", "🧔🏽"] },
     searchBar: false,
@@ -46,7 +46,7 @@ const TABS = [
   {
     label: "Call",
     description: "AI Voice Calls Warm Leads, Handle Objections, And Book Meetings Automatically.",
-    image: "/images/sales-loop/call.png",
+    image: "/images/how-it-works/call_ai_bg.png",
     floatingLeft: { emoji: "📞" },
     floatingRight: { avatars: ["🧑🏻", "👩🏼", "👨"] },
     searchBar: false,
@@ -54,7 +54,7 @@ const TABS = [
   {
     label: "Close",
     description: "One-Click Booking Links, E-Sign Accept, And Payment Deposits — All In The Proposal.",
-    image: "/images/sales-loop/close.png",
+   image: "/images/how-it-works/close_bg.png",
     floatingLeft: { emoji: "🤝" },
     floatingRight: { avatars: ["👩🏽", "🧔", "👨🏾"] },
     searchBar: false,
@@ -62,7 +62,7 @@ const TABS = [
   {
     label: "Learn",
     description: "Analytics Surface What's Working — Best Steps, Channels, And Angles — Automatically.",
-    image: "/images/sales-loop/learn.png",
+    image: "/images/how-it-works/learn_bg.png",
     floatingLeft: { emoji: "📊" },
     floatingRight: { avatars: ["👩", "🧑🏻", "👨🏿"] },
     searchBar: false,
@@ -70,7 +70,7 @@ const TABS = [
   {
     label: "Repeat",
     description: "Clone Winning Campaigns To New Segments And Compound Your Results Week Over Week.",
-    image: "/images/sales-loop/repeat.png",
+    image: "/images/how-it-works/prospect_bg.png",
     floatingLeft: { emoji: "🔄" },
     floatingRight: { avatars: ["👩🏾", "🧔🏽", "👨"] },
     searchBar: false,
@@ -84,8 +84,8 @@ function DashboardPreview({ tab }) {
     <div className="relative w-full">
 
       {/* Main dashboard card */}
-      <div className="relative mx-auto rounded-2xl border border-gray-300 py-8 px-8 sm:px-16 overflow-hidden"
-        style={{ minHeight: "320px", background: "#F8F8F8" }}
+      <div className="relative mx-auto rounded-2xl border border-gray-300 py-8 px-8 sm:px-16 overflow-hidden bg-linear-to-br from-[#e5ff9e] from-0% via-[#81f781] via-50% to-[#97edfc] to-100%"
+        style={{ minHeight: "", background: "" }}
       >
          {/* Description */}
         <p className="text-center text-black text-lg sm:text-xl md:text-2xl mb-8 mx-auto leading-6 sm:leading-relaxed">
@@ -177,7 +177,7 @@ export default function AlwaysOnSalesLoop() {
         }}
         className="flex justify-center mb-6 cursor-pointer"
       >
-        <div className="bg-[#D0F56B] text-black font-degular font-bold text-lg lg:text-4xl px-8 py-2.5 mb-4 rounded-full">
+        <div className="bg-[#D0F56B] text-black font-degular font-bold text-lg lg:text-4xl px-8 py-2 mb-4 rounded-full">
           The Always-On Sales Loop
         </div>
       </div>

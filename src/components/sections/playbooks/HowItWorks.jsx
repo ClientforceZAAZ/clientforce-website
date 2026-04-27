@@ -35,7 +35,7 @@ function FeatureGrid() {
 
       {/*  Row of Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-14 gap-6 mt-6">
-        {/* Finder v2 Rules */}
+        {/* Playbook */}
         <div
           style={{
             opacity: visible ? 1 : 0,
@@ -51,17 +51,17 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden">
             <img
-              src="/images/guardrails/"
-              alt=""
+              src="/images/dfy/pick_playbook.png"
+              alt="pick playbook"
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[315px] h-[280px] bg-[#0000001A]"
+              className=" object-contain rounded-lg w-full h-full"
             />
           </div>
         </div>
 
-        {/* Embeddable Widget Presets */}
+        {/* Answer Prompts */}
         <div
           style={{
             opacity: visible ? 1 : 0,
@@ -77,17 +77,17 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden">
             <img
-              src="/images/guardrails/"
-              alt=""
+              src="/images/dfy/answer_prompts.png"
+              alt="Answer prompts"
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[280px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg w-full h-full"
             />
           </div>
         </div>
 
-        {/* Chrome Capture Tags */}
+        {/* Launch */}
         <div
           style={{
             opacity: visible ? 1 : 0,
@@ -103,12 +103,12 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden">
             <img
-              src="/images/guardrails/"
-              alt=""
+              src="/images/dfy/agents_runs.png"
+              alt="agents runs"
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg w-full h-full"
             />
           </div>
         </div>

@@ -48,6 +48,7 @@ export default function HowItWorks() {
             <span className="text-[#D0F56B] font-normal">(3 steps)</span>
           </div>
         </div>
+
         {/* Three-column card grid */}
         <div className="relative grid grid-cols-1 md:grid-cols-11 gap-6 px-8">
           {/* Card 1 — bottom-left text */}
@@ -63,10 +64,10 @@ export default function HowItWorks() {
             className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-4"
           >
             <div>
-              <img src="" alt="" className=" h-[280px]" />
+              <img src="/images/local-businesses/choose_your_goals.png" alt="choose your goal" className="" />
             </div>
 
-            <div className="mt-auto">
+            <div className="mt-4">
               <p className=" text-lg leading-6">
                 <span className="font-bold">Choose Your Goal:</span> Book
                 Service Calls, Request Quotes, Or Membership Renewals.
@@ -83,10 +84,15 @@ export default function HowItWorks() {
               position: "relative",
               zIndex: 1,
             }}
-            className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-3"
+            className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col-reverse col-span-1 md:col-span-3"
           >
+
             <div>
-              <p className="text-lg leading-6">
+              <img src="/images/agencies/connect_sourcess.png" alt="connect sources" className="" />
+            </div>
+
+            <div>
+              <p className="text-lg leading-6 mb-4">
                 <span className="font-bold"> Turn On Sources:</span> Widget On
                 Your Site, Finder V2, And One-Click Chrome Capture.
               </p>
@@ -105,7 +111,12 @@ export default function HowItWorks() {
             }}
             className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] col-span-1 md:col-span-4"
           >
-            <div className="mt-auto">
+
+            <div>
+              <img src="/images/agencies/launch_and_prove.png" alt="launch and prove" className="" />
+            </div>
+
+            <div className="mt-4">
               <p className="text-lg leading-6">
                 <span className="font-bold">Let It Run:</span> Your Agent
                 Follows Up Across Email/WhatsApp/Voice Until The Job Is Booked.

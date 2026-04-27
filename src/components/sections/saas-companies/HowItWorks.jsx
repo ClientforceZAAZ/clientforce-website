@@ -43,11 +43,12 @@ export default function HowItWorks() {
           }}
           className="flex justify-center mb-10"
         >
-          <div className=" border border-white rounded-full px-6 text-3xl sm:text-4xl lg:text-[46px] text-white font-bold font-degular shadow-sm">
+          <div className=" border border-white rounded-full px-6 py-2 text-3xl sm:text-4xl lg:text-[46px] text-white font-bold font-degular shadow-sm">
             How It Works{" "}
             <span className="text-[#D0F56B] font-normal">(3 steps)</span>
           </div>
         </div>
+
         {/* Three-column card grid */}
         <div className="relative grid grid-cols-1 md:grid-cols-11 gap-6 px-8">
           {/* Card 1 — bottom-left text */}
@@ -63,10 +64,10 @@ export default function HowItWorks() {
             className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-4"
           >
             <div>
-              <img src="" alt="" className=" h-[280px]" />
+              <img src="/images/saas-companies/define_motion.png" alt="define_motion" className="" />
             </div>
 
-            <div className="mt-auto">
+            <div className="mt-4">
               <p className=" text-lg leading-6">
                 <span className="font-bold">Define Motion:</span> Demos,
                 Trial→Paid, Expansion, Or Win-Back (Or Run Multiple Agents In
@@ -84,10 +85,15 @@ export default function HowItWorks() {
               position: "relative",
               zIndex: 1,
             }}
-            className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-3"
+            className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col-reverse col-span-1 md:col-span-3"
           >
+
             <div>
-              <p className="text-lg leading-6">
+              <img src="/images/saas-companies/add_knowledge.png" alt="add_knowledge" className="" />
+            </div>
+
+            <div>
+              <p className="text-lg leading-6 mb-4">
                 <span className="font-bold"> Add Knowledge:</span> Upload
                 Pricing Sheets, Decks, Case Studies; The Agent Learns Your
                 Story.
@@ -105,9 +111,14 @@ export default function HowItWorks() {
               position: "relative",
               zIndex: 1,
             }}
-            className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] col-span-1 md:col-span-4"
+            className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col col-span-1 md:col-span-4"
           >
-            <div className="mt-auto">
+
+            <div>
+              <img src="/images/saas-companies/launch_and_optimize.png" alt="launch_and_optimize" className="" />
+            </div>
+
+            <div className="mt-4">
               <p className="text-lg leading-6">
                 <span className="font-bold">Launch & Optimize:</span> A/B
                 Subjects, Step Performance, Deliverability Health, Number

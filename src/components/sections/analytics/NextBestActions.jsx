@@ -75,7 +75,7 @@ export default function NextBestActions() {
           delay="0.1s"
           visible={visible}
           description={<p className="text-center"><span className="font-bold">Promote</span> Winning <br /> Subject Lines To 100% <br /> Of Sends</p>}
-          cardImage={<Image src="/images/analytics/analytics_promote.png" width={516} height={132} />}
+          cardImage={<Image src="/images/analytics/analytics_promote_img.png" width={516} height={132} />}
         >
           
           {/* <PromoteAnimation visible={visible} /> */}
@@ -85,7 +85,7 @@ export default function NextBestActions() {
           delay="0.2s"
           visible={visible}
           description={<p className="text-center"><span className="font-bold">Pause/Replace</span> <br /> Underperforming Steps <br /> Or Angles</p>}
-          cardImage={<Image src="/images/analytics/pause_replace.png" width={516} height={369} />}
+          cardImage={<Image src="/images/analytics/pause_replace_img.png" width={516} height={369} />}
         >
           {/* <PauseAnimation visible={visible} /> */}
         </ActionCard>
@@ -94,7 +94,7 @@ export default function NextBestActions() {
           delay="0.3s"
           visible={visible}
           description={<p className="text-center"><span className="font-bold">Rebalance Channels</span> <br /> (Increase Voice After Warm- <br /> Up, Add WhatsApp Nudge)</p>}
-          cardImage={<Image src="/images/analytics/rebalance.png" width={516} height={143} />}
+          cardImage={<Image src="/images/analytics/rebalance_img.png" width={516} height={143} />}
 
         >
           {/* <RebalanceAnimation visible={visible} /> */}
@@ -108,7 +108,7 @@ export default function NextBestActions() {
           visible={visible}
           className="md:col-span-2 bg-[#CBE7E9] p-8"
           description={<p className="text-center"><span className="font-bold">Repair Deliverability</span> (Rotate <br /> Domains, Throttle, Verify)</p>}
-          cardImage={<Image src="/images/analytics/repair.png" width={491} height={297} />}
+          cardImage={<Image src="/images/analytics/repair_img.png" width={491} height={297} />}
         >
           {/* <RepairAnimation visible={visible} /> */}
         </ActionCard>
@@ -116,9 +116,9 @@ export default function NextBestActions() {
         <ActionCard
           delay="0.5s"
           visible={visible}
-          className="md:col-span-3 flex-col sm:flex sm:flex-row p-8 sm:p-0 bg-[#CBE7E9] h-full items-center"
-          description={<p className="px-10 "><span className="font-bold ">Clone</span> Top-Performing <br /> Campaigns To New <br /> Segments</p>}
-          cardImage={<Image src="/images/analytics/clone.png" width={542} height={459} className="" />}
+          className="md:col-span-3 bg-[#CBE7E9] p-8"
+          description={<p className="text-center"><span className="font-bold ">Clone</span> Top-Performing <br /> Campaigns To New Segments</p>}
+          cardImage={<Image src="/images/analytics/clone_img.png" width={542} height={459} className="" />}
         >
           {/* <CloneAnimation visible={visible} /> */}
         </ActionCard>

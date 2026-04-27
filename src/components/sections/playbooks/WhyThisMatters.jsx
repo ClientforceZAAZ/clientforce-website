@@ -65,12 +65,12 @@ function FeatureGrid() {
           </div>
           <div className=" overflow-hidden mt-auto flex items-center justify-center">
             <img
-              src="/images/guardrails/"
-              alt="domain_auth"
+              src="/images/dfy/agent_blueprint.png"
+              alt="agent_blueprint"
               // width={323}
               // height={342}
               // quality={100}
-              className="object-cover rounded-xl h-[430px] w-full bg-[#0000001A]"
+              className="object-cover rounded-xl h-[430px] w-full"
             />
           </div>
         </div>
@@ -96,12 +96,12 @@ function FeatureGrid() {
             </div>
             <div className=" overflow-hidden mt-auto flex items-center justify-center">
               <img
-                src="/images/guardrails/"
-                alt="domain_auth"
+               src="/images/dfy/agent_blueprint.png"
+              alt="agent_blueprint"
                 // width={323}
                 // height={342}
                 // quality={100}
-                className="object-cover rounded-xl lg:h-[430px] w-full bg-[#0000001A]"
+                className="object-cover rounded-xl lg:h-[430px] w-full"
               />
             </div>
           </div>
@@ -126,12 +126,12 @@ function FeatureGrid() {
             </div>
             <div className=" flex-shrink-0">
               <img
-                src="/images/guardrails/"
-                alt="Verification & Hygiene"
+                src="/images/dfy/Sequence_orchestrator.png"
+                alt="Sequence orchestrator"
                 //   width={323}
                 //   height={179}
                 //   quality={100}
-                className=" object-contain rounded-lg w-[330px] h-[200px] bg-[#0000001A]"
+                className=" object-contain rounded-lg w-[330px] h-[200px]"
               />
             </div>
           </div>
@@ -146,7 +146,7 @@ function FeatureGrid() {
                 transition:
                   "opacity 0.55s ease 0.4s, transform 0.55s ease 0.4s",
               }}
-              className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col items-center p-6 pb-0 mb-3 sm:mb-0"
+              className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col items-center p-6 mb-3 sm:mb-0"
             >
               <div className=" flex-1">
                 <h3 className="text-black font-bold text-xl leading-snug">
@@ -158,12 +158,12 @@ function FeatureGrid() {
               </div>
               <div className=" flex-shrink-0 mt-4">
                 <img
-                  src="/images/guardrails/.png"
-                  alt=""
+                  src="/images/dfy/dynamic_proposals2.png"
+                  alt="dynamic proposals"
                   //   width={274}
                   //   height={143}
                   //   quality={100}
-                  className=" object-contain rounded-lg w-full h-full bg-[#0000001A]"
+                  className=" object-contain rounded-lg w-full h-full"
                 />
               </div>
             </div>
@@ -180,12 +180,12 @@ function FeatureGrid() {
             >
               <div className="flex-1 overflow-hidden">
                 <img
-                  src="/images/guardrails/"
-                  alt=""
+                  src="/images/dfy/voice_call.png"
+                  alt="voice call"
                   //   width={200}
                   //   height={134}
                   //   quality={100}
-                  className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+                  className=" object-contain rounded-lg w-full h-full"
                 />
               </div>
               <div className="mt-4">
@@ -223,12 +223,12 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden">
             <img
-              src="/images/guardrails/"
-              alt=""
+              src="/images/dfy/finder_v2_rules.png"
+              alt="finder v2 rules"
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg w-full h-full"
             />
           </div>
         </div>
@@ -252,12 +252,12 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden">
             <img
-              src="/images/guardrails/"
-              alt=""
+              src="/images/dfy/embeddable_widget.png"
+              alt="embeddable widget"
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[280px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg w-full h-full"
             />
           </div>
         </div>
@@ -281,12 +281,12 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden">
             <img
-              src="/images/guardrails/"
-              alt=""
+              src="/images/dfy/chrome_capture2.png"
+              alt="chrome capture"
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg w-full h-full px-4 py-4 md:py-0 bg-[#6BE8FD]"
             />
           </div>
         </div>
@@ -314,12 +314,12 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden flex justify-start">
             <img
-              src="/images/guardrails/"
-              alt=""
+              src="/images/dfy/compliance_guardrails2.png"
+              alt="compliance and guardrails"
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg w-[315px] h-full "
             />
           </div>
         </div>
@@ -343,12 +343,12 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden flex justify-end">
             <img
-              src="/images/guardrails/"
-              alt=""
+              src="/images/dfy/analytics_presets.png"
+              alt="analytics presets"
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg w-[315px] h-full"
             />
           </div>
         </div>

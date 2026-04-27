@@ -52,9 +52,9 @@ function FeatureGrid() {
           </div>
           <div className="overflow-hidden mt-auto flex items-center justify-center">
             <img
-              src="/images/guardrails/"
-              alt="domain_auth"
-              className="object-cover rounded-xl h-[430px] w-full bg-[#0000001A]"
+              src="/images/local-businesses/missed_call.png"
+              alt="missed call"
+              className="object-cover rounded-xl h-[430px] w-full"
             />
           </div>
         </div>
@@ -81,9 +81,9 @@ function FeatureGrid() {
             </div>
             <div className="overflow-hidden mt-auto flex items-center justify-center">
               <img
-                src="/images/guardrails/"
+                 src="/images/local-businesses/missed_call.png"
                 alt="domain_auth"
-                className="object-cover rounded-xl lg:h-[430px] w-full bg-[#0000001A]"
+                className="object-cover rounded-xl w-full"
               />
             </div>
           </div>
@@ -108,9 +108,9 @@ function FeatureGrid() {
             </div>
             <div className="flex-shrink-0">
               <img
-                src="/images/guardrails/"
+                 src="/images/local-businesses/embeddable.png"
                 alt="Verification & Hygiene"
-                className="object-contain rounded-lg w-[330px] h-[200px] bg-[#0000001A]"
+                className="object-contain rounded-lg w-[330px] h-[200px] bg-[#bfc5ff] p-2"
               />
             </div>
           </div>
@@ -125,7 +125,7 @@ function FeatureGrid() {
                 transition:
                   "opacity 0.55s ease 0.4s, transform 0.55s ease 0.4s",
               }}
-              className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col items-center p-6 pb-0 mb-3 sm:mb-0"
+              className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col items-center p-6 mb-3 sm:mb-0"
             >
               <div className="flex-1">
                 <h3 className="text-black font-bold text-xl leading-snug">
@@ -138,9 +138,9 @@ function FeatureGrid() {
               </div>
               <div className="flex-shrink-0 mt-4">
                 <img
-                  src="/images/guardrails/.png"
+                   src="/images/local-businesses/finder_v22.png"
                   alt=""
-                  className="object-contain rounded-lg w-full h-full bg-[#0000001A]"
+                  className="object-contain rounded-lg w-full h-full bg-[#bfc5ff] p-2"
                 />
               </div>
             </div>
@@ -157,9 +157,9 @@ function FeatureGrid() {
             >
               <div className="flex-1 overflow-hidden">
                 <img
-                  src="/images/guardrails/"
+                  src="/images/local-businesses/whatsapp_sms_nudges.png"
                   alt=""
-                  className="object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+                  className="object-contain rounded-lg"
                 />
               </div>
               <div className="mt-4">
@@ -197,12 +197,12 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden">
             <img
-              src="/images/guardrails/"
+              src="/images/local-businesses/ai_voice_callss.png"
               alt=""
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg"
             />
           </div>
         </div>
@@ -227,17 +227,14 @@ function FeatureGrid() {
           </div>
           <div className="flex-1 overflow-hidden">
             <img
-              src="/images/guardrails/"
+              src="/images/local-businesses/reputation_safe_sending.png"
               alt=""
-              //   width={200}
-              //   height={134}
-              //   quality={100}
-              className=" object-contain rounded-lg w-[280px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg"
             />
           </div>
         </div>
 
-        {/* Reputation-safe sending */}
+        {/* Simple proof */}
         <div
           style={{
             opacity: visible ? 1 : 0,
@@ -248,88 +245,25 @@ function FeatureGrid() {
         >
           <div className="mt-4">
             <h3 className="text-black font-bold text-xl leading-snug">
-              Reputation-safe sending
+              Simple Proof
             </h3>
             <p className="text-[15px] text-[#00000099] ">
-              Unified Inbox: Email, WhatsApp, Call Notes, Proposals—One Timeline
-              Per Lead.
+              See Calls Booked, Proposals Sent, And Jobs Won—One Dashboard.
             </p>
           </div>
           <div className="flex-1 overflow-hidden">
             <img
-              src="/images/guardrails/"
+              src="/images/local-businesses/simple_proof.png"
               alt=""
               //   width={200}
               //   height={134}
               //   quality={100}
-              className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+              className=" object-contain rounded-lg bg-[#bfc5ff] p-2"
             />
           </div>
         </div>
       </div>
 
-      {/* Third Row of cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-        {/* Reputation-safe sending */}
-        <div
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0px)" : "translateY(24px)",
-            transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
-          }}
-          className="bg-white border border-[#00000024] rounded-2xl overflow-hidden col-span-1 flex flex-col sm:flex-row-reverse items-center py-6 sm:pr-6 pl-0 pr-0 gap-8"
-        >
-          <div className="mt-4">
-            <h3 className="text-black font-bold text-xl leading-snug">
-              Reputation-Safe <br /> Sending
-            </h3>
-            <p className="text-[15px] text-[#00000099]">
-              Email Verification, Domain Warm-Up,
-              <br /> And DNC Guardrails.
-            </p>
-          </div>
-          <div className="flex-1 overflow-hidden flex justify-start">
-            <img
-              src="/images/guardrails/"
-              alt=""
-              //   width={200}
-              //   height={134}
-              //   quality={100}
-              className=" object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
-            />
-          </div>
-        </div>
-
-        {/* Simple proof */}
-        <div
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0px)" : "translateY(24px)",
-            transition: "opacity 0.55s ease 0.3s, transform 0.55s ease 0.3s",
-          }}
-          className="bg-white border border-[#00000024] rounded-2xl overflow-hidden col-span-1 flex flex-col sm:flex-row items-center py-6 sm:pl-6 pl-0 pr-0 gap-8"
-        >
-          <div className="mb-4">
-            <h3 className="text-black font-bold text-xl leading-snug">
-              Simple Proof
-            </h3>
-            <p className="text-[15px] text-[#00000099]">
-              See Calls Booked, Proposals <br /> Sent, And Jobs Won—One
-              Dashboard.
-            </p>
-          </div>
-          <div className="flex-1 overflow-hidden flex justify-end">
-            <img
-              src="/images/guardrails/"
-              alt=""
-              //   width={200}
-              //   height={134}
-              //   quality={100}
-              className=" object-contain rounded-lg w-[280px] h-[220px] bg-[#0000001A]"
-            />
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

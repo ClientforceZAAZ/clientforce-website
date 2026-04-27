@@ -1,0 +1,55 @@
+<svg width="133" height="52" viewBox="0 0 133 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-10.0816" y="-10.0816" width="153.163" height="72.1632"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5.04px);clip-path:url(#bgblur_0_7223_2036_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="10.0816" width="133" height="52" rx="10.7061" fill="url(#paint0_linear_7223_2036)"/>
+<foreignObject x="-2.81352" y="-1.81303" width="137.627" height="55.6261"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(4.21px);clip-path:url(#bgblur_1_7223_2036_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="8.41899" x="5.80297" y="6.80297" width="120.394" height="38.3941" rx="8.61602" fill="black" fill-opacity="0.41" stroke="url(#paint1_linear_7223_2036)" stroke-width="0.394061"/>
+<path d="M35.2973 31.164H32.8832V33.5781H23.2267V31.164H20.8126V28.7499H25.6408V31.164H30.4691V26.3358H23.2267V23.9216H20.8126V19.0934H23.2267V16.6793H32.8832V19.0934H35.2973V21.5075H30.4691V19.0934H25.6408V23.9216H32.8832V26.3358H35.2973V31.164ZM51.2258 19.0934H46.3976V33.5781H41.5693V19.0934H36.7411V16.6793H51.2258V19.0934ZM64.7355 33.5781H55.079V31.164H52.6648V19.0934H55.079V16.6793H64.7355V19.0934H57.4931V23.9216H64.7355V26.3358H57.4931V31.164H64.7355V33.5781ZM83.0875 26.3358H80.6734V28.7499H73.431V33.5781H68.6028V16.6793H80.6734V19.0934H83.0875V26.3358ZM78.2593 26.3358V19.0934H73.431V26.3358H78.2593ZM110.13 33.5781H105.302V31.164H95.6457V23.9216H98.0598V21.5075H100.474V19.0934H102.888V16.6793H110.13V33.5781ZM105.302 28.7499V21.5075H102.888V23.9216H100.474V28.7499H105.302Z" fill="#35E834"/>
+<defs>
+<clipPath id="bgblur_0_7223_2036_clip_path" transform="translate(10.0816 10.0816)"><rect width="133" height="52" rx="10.7061"/>
+</clipPath><clipPath id="bgblur_1_7223_2036_clip_path" transform="translate(2.81352 1.81303)"><rect x="5.80297" y="6.80297" width="120.394" height="38.3941" rx="8.61602"/>
+</clipPath><linearGradient id="paint0_linear_7223_2036" x1="1.42769e-06" y1="52.0256" x2="13.4604" y2="3.7775" gradientUnits="userSpaceOnUse">
+<stop stop-color="#209AA6"/>
+<stop offset="1" stop-color="#011012"/>
+</linearGradient>
+<linearGradient id="paint1_linear_7223_2036" x1="66" y1="7" x2="60.9163" y2="49.1039" gradientUnits="userSpaceOnUse">
+<stop stop-color="#35E834"/>
+<stop offset="1" stop-color="#D0F56B"/>
+</linearGradient>
+</defs>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</svg>

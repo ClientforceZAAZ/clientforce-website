@@ -28,7 +28,7 @@ function FeatureGrid() {
   return (
     <div ref={ref} className="px-6 lg:px-20">
         <div className="flex justify-center">
-            <h1 className="text-black border text-2xl sm:text-3xl md:text-4xl lg:text-5xl px-6 py-2 rounded-full font-bold text-center font-degular mb-10">
+            <h1 className="text-white border border-white text-2xl sm:text-3xl md:text-4xl px-6 py-2 rounded-full font-bold text-center font-degular mb-10">
                 Messaging Consent & Privacy
             </h1>
         </div>
@@ -45,22 +45,22 @@ function FeatureGrid() {
         transform: visible ? "translateY(0px)" : "translateY(24px)",
         transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
       }}
-      className="col-span-1 rounded-2xl overflow-hidden lg:hidden flex flex-col items-center justify-center px-6 py-6 bg-white border border-[#00000024]"
+      className="col-span-1 rounded-2xl overflow-hidden lg:hidden flex flex-col items-center justify-center px-6 py-6 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D]"
     >
       <div className="mb-4">
-        <h3 className="text-black font-bold text-xl leading-snug">
-          Proof of Consent Ledger
+        <h3 className="text-white font-bold text-xl leading-snug">
+          GDPR/CCPA/TCPA-ready Capture
         </h3>
-        <p className="text-sm text-[#00000099]">
-          Versioned records for opt-ins/opt-outs, exportable for audits.
+        <p className="text-sm text-gray-300">
+          Embeddable forms/widgets with consent checkboxes, purpose notes, IP + timestamp logs.
         </p>
       </div>
 
       <div className="overflow-hidden">
         <img
-          src="/images/guardrails/"
-          alt="Proof of Consent Ledger"
-          className="object-cover rounded-xl h-[220px] w-full bg-[#0000001A]"
+          src="/images/guardrails/GDPRCCPATCPA-ready.png"
+          alt="GDPR/CCPA/TCPA-ready"
+          className="object-cover rounded-xl w-full h-full bg-[#0000001A]"
         />
       </div>
     </div>
@@ -72,22 +72,22 @@ function FeatureGrid() {
         transform: visible ? "translateY(0px)" : "translateY(24px)",
         transition: "opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s",
       }}
-      className="col-span-1 bg-white border border-[#00000024] rounded-2xl overflow-hidden flex lg:flex-row flex-col items-center justify-center gap-4 p-6"
+      className="col-span-1 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex lg:flex-row flex-col items-center lg:items-start justify-center gap-4 p-6"
     >
       <div className="flex-1">
-        <h3 className="text-black font-bold text-xl leading-snug">
-          GDPR/CCPA/TCPA-ready Capture
+        <h3 className="text-white font-bold text-xl leading-snug">
+         Proof of Consent Ledger
         </h3>
-        <p className="text-sm text-[#00000099]">
-          Embeddable forms/widgets with consent checkboxes, purpose notes, IP + timestamp logs.
+        <p className="text-sm text-gray-300">
+          Versioned records for opt-ins/opt-outs, exportable for audits.
         </p>
       </div>
 
       <div className="flex-shrink-0">
         <img
-          src="/images/guardrails/"
-          alt="Capture"
-          className="object-contain rounded-lg w-[330px] h-[200px] bg-[#0000001A]"
+          src="/images/guardrails/Proof of Consent.png"
+          alt=" Proof of Consent"
+          className="object-contain rounded-lg w-full lg:h-[200px] bg-[#0000001A]"
         />
       </div>
     </div>
@@ -102,20 +102,20 @@ function FeatureGrid() {
           transform: visible ? "translateY(0px)" : "translateY(24px)",
           transition: "opacity 0.55s ease 0.4s, transform 0.55s ease 0.4s",
         }}
-        className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col items-center p-6 mb-6 sm:mb-0"
+        className="bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-col items-center p-6 mb-6 sm:mb-0"
       >
         <div className="flex-1">
-          <h3 className="text-black font-bold text-xl leading-snug">
+          <h3 className="text-white font-bold text-xl leading-snug">
             WhatsApp Compliance
           </h3>
-          <p className="text-sm text-[#00000099]">
+          <p className="text-sm text-gray-300">
             Template approval tracking with automatic email fallback if pending/denied.
           </p>
         </div>
 
-        <div className="flex-shrink-0 mt-4 sm:mt-0">
+        <div className="flex-shrink-0 mt-4">
           <img
-            src="/images/guardrails/.png"
+            src="/images/guardrails/WhatsApp Compliance.png"
             alt="WhatsApp Compliance"
             className="object-contain rounded-lg w-full h-full bg-[#0000001A]"
           />
@@ -129,21 +129,21 @@ function FeatureGrid() {
           transform: visible ? "translateY(0px)" : "translateY(24px)",
           transition: "opacity 0.55s ease 0.3s, transform 0.55s ease 0.3s",
         }}
-        className="bg-white border border-[#00000024] rounded-2xl overflow-hidden flex flex-col p-6 items-center"
+        className="bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-col p-6 items-center"
       >
         <div className="flex-1 overflow-hidden">
           <img
-            src="/images/guardrails/"
+            src="/images/guardrails/DNC Management.png"
             alt="DNC Management"
-            className="object-contain rounded-lg w-[315px] h-[220px] bg-[#0000001A]"
+            className="object-contain rounded-lg w-full h-full bg-[#0000001A]"
           />
         </div>
 
         <div className="mt-4">
-          <h3 className="text-black font-bold text-xl leading-snug">
+          <h3 className="text-white font-bold text-xl leading-snug">
             DNC Management
           </h3>
-          <p className="text-sm text-[#00000099]">
+          <p className="text-sm text-gray-300">
             Global and campaign-level DNC lists with per-channel suppression.
           </p>
         </div>
@@ -158,23 +158,23 @@ function FeatureGrid() {
       transform: visible ? "translateY(0px)" : "translateY(24px)",
       transition: "opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s",
     }}
-    className="col-span-3 rounded-2xl overflow-hidden hidden lg:flex flex-col justify-center px-8 py-6 bg-white border border-[#00000024]"
+    className="col-span-3 rounded-2xl overflow-hidden hidden lg:flex flex-col justify-center px-8 py-6 bg-linear-to-b from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D]"
   >
     <div>
-      <h3 className="text-black font-bold text-xl leading-snug">
-        Proof of Consent Ledger
+      <h3 className="text-white font-bold text-xl leading-snug">
+        GDPR/CCPA/TCPA-ready Capture
       </h3>
-      <p className="text-sm text-[#00000099]">
-        Versioned records for opt-ins/opt-outs, exportable for audits.
+      <p className="text-sm text-gray-300">
+        Embeddable forms/widgets with consent checkboxes, purpose notes, IP + timestamp logs.
       </p>
     </div>
 
     <div className="overflow-hidden mt-auto flex items-center justify-center">
       <img
-        src="/images/guardrails/"
-        alt="Proof of Consent Ledger"
-        className="object-cover rounded-xl h-[430px] w-full bg-[#0000001A]"
-      />
+          src="/images/guardrails/GDPRCCPATCPA-ready.png"
+          alt="GDPR/CCPA/TCPA-ready"
+          className="object-cover rounded-xl w-full bg-[#0000001A]"
+        />
     </div>
   </div>
 </div>
@@ -191,7 +191,7 @@ export default function WhatYouSee() {
     <section
       className="w-full  py-10"
         style={{
-        background: "#F4F9FA",
+        background: "#010101",
       }}
     >
       <FeatureGrid />

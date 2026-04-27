@@ -8,7 +8,7 @@ export default function LocalBusinessesHero() {
       badge="B2B (Mid-Market & Enterprise)"
       badgeIcon=""
       headline={<>
-       Account-Smart <br className="hidden lg:block" /> Pipeline Creation With Autonomous Multi-Channel Orchestration
+       <span className="text-[#09B708]">Account-Smart <br className="hidden lg:block" /> Pipeline Creation</span> With Autonomous Multi-Channel Orchestration
     </>
     }
       headlineStyle="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  leading-6 sm:leading-8 md:leading-10 lg:leading-13 text-center lg:text-left"
@@ -21,8 +21,8 @@ export default function LocalBusinessesHero() {
       metrics=""
       rightImage={
           <>
-            <div className="relative pt-10 pl-10">
-              <Image src="/images/solutions/solutions_rightBg.png" alt="Dashboard Preview" height={1198} width={950} className="w-full h-auto" priority />
+            <div className="relative pl-0 lg:pl-10">
+              <Image src="/images/b2b/b2b_right_hero.png" alt="Dashboard Preview" height={1198} width={950} className="w-full h-auto" priority />
             </div>
           </>
           }

@@ -9,22 +9,24 @@ export default function Hero() {
     <PageHero
       badge="Guardrails & Compliance"
       badgeIcon=""
-      badgeBg="bg-[#E9FFAC]"
+      badgeBg="bg-[#627332]"
+      badgeTextColor="text-white"
+      BadgeBorder="bg-white"
       headline={<>Scale Outreach Safely. <br className="hidden sm:block" /> Protect Reputation. Stay <br className="hidden sm:block" /> Compliant, By Default.</>}
-      headlineStyle="text-4xl sm:text-5xl lg:text-[55px] leading-8 sm:leading-12 lg:leading-14 text-center lg:text-left"
+      headlineStyle="text-4xl sm:text-5xl lg:text-[55px] leading-8 sm:leading-12 lg:leading-14 text-center lg:text-left text-white"
       description={<>ClientForce bakes deliverability, consent, and policy controls into every step so your Agents can run 24/7 without risking spam flags, fines, or brand damage.</>}
-      descriptionStyle="text-black text-sm sm:text-lg text-center lg:text-left leading-4 sm:leading-5 sm:leading-6"
+      descriptionStyle="text-black text-sm sm:text-lg text-center lg:text-left leading-4 sm:leading-5 sm:leading-6 text-white"
       primaryCTA={<PrimaryCTA variant="dark">Get Started</PrimaryCTA>}
       secondaryCTA={<PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>}
-      rightBg="bg-linear-to-b from-[#E9FFAC] to-[#F4F9FA]"
-      leftBg="bg-linear-to-b from-[#E9FFAC] to-[#F4F9FA]"
+      rightBg="bg-gradient-to-b from-[#627332] from-60% to-[#010101]"
+      leftBg="bg-gradient-to-b from-[#627332] from-60% to-[#010101]"
       metrics={<>
-        <span>★★★★★ 2,000+ USERS</span>
+        <span className="text-white">★★★★★ 2,000+ USERS</span>
       </>}
       rightImage={
           <>
-            <div className="relative pt-10 pb-10 pl-10">
-              <Image src="/images/guardrails/guardrails_rightBg.png" alt="Dashboard Preview" height={1198} width={950} className="w-full h-auto" priority />
+            <div className="relative pt-17 pb-0 pl-10">
+              <Image src="/images/guardrails/guardrails_rightBg_img1.png" alt="Dashboard Preview" height={1198} width={950} className="w-full h-auto" priority />
             </div>
           </>
           }

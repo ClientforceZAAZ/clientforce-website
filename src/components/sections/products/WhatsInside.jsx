@@ -175,7 +175,7 @@ const SECTIONS = [
   {
     title: "Unified Inbox & Lead Timeline",
     subtitle: "Every Conversation, One Place—Total Clarity.",
-    image: "/images/products/unified_inbox_rightBg.png",
+    image: "/images/products/unified_inbox_rightBgg.png",
     FeatureSectionBg: "url('/images/products/unified_inbox_bg.png')",
     borderSetting: "",
     reverse: false,

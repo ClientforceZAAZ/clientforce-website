@@ -58,14 +58,14 @@ export default function HowToGetStarted() {
             position: "relative",
             zIndex: 1,
           }}
-          className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-4"
+          className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col items-center col-span-1 md:col-span-4"
         >
         
           <div>
-            <img src="" alt="" className=" h-[280px]" />
+            <img src="/images/solutions/demos_trial.png" alt="Demos, Trial→Paid" className="" />
           </div>
         
-          <div className="mt-auto">
+          <div className="mt-4">
             <p className=" text-lg leading-6">
               <span className="font-bold">Pick A Goal:</span> Demos, Trial→Paid, Winback, High-Ticket, Or Local.
             </p>
@@ -82,9 +82,13 @@ export default function HowToGetStarted() {
             position: "relative",
             zIndex: 1,
           }}
-          className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-3"
+          className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col-reverse items-center col-span-1 md:col-span-3"
         >
           <div>
+            <img src="/images/solutions/choose_a_build.png" alt="choose_a_build" className="" />
+          </div>
+
+          <div className="mb-4">
             <p className="text-lg leading-6">
               <span className="font-bold">Choose A Build Path:</span> Start With AI, DFY Playbook, Or From Scratch.
             </p>
@@ -101,9 +105,13 @@ export default function HowToGetStarted() {
             position: "relative",
             zIndex: 1,
           }}
-          className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] col-span-1 md:col-span-4"
+          className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] items-center col-span-1 md:col-span-4"
         >
-          <div className="mt-auto">
+          <div>
+            <img src="/images/solutions/launch_connect.png" alt="launch_connect" className="" />
+          </div>
+
+          <div className="mt-4">
             <p className="text-lg leading-6">
               <span className="font-bold">Launch:</span> Connect Inbox/Number, Set Finder Rules, Embed Widget — Go Live.
             </p>

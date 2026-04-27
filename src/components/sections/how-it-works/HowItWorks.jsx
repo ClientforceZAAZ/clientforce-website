@@ -32,12 +32,13 @@ const STEPS = [
       { bold: "Guardrails On:", text: " Time Windows, Daily Caps, Compliance Defaults Included." },
     ],
     outcome: "A Goal-Aligned Agent With A Ready-To-Run, Personalized Campaign Plan.",
-    image: (<><Image src="/images/how-it-works/step_one.png" width={100} height={40} /></>),
+    stepImage: (<><Image src="/images/how-it-works/step_one.png" width={100} height={40} /></>),
+    image: "/images/how-it-works/step_one_img.png",
     imageLeft: false,
   },
   {
     step: "STEP 2",
-    title: "Create Your AI Sales Agent",
+    title: "Create Lead Sources",
     subtitle: "Import CSV, Enable The Finder For Auto-Prospecting, Add Widgets To Your Site, Or Capture From LinkedIn/Google Business Via The Chrome Extension.",
     bullets: [
       { bold: "Finder V2 (Auto-Prospecting):", text: " Keywords, Industry, Geo, Frequency → Fresh Leads Flow In On Schedule." },
@@ -46,7 +47,8 @@ const STEPS = [
       { bold: "Smart Import:", text: " Field Mapping, De-Dups, Email Verification; Bad Addresses Suppressed." },
     ],
     outcome: "Your Pipeline Refills Itself — Clean, Enriched, And Instantly Routed.",
-    image: (<><Image src="/images/how-it-works/step_two.png" width={100} height={40} /></>),
+    stepImage: (<><Image src="/images/how-it-works/step_two.png" width={100} height={40} /></>),
+    image: "/images/how-it-works/step_two_img.png",
     imageLeft: true,
   },
   {
@@ -60,7 +62,8 @@ const STEPS = [
       { bold: "Optimization Built-In:", text: " Step Performance, Reply Types, A/B Subjects, Deliverability & Number Reputation." },
     ],
     outcome: "Always-On Campaigns That Prospect, Engage, And Close — Without Manual Chasing.",
-     image: (<><Image src="/images/how-it-works/step_three.png" width={100} height={40} /></>),
+     stepImage: (<><Image src="/images/how-it-works/step_three.png" width={100} height={40} /></>),
+     image: "/images/how-it-works/step_three_img.png",
     imageLeft: false,
   },
 ];
@@ -73,8 +76,8 @@ function StepCard({ step, index }) {
       ref={ref}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(32px)",
-        transition: "opacity 0.65s ease, transform 0.65s ease",
+        // transform: visible ? "translateY(0)" : "translateY(32px)",
+        // transition: "opacity 0.65s ease, transform 0.65s ease",
       }}
       className=""
       style2={{
@@ -89,15 +92,15 @@ function StepCard({ step, index }) {
           <div
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(-24px)",
-              transition:
-                "opacity 0.65s ease 0.15s, transform 0.65s ease 0.15s",
+              // transform: visible ? "translateX(0)" : "translateX(-24px)",
+              // transition:
+              //   "opacity 0.65s ease 0.15s, transform 0.65s ease 0.15s",
             }}
             className="lg:w-[50%] relative overflow-hidden hidden lg:block"
           >
             {/* <div className="absolute inset-0 bg-gradient-to-br from-[#0a2a1a] to-[#061a0a]" /> */}
             <Image
-              src="/images/how-it-works/steps_card_image_left.png"
+              src={step.image}
               alt={step.title}
               width={1060}
               height={784}
@@ -109,12 +112,12 @@ function StepCard({ step, index }) {
         <div
           style={{
             opacity: visible ? 1 : 0,
-            transform: visible
-              ? "translateX(0)"
-              : step.imageLeft
-                ? "translateX(24px)"
-                : "translateX(-24px)",
-            transition: "opacity 0.65s ease 0.2s, transform 0.65s ease 0.2s",
+            // transform: visible
+            //   ? "translateX(0)"
+            //   : step.imageLeft
+            //     ? "translateX(24px)"
+            //     : "translateX(-24px)",
+            // transition: "opacity 0.65s ease 0.2s, transform 0.65s ease 0.2s",
           }}
           className={`lg:w-[50%] flex flex-col justify-center ${step.imageLeft ? "px-6 sm:px-8" : "px-6 sm:px-8"}`}
         >
@@ -138,8 +141,8 @@ function StepCard({ step, index }) {
                 key={i}
                 style={{
                   opacity: visible ? 1 : 0,
-                  transform: visible ? "translateX(0)" : "translateX(-12px)",
-                  transition: `opacity 0.5s ease ${0.3 + i * 0.08}s, transform 0.5s ease ${0.3 + i * 0.08}s`,
+                  // transform: visible ? "translateX(0)" : "translateX(-12px)",
+                  // transition: `opacity 0.5s ease ${0.3 + i * 0.08}s, transform 0.5s ease ${0.3 + i * 0.08}s`,
                 }}
                 className="flex gap-2"
               >
@@ -172,15 +175,15 @@ function StepCard({ step, index }) {
           <div
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(24px)",
-              transition:
-                "opacity 0.65s ease 0.15s, transform 0.65s ease 0.15s",
+              // transform: visible ? "translateX(0)" : "translateX(24px)",
+              // transition:
+              //   "opacity 0.65s ease 0.15s, transform 0.65s ease 0.15s",
             }}
             className="lg:w-[50%] relative overflow-hidden hidden lg:block"
           >
             {/* <div className="absolute inset-0 bg-gradient-to-br from-[#0a2a1a] to-[#061a0a]" /> */}
             <Image
-              src="/images/how-it-works/steps_card_image.png"
+              src={step.image}
               alt={step.title}
               width={1060}
               height={784}
@@ -195,7 +198,7 @@ function StepCard({ step, index }) {
           ${step.imageLeft ? "lg:left-[35rem] left-[1.5rem]" : "left-[1.5rem]"}
         `}
               >
-                {step.image}
+                {step.stepImage}
         </div>
       </div>
     </div>

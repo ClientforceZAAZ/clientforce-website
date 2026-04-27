@@ -48,18 +48,18 @@ function HowItWorksCard() {
         >
           <div>
             <h3 className="text-white font-bold text-xl leading-snug">
-              End-To-End Out Of The Box
+               Positioning That Converts
             </h3>
             <p className="text-sm text-[#FFFFFF99]">
-              Not Just Templates; Full Prospect → Engage → Proposal → Call →
-              Close Flows.
+              Benefits, Differentiators, Objections, And Proof Already Mapped
+              Per Industry.
             </p>
           </div>
           <div className="overflow-hidden mt-auto flex items-center justify-center">
             <img
-              src="/images/"
+              src="/images/solutions/positioning_convert.png"
               alt=""
-              className="object-cover rounded-t-xl h-[400px] w-full bg-[#FFFFFF1A]"
+              className="object-cover rounded-t-xl h-full w-full"
             />
           </div>
         </div>
@@ -77,19 +77,19 @@ function HowItWorksCard() {
           >
             <div className="mb-4 w-full md:w-fit">
               <h3 className="text-white font-bold text-xl leading-snug">
-                End-To-End Out Of The Box
+                Positioning That Converts
               </h3>
               <p className="text-sm text-[#FFFFFF99]">
-                Not Just Templates; Full Prospect → Engage → Proposal → Call →
-                Close Flows.
+                 Benefits, Differentiators, Objections, And Proof Already Mapped
+                Per Industry.
               </p>
             </div>
             <div className="overflow-hidden mt-auto flex items-center justify-center">
               <img
-                src="/images/"
-                alt=""
-                className="object-cover rounded-t-xl w-full bg-[#FFFFFF1A]"
-              />
+              src="/images/solutions/positioning_convert.png"
+              alt=""
+              className="object-cover rounded-t-xl h-full w-full"
+            />
             </div>
           </div>
 
@@ -100,20 +100,19 @@ function HowItWorksCard() {
               transform: visible ? "translateY(0px)" : "translateY(24px)",
               transition: "opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s",
             }}
-            className="bg-linear-to-br from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex lg:flex-row flex-col items-center justify-center gap-4 p-6"
+            className="bg-linear-to-br from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex lg:flex-row flex-col items-center lg:items-start justify-center gap-4 p-6"
           >
             <div className="flex-1">
               <h3 className="text-white font-bold text-xl leading-snug">
-                Positioning That Converts
+                End-To-End Out Of The Box
               </h3>
               <p className="text-sm text-[#FFFFFF99]">
-                Benefits, Differentiators, Objections, And Proof Already Mapped
-                Per Industry.
+                Not Just Templates; Full Prospect → Engage → Proposal → Call → Close Flows.
               </p>
             </div>
             <div className="flex-shrink-0">
               <img
-                src="/images/"
+                src="/images/solutions/end-to-end.png"
                 alt=""
                 className="object-contain rounded-lg w-[330px] h-[200px] bg-[#FFFFFF1A]"
               />
@@ -130,7 +129,7 @@ function HowItWorksCard() {
                 transition:
                   "opacity 0.55s ease 0.4s, transform 0.55s ease 0.4s",
               }}
-              className="bg-linear-to-br from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-col items-center p-6 pb-0 mb-3 sm:mb-0"
+              className="bg-linear-to-br from-[#FFFFFF0D] from-60% to-[#D0F56B21] border border-[#FFFFFF0D] rounded-2xl overflow-hidden flex flex-col items-center p-6 mb-3 sm:mb-0"
             >
               <div className="flex-1">
                 <h3 className="text-white font-bold text-xl leading-snug">
@@ -143,8 +142,8 @@ function HowItWorksCard() {
               </div>
               <div className="flex-shrink-0 mt-4">
                 <img
-                  src="/images/"
-                  alt=""
+                  src="/images/solutions/compliance_handled.png"
+                  alt="compliance handled"
                   className="object-contain rounded-lg"
                 />
               </div>
@@ -162,9 +161,9 @@ function HowItWorksCard() {
             >
               <div className="flex-1 overflow-hidden">
                 <img
-                  src="/images/"
-                  alt=""
-                  className="object-contain rounded-lg w-[315px] h-[220px]"
+                  src="/images/solutions/scale_like_agency.png"
+                  alt="scale like agency"
+                  className="object-contain rounded-lg w-full h-full"
                 />
               </div>
               <div className="mt-4">
@@ -193,10 +192,10 @@ function HowItWorksCard() {
   className="rounded-2xl overflow-hidden flex flex-col lg:flex-row-reverse items-center bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] p-6 sm:p-8 gap-8 sm:gap-12 mt-8"
 >
   {/* Image */}
-  <div className="w-full lg:w-[45%] overflow-hidden h-[260px] sm:h-[360px] lg:h-[640px] bg-[#FFFFFF1A]">
+  <div className="w-full lg:w-[45%] overflow-hidden h-full hidden lg:block">
     <img
-      src="/images/"
-      alt=""
+      src="/images/solutions/whats_in_each_playbook.png"
+      alt="whats in each playbook"
       className="w-full h-full object-cover"
     />
   </div>
@@ -210,7 +209,7 @@ function HowItWorksCard() {
     <div className="mt-2 flex flex-col gap-4 sm:gap-6 justify-between items-start w-full">
 
       <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-        <Image src="/images/agents/icons/compliance_email.svg" width={45} height={45}
+        <Image src="/images/solutions/icons/email_sequence.svg" width={45} height={45}
           className="w-8 h-8 sm:w-[45px] sm:h-[45px]" />
         <p className="text-white text-xs sm:text-lg font-light w-full">
           <span className="font-bold">Email sequences</span> (5–7 steps) with A/B subjects
@@ -236,7 +235,7 @@ function HowItWorksCard() {
       </div>
 
       <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-        <Image src="/images/agents/icons/compliance_voice.svg" width={45} height={45}
+        <Image src="/images/solutions/icons/dyamic_proposal.svg" width={45} height={45}
           className="w-8 h-8 sm:w-[45px] sm:h-[45px]" />
         <p className="text-white text-xs sm:text-lg font-light w-full">
           <span className="font-bold">Dynamic proposal templates</span>
@@ -245,7 +244,7 @@ function HowItWorksCard() {
       </div>
 
       <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-        <Image src="/images/agents/icons/compliance_voice.svg" width={45} height={45}
+        <Image src="/images/solutions/icons/widget_form.svg" width={45} height={45}
           className="w-8 h-8 sm:w-[45px] sm:h-[45px]" />
         <p className="text-white text-xs sm:text-lg font-light w-full">
           <span className="font-bold">Widget & form presets</span>
@@ -254,7 +253,7 @@ function HowItWorksCard() {
       </div>
 
       <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-        <Image src="/images/agents/icons/compliance_voice.svg" width={45} height={45}
+        <Image src="/images/solutions/icons/objection_banks.svg" width={45} height={45}
           className="w-8 h-8 sm:w-[45px] sm:h-[45px]" />
         <p className="text-white text-xs sm:text-lg font-light w-full">
           <span className="font-bold">Objection banks & proof inserts</span>
@@ -263,7 +262,7 @@ function HowItWorksCard() {
       </div>
 
       <div className="flex items-center gap-4 w-full bg-[#FFFFFF1C] border border-[#0AD85533] p-3 rounded-lg">
-        <Image src="/images/agents/icons/compliance_voice.svg" width={45} height={45}
+        <Image src="/images/solutions/icons/scheduling.svg" width={45} height={45}
           className="w-8 h-8 sm:w-[45px] sm:h-[45px]" />
         <p className="text-white text-xs sm:text-lg font-light w-full">
           <span className="font-bold">Scheduling & guardrails</span>

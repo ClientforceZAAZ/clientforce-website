@@ -27,8 +27,8 @@ const ITEMS = [
     ),
     delay: "0.1s",
     icon: (
-        <div className="w-12 h-12 rounded-2xl bg-[#D2F7FD] flex items-center justify-center">
-             <Image src="/images/analytics/icons/charity_icon.svg" width={70} height={70} />
+        <div className="w-15 h-15 rounded-full bg-[#ffffff1c] flex items-center justify-center">
+             <Image src="/images/b2b/icons/first_meeting_icon.svg" width={50} height={50} />
         </div>
        
     ),
@@ -40,9 +40,9 @@ const ITEMS = [
     ),
     delay: "0.25s",
     icon: (
-      <div className="w-12 h-12 rounded-2xl bg-[#D2F7FD] flex items-center justify-center">
-        <Image src="/images/analytics/icons/attribution.svg" width={70} height={70} />
-      </div>
+      <div className="w-15 h-15 rounded-full bg-[#ffffff1c] flex items-center justify-center">
+             <Image src="/images/b2b/icons/higher_opportunity_icon.svg" width={50} height={50} />
+        </div>
     ),
   },
   {
@@ -52,9 +52,9 @@ const ITEMS = [
     ),
     delay: "0.4s",
     icon: (
-      <div className="w-12 h-12 rounded-2xl bg-[#D2F7FD] flex items-center justify-center">
-         <Image src="/images/analytics/icons/actionability.svg" width={70} height={70} />
-      </div>
+      <div className="w-15 h-15 rounded-full bg-[#ffffff1c] flex items-center justify-center">
+             <Image src="/images/b2b/icons/cleaner_governance.svg" width={50} height={50} />
+        </div>
     ),
   },
 ];
@@ -74,7 +74,7 @@ function GlanceCard({ icon, title, description, delay, visible }) {
           ? "0 12px 40px rgba(0,0,0,0.10)"
           : "0 2px 16px rgba(0,0,0,0.05)",
       }}
-      className="flex-1 bg-white rounded-2xl border border-[#D7D7D7] p-6 flex flex-col items-center gap-6 cursor-default"
+      className="flex-1 bg-black rounded-2xl border border-[#D7D7D7] p-6 flex flex-col items-center gap-6 cursor-default"
     >
       {/* Icon */}
       <div
@@ -88,8 +88,8 @@ function GlanceCard({ icon, title, description, delay, visible }) {
       </div>
 
       {/* Text */}
-      <p className="text-base leading-relaxed text-center">
-        <span className="font-bold text-black">{title} </span>
+      <p className="text-base leading-relaxed text-center text-white">
+        <span className="font-bold">{title} </span>
         {description}
       </p>
     </div>

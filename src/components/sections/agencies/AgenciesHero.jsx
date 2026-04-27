@@ -22,8 +22,8 @@ export default function Hero() {
       metrics=""
       rightImage={
           <>
-            <div className="relative pt-10 pl-10">
-              <Image src="/images/solutions/solutions_rightBg.png" alt="Dashboard Preview" height={1198} width={950} className="w-full h-auto" priority />
+            <div className="relative pl-0 lg:pl-10">
+              <Image src="/images/agencies/solutions_rightBg_imgg.png" alt="Dashboard Preview" height={1198} width={950} className="w-full h-auto" priority />
             </div>
           </>
           }

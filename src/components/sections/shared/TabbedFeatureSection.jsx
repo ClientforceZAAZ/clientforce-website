@@ -40,8 +40,9 @@ export default function TabbedFeatureSection({ background = "", tabs = [], image
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(-12px)",
           transition: "opacity 0.5s ease, transform 0.5s ease",
+          zIndex: 10
         }}
-        className="flex flex-wrap gap-3 justify-center mb-8"
+        className="flex flex-wrap gap-3 justify-center mb-8 z-10"
       >
         {tabs.map((tab, i) => (
           <button
@@ -52,8 +53,9 @@ export default function TabbedFeatureSection({ background = "", tabs = [], image
               color: activeTab === i ? "#11A848" : "#000000",
               background: "white",
               transition: "all 0.25s ease",
+              zIndex: 10,
             }}
-            className="px-5 py-2 rounded-full border text-sm font-bold cursor-pointer"
+            className="px-5 py-2 rounded-full border text-sm font-bold cursor-pointer z-10"
           >
             {tab.label}
           </button>
@@ -68,15 +70,15 @@ export default function TabbedFeatureSection({ background = "", tabs = [], image
           transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s",
           boxShadow: "0 8px 40px rgba(0,0,0,0.07)",
         }}
-        className={`bg-white border border-gray-300 rounded-3xl overflow-hidden `}
+        className={`bg-white border border-gray-300 rounded-3xl overflow-hidden z-10 `}
       >
         <div
           key={activeTab}
           style={{ animation: "tabFadeIn 0.35s ease" }}
-          className={`flex flex-col ${imageRight? "md:flex-row-reverse" : "md:flex-row"}`}
+          className={`flex flex-col ${imageRight? "md:flex-row-reverse" : "md:flex-row"} z-10`}
         >
           {/* Left — image */}
-          <div className="md:w-[50%] p-6 flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
+          <div className="md:w-[50%] p-6 flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 z-10">
             {active?.image && (
               <img
                 src={active.image}
@@ -111,8 +113,8 @@ export default function TabbedFeatureSection({ background = "", tabs = [], image
 
 
 
-      <Image src="/images/guardrails/Ellipse_guardrails_right.png" width={400} height={250} className="absolute bottom-[-20] left-0" />
-      <Image src="/images/guardrails/Ellipse_guardrails_left.png" width={400} height={250} className="absolute bottom-[-20] right-0" />
+      <Image src="/images/guardrails/Ellipse_guardrails_right.png" width={400} height={250} className="absolute bottom-[-20] -z-10 left-0 bg-amber-400 " />
+      <Image src="/images/guardrails/Ellipse_guardrails_left.png" width={400} height={250} className="absolute bottom-[-20] right-0 bg-blue-500 -z-10" />
 
       <Image src="/images/guardrails/icons/right.svg" width={50} height={50} className="absolute top-50 right-0" />
       <Image src="/images/guardrails/icons/left.svg" width={50} height={50} className="absolute top-50 left-0" />

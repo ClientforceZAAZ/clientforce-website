@@ -11,7 +11,7 @@ const TESTIMONIALS = [
   {
     id: "chidi",
     quote: '"We Booked 37 Qualified Meetings In 7 Days."',
-    author: "— Chidi Okafor, Agency Owner",
+    author: "— Adrian Novak, Agency Owner",
     image: "/images/proof_chidi.png",
   },
   {

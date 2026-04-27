@@ -80,11 +80,8 @@ export default function Footer() {
               height={28}
               alt="Clientforce AI"
             />
-            <p className="text-white text-sm mt-6 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+            <p className="text-white text-sm mt-6 leading-relaxed text-align justify">
+              Clientforce AI helps you automate your outreach, capture more leads, and close deals faster with intelligent, AI-powered systems. From multi-channel communication to fully optimized sales workflows, everything is built to help you scale efficiently and grow your business with confidence.
             </p>
             <div className="flex items-center h-12 w-full max-w-xs mt-6 overflow-hidden rounded-xl bg-[#1f1f1f]">
               <input

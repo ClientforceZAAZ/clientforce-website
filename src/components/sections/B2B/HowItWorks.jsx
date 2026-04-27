@@ -47,7 +47,7 @@ export default function HowItWorks() {
             }}
             className="flex justify-center mb-10"
             >
-            <div className=" border border-white rounded-full px-6 text-3xl sm:text-4xl lg:text-[46px] text-white font-bold font-degular shadow-sm">
+            <div className=" border border-white rounded-full px-6 py-2 text-3xl sm:text-4xl lg:text-[46px] text-white font-bold font-degular shadow-sm">
                 How It Works <span className="text-[#D0F56B] font-normal">(3 steps)</span>
             </div>
             </div>
@@ -65,10 +65,10 @@ export default function HowItWorks() {
                 className="bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-4"
                 >
                 <div>
-                    <img src="" alt="" className=" h-[280px]" />
-                </div>
+              <img src="/images/agencies/launch_and_prove.png" alt="launch and prove" className="" />
+            </div>
 
-                <div className="mt-auto">
+                <div className="mt-4">
                     <p className=" text-lg leading-6">
                     <span className="font-bold">Define The Program:</span>  ABM List, Vertical Motion, Event Follow-Up, Or Partner Co-Sell.
                     </p>
@@ -84,10 +84,13 @@ export default function HowItWorks() {
                     position: "relative",
                     zIndex: 1,
                 }}
-                className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col col-span-1 md:col-span-3"
+                className=" bg-white border border-[#00000024] rounded-2xl p-5 flex flex-col-reverse col-span-1 md:col-span-3"
                 >
+                   <div>
+              <img src="/images/b2b/load_knowledge_messaging.png" alt="load_knowledge_messaging" className="" />
+            </div>
                 <div>
-                    <p className="text-lg leading-6">
+                    <p className="text-lg leading-6 mb-4">
                     <span className="font-bold"> Load Knowledge:</span>  Messaging Guardrails, Objection Libraries, ROI Stories, PDFs.
                     </p>
                 </div>
@@ -104,7 +107,13 @@ export default function HowItWorks() {
                 }}
                 className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col min-h-[160px] col-span-1 md:col-span-4"
                 >
-                <div className="mt-auto">
+
+                   <div>
+              <img src="/images/saas-companies/launch_and_optimize.png" alt="launch_and_optimize" className="" />
+            </div>
+
+
+                <div className="mt-4">
                     <p className="text-lg leading-6">
                     <span className="font-bold">Run & Report:</span> Agents Execute; Managers Review Outcomes, Tune Steps, And Scale.
                     </p>
