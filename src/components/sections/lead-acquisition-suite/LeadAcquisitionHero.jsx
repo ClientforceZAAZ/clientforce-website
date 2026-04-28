@@ -1,10 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import PageHero from "@/components/sections/shared/PageHero";
 
+import VideoModal from "@/components/ui/VideoModal";
+
+import { useState } from "react";
+
 export default function Hero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
-    <PageHero
+    <>
+      <PageHero
       badge="Lead Acquisition Suite"
       badgeBg="#F6F6F6"
       headline={<>Never Run Out <br className="hidden lg:block" /> Of Leads <p className="text-2xl sm:text-4xl lg:text-5xl">Lead Acquisition Suite</p></>}
@@ -12,7 +20,7 @@ export default function Hero() {
       description="Turn Prospecting Into A Background Process. ClientForce’s Lead Acquisition Suite Continuously Discovers, Captures, Validates, And Routes Fresh Prospects Straight Into The Right AI Agent Campaign—No Spreadsheets, No Copy-Paste, No Manual Chasing."
       descriptionStyle="text-sm sm:text-lg text-center lg:text-left pr-0 lg:pr-20"
       primaryCTA={<PrimaryCTA variant="dark">Get Started</PrimaryCTA>}
-      secondaryCTA={<PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>}
+      secondaryCTA={<PrimaryCTA variant="light" onClick={() => setIsVideoOpen(true)}>Watch 2-Minutes Demo</PrimaryCTA>}
       rightBg = "bg-[linear-gradient(320deg,#e3f5f7_0%,#e3f3f5_25%,#f6f6f6_50%,#99e9d2_60%,#88e6c6_85%,#2ddc7a_100%)]"
       rightImage={
           <>
@@ -28,5 +36,11 @@ export default function Hero() {
         <div className="absolute bottom-[0%] right-[5%] w-[60%] z-30"> <Image src="/images/lead-acquisition-suite/lead-acquisition-hero-woman.png" width={820} height={880} className="w-full h-auto" /></div>
       </>}
     />
+    <VideoModal 
+                  isOpen={isVideoOpen} 
+                  onClose={() => setIsVideoOpen(false)} 
+                  mediaId="eu8l1vo7pz" 
+                />
+    </>
   );
 }

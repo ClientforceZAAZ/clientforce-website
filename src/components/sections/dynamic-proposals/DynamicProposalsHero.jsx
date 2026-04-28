@@ -1,10 +1,14 @@
 "use client";
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import Image from "next/image";
+import VideoModal from "@/components/ui/VideoModal";
+
+import { useState } from "react";
 
 
 
 export default function DynamicProposalsHero() {
+    const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className='mt-18 lg:mt-21 pt-12 bg-cover bg-center' style={{ backgroundImage: "url('/images/dynamic-proposals/dynamic_proposal_hero_bg.png')"}}>
         <div>
@@ -22,7 +26,7 @@ export default function DynamicProposalsHero() {
             <p className='px-10 font-medium text-xs sm:text-base md:text-lg text-[#FFFFFF99] text-center mt-2 sm:mt-4 leading-4 sm:leading-6'>Send Customized, On-Brand Proposals To Thousands—Auto-Built From Your <br className="hidden md:block" /> Offer Docs, Tailored To Each Lead, And Tracked End-To-End.</p>
             <div className="flex items-center justify-center gap-3 py-5 md:py-10">
                 <PrimaryCTA variant="dark">Launch An Agent</PrimaryCTA>
-                <PrimaryCTA variant="light">Watch 2-minutes Demo</PrimaryCTA>
+                <PrimaryCTA variant="light" onClick={() => setIsVideoOpen(true)}>Watch 2-minutes Demo</PrimaryCTA>
             </div>
             <div>
                 <div className="flex items-center justify-center gap-2">
@@ -53,6 +57,11 @@ export default function DynamicProposalsHero() {
             </div>
 
         </div>
+         <VideoModal 
+                              isOpen={isVideoOpen} 
+                              onClose={() => setIsVideoOpen(false)} 
+                              mediaId="eu8l1vo7pz" 
+              />
     </section>
   )
 }

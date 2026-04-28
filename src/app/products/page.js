@@ -64,14 +64,33 @@ export default function ProductsPage() {
                 ]}
             />
         <WatchDemo />  
-        <FAQ faqs={[
-            { id: 1, question: "Is this a CRM or an AI agent platform?", answer: "ClientForceAI can run standalone or alongside your CRM. Use our unified inbox + pipelines, or sync via integrations." },
-            { id: 2, question: "Can I run multiple agents for different goals?", answer: "..." },
-            { id: 3, question: "Do I need content or scripts?", answer: "..." },
-            { id: 4, question: "Can I use this for my clients?", answer: "..." },
-            { id: 5, question: "What about compliance and deliverability?", answer: "..." },
-            ]} 
-        />
+       <FAQ faqs={[
+  { 
+    id: 1, 
+    question: "Is this a CRM or an AI agent platform?", 
+    answer: "ClientForceAI is both. It combines a lightweight CRM with powerful AI agents, so you can manage conversations, pipelines, and automate outreach all in one place or integrate it with your existing CRM if needed." 
+  },
+  { 
+    id: 2, 
+    question: "Can I run multiple agents for different goals?", 
+    answer: "Yes. You can deploy multiple AI agents for different use cases—lead generation, follow-ups, appointment setting, reactivation campaigns, and more. Each agent can be customized to a specific goal or workflow." 
+  },
+  { 
+    id: 3, 
+    question: "Do I need content or scripts?", 
+    answer: "No. We provide ready-to-use templates, playbooks, and proven scripts you can launch with instantly. You can also customize everything to match your brand, offer, and tone if you prefer." 
+  },
+  { 
+    id: 4, 
+    question: "Can I use this for my clients?", 
+    answer: "Absolutely. ClientForceAI is built with agencies in mind. You can create separate workspaces for each client, deploy dedicated AI agents, and manage everything from a single dashboard." 
+  },
+  { 
+    id: 5, 
+    question: "What about compliance and deliverability?", 
+    answer: "We follow best practices for compliance and deliverability, including domain warming, inbox rotation, and adherence to standards like GDPR, TCPA, and CAN-SPAM. This helps protect your domains and maximize inbox placement." 
+  },
+]} />
     </main>
   );
 }

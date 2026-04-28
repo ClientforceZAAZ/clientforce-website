@@ -1,11 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import AnalyticsHeroCard from "@/components/sections/analytics/components/AnalyticsHeroCard";
 import PageHero from "@/components/sections/shared/PageHero";
+import VideoModal from "@/components/ui/VideoModal";
+
+import { useState } from "react";
 
 export default function Hero() {
+   const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
-    <PageHero
+    <>
+       <PageHero
       badge="Solutions"
       badgeIcon=""
       headline={
@@ -42,7 +49,7 @@ export default function Hero() {
       descriptionStyle="text-[#676767] text-sm sm:text-lg text-center lg:text-left"
       primaryCTA={<PrimaryCTA variant="dark">Launch And Agent</PrimaryCTA>}
       secondaryCTA={
-        <PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>
+        <PrimaryCTA variant="light" onClick={() => setIsVideoOpen(true)}>Watch 2-Minutes Demo</PrimaryCTA>
       }
       rightBg="bg-[#FFFFFF]"
       leftBg="bg-[#FFFFFF]"
@@ -63,5 +70,11 @@ export default function Hero() {
       }
       floatingCards=""
     />
+     <VideoModal
+                isOpen={isVideoOpen}
+                onClose={() => setIsVideoOpen(false)}
+                mediaId="eu8l1vo7pz"
+              />
+    </>
   );
 }

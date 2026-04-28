@@ -216,7 +216,7 @@ const SECTIONS = [
 
 export default function WhatsInside() {
   return (
-    <section className="pt-10 sm:pt-20 px-8 md:px-16 pb-6 md:pb-16">
+    <section className="pt-10 sm:pt-20 px-8 md:px-16 pb-0">
         <div className="flex items-center justify-center px-4">
   <h1 className="font-bold font-degular text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-[640px] text-center leading-tight">
     

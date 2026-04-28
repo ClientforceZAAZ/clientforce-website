@@ -32,55 +32,188 @@ const NODES = [
   { id: "messaging",   label: "Messaging",         icon:(<><img src="/icons/messagingg.svg" alt="ai_sales_agent" /></>), color: "#FFC3C3", textColor: "#000000", borderColor: "#f9a8d4" },
   { id: "proposing",   label: "Proposing",         icon: (<><img src="/icons/proposing.svg" alt="ai_sales_agent" /></>), color: "#E1ABFF", textColor: "#000000", borderColor: "#c4b5fd" },
   { id: "calling",     label: "Calling",           icon: (<><img src="/icons/calls.svg" alt="ai_sales_agent" /></>), color: "#A7B0FE", textColor: "#000000", borderColor: "#93c5fd" },
-  { id: "closing",     label: "Closing",           icon:(<><img src="/icons/calls.svg" alt="ai_sales_agent" /></>), color: "#A2EBF8", textColor: "#000000", borderColor: "#67e8f9" },
+  { id: "closing",     label: "Closing",           icon:(<><img src="/icons/closing.svg" alt="ai_sales_agent" /></>), color: "#A2EBF8", textColor: "#000000", borderColor: "#67e8f9" },
   { id: "e2e",         label: "End to end, 24/7",  icon: (<><img src="/icons/end_to_end.svg" alt="ai_sales_agent" /></>), color: "#A1FBBF", textColor: "#000000", borderColor: "#0EBE4F" },
 ];
 
 const SEQUENCE = ["agent", "prospecting", "messaging", "proposing", "calling", "closing", "e2e"];
 
 // Single sequential chain — 6 connections only
+// const CONNECTIONS = [
+//   {
+//     id: "agent-prospecting",
+//     from: "agent", to: "prospecting",
+//     glowColor: "#86efac",
+//     path: (p1, p2) =>
+//       `M ${p1.x} ${p1.y + 16} C ${p1.x - 20} ${p1.y + 50}, ${p2.x + 30} ${p2.y - 30}, ${p2.x} ${p2.y - 16}`,
+//   },
+//   {
+//     id: "prospecting-messaging",
+//     from: "prospecting", to: "messaging",
+//     glowColor: "#f9a8d4",
+//    path: (p1, p2) => 
+//   `M ${p1.x} ${p1.y} C ${p1.x + 30} ${p1.y}, ${p2.x - 30} ${p2.y}, ${p2.x} ${p2.y}`,
+//   },
+//   {
+//     id: "messaging-proposing",
+//     from: "messaging", to: "proposing",
+//     glowColor: "#c4b5fd",
+//     path: (p1, p2) =>
+//       `M ${p1.x} ${p1.y + 16} C ${p1.x - 30} ${p1.y + 40}, ${p2.x + 40} ${p2.y - 30}, ${p2.x} ${p2.y - 16}`,
+//   },
+//   {
+//     id: "proposing-calling",
+//     from: "proposing", to: "calling",
+//     glowColor: "#93c5fd",
+//     path: (p1, p2) =>
+//       `M ${p1.x + 16} ${p1.y} C ${p1.x + 40} ${p1.y}, ${p2.x - 40} ${p2.y}, ${p2.x - 16} ${p2.y}`,
+//   },
+//   {
+//     id: "calling-closing",
+//     from: "calling", to: "closing",
+//     glowColor: "#67e8f9",
+//     path: (p1, p2) =>
+//       `M ${p1.x + 16} ${p1.y} C ${p1.x + 40} ${p1.y}, ${p2.x - 40} ${p2.y}, ${p2.x - 16} ${p2.y}`,
+//   },
+//   {
+//     id: "closing-e2e",
+//     from: "closing", to: "e2e",
+//     glowColor: "#0EBE4F",
+//     path: (p1, p2) =>
+//       `M ${p1.x} ${p1.y + 16} C ${p1.x - 20} ${p1.y + 40}, ${p2.x + 40} ${p2.y - 30}, ${p2.x} ${p2.y - 16}`,
+//   },
+// ];
+// const CONNECTIONS = [
+//   {
+//     id: "agent-prospecting",
+//     from: "agent", to: "prospecting",
+//     glowColor: "#86efac",
+//     // Logic: Down -> Left -> Down (Rectilinear)
+//     path: (p1, p2) => {
+//       const midY = p1.y + (p2.y - p1.y) / 2;
+//       return `M ${p1.x} ${p1.y + 16} 
+//               L ${p1.x} ${midY - 10} 
+//               Q ${p1.x} ${midY} ${p1.x - 10} ${midY} 
+//               L ${p2.x + 10} ${midY} 
+//               Q ${p2.x} ${midY} ${p2.x} ${midY + 10} 
+//               L ${p2.x} ${p2.y - 16}`;
+//     },
+//   },
+//   {
+//     id: "prospecting-messaging",
+//     from: "prospecting", to: "messaging",
+//     glowColor: "#f9a8d4",
+//     // Logic: Straight Horizontal
+//     path: (p1, p2) => `M ${p1.x + 40} ${p1.y} L ${p2.x - 40} ${p2.y}`,
+//   },
+//   {
+//     id: "messaging-proposing",
+//     from: "messaging", to: "proposing",
+//     glowColor: "#c4b5fd",
+//     // Logic: Stepped Curve (Down -> Far Left -> Down)
+//     path: (p1, p2) => {
+//       const midY = p1.y + (p2.y - p1.y) / 2;
+//       return `M ${p1.x} ${p1.y + 16} 
+//               L ${p1.x} ${midY - 10} 
+//               Q ${p1.x} ${midY} ${p1.x - 10} ${midY} 
+//               L ${p2.x + 10} ${midY} 
+//               Q ${p2.x} ${midY} ${p2.x} ${midY + 10} 
+//               L ${p2.x} ${p2.y - 16}`;
+//     },
+//   },
+//   {
+//     id: "proposing-calling",
+//     from: "proposing", to: "calling",
+//     glowColor: "#93c5fd",
+//     path: (p1, p2) => `M ${p1.x + 40} ${p1.y} L ${p2.x - 40} ${p2.y}`,
+//   },
+//   {
+//     id: "calling-closing",
+//     from: "calling", to: "closing",
+//     glowColor: "#67e8f9",
+//     path: (p1, p2) => `M ${p1.x + 40} ${p1.y} L ${p2.x - 40} ${p2.y}`,
+//   },
+//   {
+//     id: "closing-e2e",
+//     from: "closing", to: "e2e",
+//     glowColor: "#0EBE4F",
+//     path: (p1, p2) => {
+//       const midY = p1.y + (p2.y - p1.y) / 2;
+//       return `M ${p1.x} ${p1.y + 16} 
+//               L ${p1.x} ${midY - 10} 
+//               Q ${p1.x} ${midY} ${p1.x - 10} ${midY} 
+//               L ${p2.x + 10} ${midY} 
+//               Q ${p2.x} ${midY} ${p2.x} ${midY + 10} 
+//               L ${p2.x} ${p2.y - 16}`;
+//     },
+//   },
+// ];
 const CONNECTIONS = [
   {
     id: "agent-prospecting",
     from: "agent", to: "prospecting",
     glowColor: "#86efac",
-    path: (p1, p2) =>
-      `M ${p1.x} ${p1.y + 16} C ${p1.x - 20} ${p1.y + 50}, ${p2.x + 30} ${p2.y - 30}, ${p2.x} ${p2.y - 16}`,
+    path: (p1, p2) => {
+      const midY = p1.y + (p2.y - p1.y) / 2;
+      // Exits bottom-center of Agent, enters top-center of Prospecting
+      return `M ${p1.x} ${p1.y} 
+              L ${p1.x} ${midY - 10} 
+              Q ${p1.x} ${midY} ${p1.x - 10} ${midY} 
+              L ${p2.x + 10} ${midY} 
+              Q ${p2.x} ${midY} ${p2.x} ${midY + 10} 
+              L ${p2.x} ${p2.y}`;
+    },
   },
   {
     id: "prospecting-messaging",
     from: "prospecting", to: "messaging",
     glowColor: "#f9a8d4",
-   path: (p1, p2) => 
-  `M ${p1.x} ${p1.y} C ${p1.x + 30} ${p1.y}, ${p2.x - 30} ${p2.y}, ${p2.x} ${p2.y}`,
+    // Bridges the full gap between centers
+    path: (p1, p2) => `M ${p1.x} ${p1.y} L ${p2.x} ${p2.y}`,
   },
   {
     id: "messaging-proposing",
     from: "messaging", to: "proposing",
     glowColor: "#c4b5fd",
-    path: (p1, p2) =>
-      `M ${p1.x} ${p1.y + 16} C ${p1.x - 30} ${p1.y + 40}, ${p2.x + 40} ${p2.y - 30}, ${p2.x} ${p2.y - 16}`,
+    path: (p1, p2) => {
+      const midY = p1.y + (p2.y - p1.y) / 2;
+      // Exits bottom-center of Messaging, enters top-center of Proposing
+      return `M ${p1.x} ${p1.y} 
+              L ${p1.x} ${midY - 16} 
+              Q ${p1.x} ${midY} ${p1.x - 16} ${midY} 
+              L ${p2.x + 12} ${midY} 
+              Q ${p2.x} ${midY} ${p2.x} ${midY + 12} 
+              L ${p2.x} ${p2.y}`;
+    },
   },
   {
     id: "proposing-calling",
     from: "proposing", to: "calling",
     glowColor: "#93c5fd",
-    path: (p1, p2) =>
-      `M ${p1.x + 16} ${p1.y} C ${p1.x + 40} ${p1.y}, ${p2.x - 40} ${p2.y}, ${p2.x - 16} ${p2.y}`,
+    // Straight line from center to center
+    path: (p1, p2) => `M ${p1.x} ${p1.y} L ${p2.x} ${p2.y}`,
   },
   {
     id: "calling-closing",
     from: "calling", to: "closing",
     glowColor: "#67e8f9",
-    path: (p1, p2) =>
-      `M ${p1.x + 16} ${p1.y} C ${p1.x + 40} ${p1.y}, ${p2.x - 40} ${p2.y}, ${p2.x - 16} ${p2.y}`,
+    // Straight line from center to center
+    path: (p1, p2) => `M ${p1.x} ${p1.y} L ${p2.x} ${p2.y}`,
   },
   {
     id: "closing-e2e",
     from: "closing", to: "e2e",
     glowColor: "#0EBE4F",
-    path: (p1, p2) =>
-      `M ${p1.x} ${p1.y + 16} C ${p1.x - 20} ${p1.y + 40}, ${p2.x + 40} ${p2.y - 30}, ${p2.x} ${p2.y - 16}`,
+    path: (p1, p2) => {
+      const midY = p1.y + (p2.y - p1.y) / 2;
+      // Exits bottom-center of Closing, enters top-center of E2E
+      return `M ${p1.x} ${p1.y} 
+              L ${p1.x} ${midY - 16} 
+              Q ${p1.x} ${midY} ${p1.x - 16} ${midY} 
+              L ${p2.x + 10} ${midY} 
+              Q ${p2.x} ${midY} ${p2.x} ${midY + 10} 
+              L ${p2.x} ${p2.y}`;
+    },
   },
 ];
 

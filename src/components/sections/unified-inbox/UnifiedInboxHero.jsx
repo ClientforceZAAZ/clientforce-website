@@ -1,10 +1,14 @@
 "use client";
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import Image from "next/image";
+import VideoModal from "@/components/ui/VideoModal";
+
+import { useState } from "react";
 
 
 
 export default function UnifiedInboxHero() {
+   const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className="relative mt-18 lg:mt-21 pt-12 bg-cover bg-center bg-gradient-to-b from-white via-white/50 to-[#35E834]/22">
       <div>
@@ -30,7 +34,7 @@ export default function UnifiedInboxHero() {
         </p>
         <div className="flex items-center justify-center gap-3 py-6  md:py-10">
           <PrimaryCTA variant="dark">Launch An Agent</PrimaryCTA>
-          <PrimaryCTA variant="light">Watch 2-minutes Demo</PrimaryCTA>
+          <PrimaryCTA variant="light" onClick={() => setIsVideoOpen(true)}>Watch 2-minutes Demo</PrimaryCTA>
         </div>
         <div>
           <div className="flex items-center justify-center gap-2 mb-10 lg:mb-10">
@@ -87,6 +91,12 @@ export default function UnifiedInboxHero() {
         src="/images/unified-inbox/unified_inbox_heroRight.png"
         className="hidden sm:block sm:absolute top-48 right-20 w-[180px] -z-10 lg:z-0"
       />
+
+       <VideoModal 
+                                    isOpen={isVideoOpen} 
+                                    onClose={() => setIsVideoOpen(false)} 
+                                    mediaId="eu8l1vo7pz" 
+                    />
     </section>
   );
 }

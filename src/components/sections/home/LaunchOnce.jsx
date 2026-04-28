@@ -1,7 +1,13 @@
+"use client";
+
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import Image from "next/image";
+import VideoModal from "@/components/ui/VideoModal";
+
+import { useState } from "react";
 
 export default function LaunchOnce() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className="relative overflow-hidden">
       <div className="flex flex-col items-center justify-center py-10 sm:py-20 lg:py-30 px-6 text-center">
@@ -13,11 +19,17 @@ export default function LaunchOnce() {
         </p>
         <div className="flex flex-wrap items-center justify-center mt-6 lg:mt-8 gap-4">
           <PrimaryCTA variant="dark">Launch My First Agent</PrimaryCTA>
-          <PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>
+          <PrimaryCTA variant="light"  onClick={() => setIsVideoOpen(true)}>Watch 2-Minutes Demo</PrimaryCTA>
         </div>
       </div>
       <Image src="/icons/launch_once_icon_left.svg" width={222} height={311} className="absolute top-20 left-0 hidden lg:block -z-10" />
       <Image src="/icons/launch_once_icon_right.svg" width={220} height={160} className="absolute top-38 right-0 hidden lg:block -z-10" />
+
+      <VideoModal 
+              isOpen={isVideoOpen} 
+              onClose={() => setIsVideoOpen(false)} 
+              mediaId="eu8l1vo7pz" 
+            />
     </section>
   );
 }

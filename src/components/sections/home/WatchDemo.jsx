@@ -1,7 +1,11 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
+import VideoModal from "@/components/ui/VideoModal";
+import { useState } from "react";
 
 export default function WatchDemo() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className=" py-0 lg:py-10 pl-0 lg:pl-6 flex items-center justify-center">
       <div
@@ -13,7 +17,7 @@ export default function WatchDemo() {
             <h1 className="font-bold text-4xl lg:text-6xl w-fit  lg:max-w-[686px] text-center font-degular ">Watch one setup turn into <br className="block lg:hidden" /> a 24/7 sales machine.</h1>
             <p className="text-base lg:text-lg text-[#676767] text-center font-dm mt-6">See an Agent find leads, send messages, place a live call, <br className="hidden sm:block" /> and book a meeting—no manual follow-up.</p>
             <div className="flex items-center justify-center mt-4">
-              <Link href="#" className="flex items-center text-xl font-bold bg-radial from-[#35E834] from-20% to-[#D0F56B] hover:from-[#D0F56B] hover:from-10% hover:to-[#35E834] transition delay-100 duration-200 ease-in-out pl-2 pr-4 rounded-full font-degular">
+              <button className="flex items-center text-xl font-bold bg-radial from-[#35E834] from-20% to-[#D0F56B] hover:from-[#D0F56B] hover:from-10% hover:to-[#35E834] transition delay-100 duration-200 ease-in-out pl-2 pr-4 rounded-full font-degular cursor-pointer" onClick={() => setIsVideoOpen(true)}>
 
                    <div className="relative flex items-center justify-center w-13 h-13">
                         {/* Pulse Ring */}
@@ -25,10 +29,15 @@ export default function WatchDemo() {
                         </span>
                     </div>
                     Watch The Demo
-              </Link>
+              </button>
             </div>
           </div>            
       </div>
+        <VideoModal 
+              isOpen={isVideoOpen} 
+              onClose={() => setIsVideoOpen(false)} 
+              mediaId="eu8l1vo7pz" // Your primary explainer ID
+            />
     </section>
   )
 }

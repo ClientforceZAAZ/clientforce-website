@@ -42,13 +42,13 @@ export default function Home() {
       <AllSimpleSteps
         heading={
           <>
-           <span className="text-white"> All in</span>{" "}
-            <span className="bg-gradient-to-r from-[#52be2f] to-[#da7d3d] text-transparent bg-clip-text">
+           <span className="text-gray-900"> All in</span>{" "}
+            <span className="bg-gradient-to-r from-[#13D111] to-[#0FC6D8] text-transparent bg-clip-text">
               4 Simple Steps
             </span>
           </>
         }
-        bgColor="bg-[#041308]"
+        bgColor="bg-[#EEF9FA]"
         steps={[
           {
             image: "/images/all_simple_steps_card1.png",
@@ -139,13 +139,58 @@ widget, and imported lists — so the pipeline never stops moving.</>
       <Proof />
       <AgentRoi />
       <SecurityCompliance />
-      <FAQ faqs={[
-          { id: 1, question: "Does this replace my CRM?", answer: "ClientForceAI can run standalone or alongside your CRM. Use our unified inbox + pipelines, or sync via integrations." },
-          { id: 2, question: "Can it make real phone calls?", answer: "Yes. Our AI voice agents can make and receive real calls..." },
-          { id: 3, question: "What if I don't have lists?", answer: "No problem. Our auto-prospecting engine builds targeted lead lists..." },
-          { id: 4, question: "Can I use this for my clients?", answer: "Absolutely. Our agency plan lets you spin up separate AI agents..." },
-          { id: 5, question: "Will emails land in inbox?", answer: "We use domain warming, inbox rotation, and deliverability monitoring..." },
-        ]} />
+     <FAQ faqs={[
+  { 
+    id: 1, 
+    question: "Does this replace my CRM?", 
+    answer: "ClientForceAI can run standalone or alongside your existing CRM. You can manage conversations, pipelines, and follow-ups directly inside our platform, or integrate seamlessly with tools you already use." 
+  },
+  { 
+    id: 2, 
+    question: "Can it make real phone calls?", 
+    answer: "Yes. Our AI voice agents can make and receive real phone calls, qualify leads, book appointments, and follow scripts naturally just like a human sales rep, but available 24/7." 
+  },
+  { 
+    id: 3, 
+    question: "What if I don't have lists?", 
+    answer: "No problem. Our built-in prospecting engine helps you find and build highly targeted lead lists based on your niche, location, and ideal customer profile so you can start outreach immediately." 
+  },
+  { 
+    id: 4, 
+    question: "Can I use this for my clients?", 
+    answer: "Absolutely. ClientForceAI is built for agencies. You can create and manage multiple client workspaces, deploy AI agents per client, and scale your services without increasing your workload." 
+  },
+  { 
+    id: 5, 
+    question: "Will emails land in inbox?", 
+    answer: "We use advanced deliverability systems including domain warming, inbox rotation, and real-time monitoring to maximize inbox placement and reduce the risk of spam filtering." 
+  },
+  { 
+    id: 6, 
+    question: "How quickly can I get started?", 
+    answer: "You can be up and running in minutes. With our ready-made templates, playbooks, and onboarding flows, most users launch their first campaign the same day." 
+  },
+  { 
+    id: 7, 
+    question: "Do I need technical skills to use this?", 
+    answer: "Not at all. ClientForceAI is designed to be beginner-friendly with a simple interface, step-by-step setup, and prebuilt workflows. No coding or technical experience is required." 
+  },
+  { 
+    id: 8, 
+    question: "What channels does it support?", 
+    answer: "ClientForceAI supports multi-channel outreach including email, SMS, WhatsApp, and AI voice calls so you can reach leads wherever they are." 
+  },
+  { 
+    id: 9, 
+    question: "Can I customize the AI agents?", 
+    answer: "Yes. You can fully customize your AI agents with your scripts, tone, offers, and workflows to match your brand and sales process." 
+  },
+  { 
+    id: 10, 
+    question: "Is there support if I get stuck?", 
+    answer: "Yes. We provide onboarding support, documentation, and access to our team to help you get results as quickly as possible." 
+  },
+]} />
       <LaunchOnce />
     </main>
   );

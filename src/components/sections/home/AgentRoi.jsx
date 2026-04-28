@@ -21,7 +21,7 @@ export default function AgentRoi() {
           style={{ backgroundImage: "url('/images/agent_roi_bg2.png')" }}>   
                 <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl font-degular text-center text-white max-w-[840px] leading-8 md:leading-12 lg:leading-16">Simple, Honest Plans for Teams That Want Momentum</h1>
                 <p className=" text-base sm:text-xl md:text-2xl text-[#FFFFFF99] py-2 sm:my-6 text-center">Start With The Plan That Fits Today—Upgrade As You Scale.</p> 
-                <Link href="#"  className="font-bold text-base sm:text-xl md:text-2xl bg-[#35E834] rounded-full px-4 sm:px-8 py-2 hover:scale-105 transition-all ease-in-out">View Pricing
+                <Link href="/pricing"  className="font-bold text-base sm:text-xl md:text-2xl bg-[#35E834] rounded-full px-4 sm:px-8 py-2 hover:scale-105 transition-all ease-in-out">View Pricing
                 </Link>
                 <div className="mt-16 relative">
                     <Image src="/images/agent_roi_bg3.png" width={840} height={525} />

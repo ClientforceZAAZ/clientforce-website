@@ -1,10 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import PageHero from "@/components/sections/shared/PageHero";
+import VideoModal from "@/components/ui/VideoModal";
+
+import { useState } from "react";
 
 export default function Hero() {
+   const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
-    <PageHero
+    <>
+        <PageHero
       badge="Agencies"
       badgeIcon=""
       headline={<>
@@ -16,7 +23,7 @@ export default function Hero() {
       description={<><span className="font-bold">ClientForceAI Lets Your Agency Deploy Self-Running Sales Agents For Every Client</span>—Prospecting, Following Up, Calling, And Closing On Autopilot. Sell Retainers Or Performance Deals With Clear ROI Dashboards, White-Label Reports, And DFY Playbooks By Niche.</>}
       descriptionStyle="text-[#676767]  text-sm sm:text-lg text-center lg:text-left"
       primaryCTA={<PrimaryCTA variant="dark">Launch And Agent</PrimaryCTA>}
-      secondaryCTA={<PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>}
+      secondaryCTA={<PrimaryCTA variant="light" onClick={() => setIsVideoOpen(true)}>Watch 2-Minutes Demo</PrimaryCTA>}
       rightBg="bg-[#FFFFFF]"
       leftBg="bg-[#FFFFFF]"
       metrics=""
@@ -29,5 +36,11 @@ export default function Hero() {
           }
       floatingCards=""
     />
+     <VideoModal
+                    isOpen={isVideoOpen}
+                    onClose={() => setIsVideoOpen(false)}
+                    mediaId="eu8l1vo7pz"
+                  />
+    </>
   );
 }

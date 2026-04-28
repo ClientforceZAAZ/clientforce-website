@@ -2,11 +2,15 @@
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import VideoModal from "@/components/ui/VideoModal";
+
+import { useState } from "react";
 
 
 const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 
 export default function AgentsHero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section
       className="mt-18 lg:mt-21 pt-12 bg-cover bg-center"
@@ -48,7 +52,7 @@ export default function AgentsHero() {
         </p>
         <div className="flex items-center justify-center gap-3 py-10">
           <PrimaryCTA variant="dark">Launch An Agent</PrimaryCTA>
-          <PrimaryCTA variant="light">Watch 2-minutes Demo</PrimaryCTA>
+          <PrimaryCTA variant="light" onClick={() => setIsVideoOpen(true)}>Watch 2-minutes Demo</PrimaryCTA>
         </div>
         <div>
           <div className="flex items-center justify-center gap-2 mb-10 lg:mb-10">
@@ -94,6 +98,12 @@ export default function AgentsHero() {
           </div>
         </div>
       </div>
+       <VideoModal 
+              isOpen={isVideoOpen} 
+              onClose={() => setIsVideoOpen(false)} 
+              mediaId="eu8l1vo7pz" 
+            />
+
     </section>
   );
 }

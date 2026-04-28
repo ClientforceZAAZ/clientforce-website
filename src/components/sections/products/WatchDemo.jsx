@@ -1,10 +1,15 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import { LuCircleDollarSign } from "react-icons/lu";
 import { FaArrowRightLong } from "react-icons/fa6";
+import VideoModal from "@/components/ui/VideoModal";
+
+import { useState } from "react";
 
 export default function WatchDemo() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className="py-0 lg:py-15 pl-0 lg:pl-6 flex items-center justify-center">
       <div
@@ -21,9 +26,10 @@ export default function WatchDemo() {
   <PrimaryCTA className="w-full sm:w-auto">Launch An Agent</PrimaryCTA>
 
   {/* Watch The Demo */}
-  <Link
-    href="#"
-    className="flex items-center justify-center w-full sm:w-auto text-base lg:text-xl font-bold bg-radial from-[#35E834] from-20% to-[#D0F56B] hover:from-[#D0F56B] hover:from-10% hover:to-[#35E834] transition delay-100 duration-200 ease-in-out pl-1 pr-4 py-2 rounded-full font-degular leading-5"
+  <button
+    
+    className="flex items-center justify-center w-full sm:w-auto text-base lg:text-xl font-bold bg-radial from-[#35E834] from-20% to-[#D0F56B] hover:from-[#D0F56B] hover:from-10% hover:to-[#35E834] transition delay-100 duration-200 ease-in-out pl-1 pr-4 py-2 rounded-full font-degular leading-5 cursor-pointer"
+    onClick={() => setIsVideoOpen(true)}
   >
     <div className="relative flex items-center justify-center w-8 h-8 md:w-10 md:h-10  mr-2">
       {/* Pulse Ring */}
@@ -35,11 +41,11 @@ export default function WatchDemo() {
       </span>
     </div>
     Watch The Demo
-  </Link>
+  </button>
 
   {/* See Pricing */}
   <Link
-    href="#"
+    href="/pricing"
     className="flex items-center justify-center sm:justify-start font-bold text-base text-gray-400 hover:text-gray-500 gap-2 ml-0 sm:ml-2"
   >
     <LuCircleDollarSign size={20} />
@@ -49,6 +55,11 @@ export default function WatchDemo() {
 </div>
           </div>            
       </div>
+      <VideoModal 
+              isOpen={isVideoOpen} 
+              onClose={() => setIsVideoOpen(false)} 
+              mediaId="eu8l1vo7pz" 
+            />
     </section>
   )
 }

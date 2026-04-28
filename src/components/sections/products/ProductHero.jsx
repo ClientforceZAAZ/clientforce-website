@@ -37,7 +37,7 @@ export default function ProductHero() {
       primaryCTA={<PrimaryCTA variant="dark">Get Started</PrimaryCTA>}
       secondaryCTA={
         <Link
-          href="#"
+          href="/pricing"
           className="flex items-center justify-center font-bold text-base text-gray-400 hover:text-gray-500 gap-2 ml-2"
         >
           <LuCircleDollarSign />

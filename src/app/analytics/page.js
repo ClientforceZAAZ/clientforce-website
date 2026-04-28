@@ -38,12 +38,24 @@ export default function Analytics() {
         <AnalyticsCards />
         <KpisTracked />
         <Integrations />
-         <FAQ faqs={[
-            { id: 1, question: "Will this show revenue per campaign?", answer: "Yes—meetings and revenue are attributed to steps, channels, and playbooks." },
-            { id: 2, question: "Can it optimize automatically?", answer: "..." },
-            { id: 3, question: "Does it help with deliverability?", answer: "..." },
-            ]} 
-        />
+        <FAQ faqs={[
+  { 
+    id: 1, 
+    question: "Will this show revenue per campaign?", 
+    answer: "Yes. Meetings and revenue are attributed to specific steps, channels, and playbooks so you can clearly see what is driving results." 
+  },
+  { 
+    id: 2, 
+    question: "Can it optimize automatically?", 
+    answer: "Yes. The system continuously analyzes performance and can adjust timing, channels, and messaging to improve results over time." 
+  },
+  { 
+    id: 3, 
+    question: "Does it help with deliverability?", 
+    answer: "Yes. Built-in systems like domain warming, sending limits, and monitoring help maintain strong deliverability and protect your sender reputation." 
+  },
+]} 
+/>
         <WhatsWorking />
     </main>
   )

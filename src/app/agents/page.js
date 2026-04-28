@@ -40,13 +40,13 @@ export default function Agentspage() {
         <AllSimpleSteps
           heading={
             <>
-              <span className="text-white">How It Works</span>{" "}
-              <span className="bg-gradient-to-r from-[#52be2f] to-[#da7d3d] text-transparent bg-clip-text">
+              <span className="text-gray-900">How It Works</span>{" "}
+              <span className="text-[#787878]">
                 (4 Steps)
               </span>
             </>
           }
-           bgColor="bg-[#041308]"
+           bgColor="bg-[#EEF9FA]"
         steps={[
           {
             image: "/images/all_simple_steps_card1.png",
@@ -135,13 +135,28 @@ widget, and imported lists — so the pipeline never stops moving.</>
              /> 
        <Integrations />
        <DeployAgent />
-        <FAQ faqs={[
-            { id: 1, question: "Will the Agent sound like us?", answer: "Yes—upload your PDFs/URLs; the Agent learns your offer, proof, and tone." },
-            { id: 2, question: "Is voice required?", answer: "..." },
-            { id: 3, question: "Can I run multiple goals?", answer: "..." },
-            { id: 4, question: "How safe is sending?", answer: "..." },
-            ]} 
-        />
+       <FAQ faqs={[
+  { 
+    id: 1, 
+    question: "Will the Agent sound like us?", 
+    answer: "Yes. Upload your PDFs or URLs and the Agent learns your offer, proof, and tone so it communicates in a way that feels aligned with your brand." 
+  },
+  { 
+    id: 2, 
+    question: "Is voice required?", 
+    answer: "No. Voice is optional. You can run campaigns using email, SMS, or WhatsApp, and add voice only if it fits your strategy." 
+  },
+  { 
+    id: 3, 
+    question: "Can I run multiple goals?", 
+    answer: "Yes. You can set up different agents for different objectives such as lead generation, follow ups, appointment booking, and reactivation campaigns." 
+  },
+  { 
+    id: 4, 
+    question: "How safe is sending?", 
+    answer: "We follow best practices to protect your sending reputation, including domain warming, inbox rotation, and continuous monitoring to help maintain strong deliverability." 
+  },
+]} />
     </main>
   )
 }

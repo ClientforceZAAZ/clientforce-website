@@ -2,11 +2,14 @@
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import VideoModal from "@/components/ui/VideoModal";
 
+import { useState } from "react";
 
 const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 
 export default function HowItWorksHero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section
       className="mt-18 lg:mt-21 pt-6 md:pt-12 bg-cover bg-center "
@@ -31,14 +34,18 @@ export default function HowItWorksHero() {
           <span className="font-bold text-black">
             Prospects, Engages, Proposes, Calls, And Closes
           </span>
-          —Across Channels—While <br  className="hidden md:block" />
+          —Across Channels—While <br className="hidden md:block" />
           You Track Everything In One Inbox And Optimize With Real Analytics
         </p>
         <div className="flex items-center justify-center gap-3 py-6  md:py-10 relative">
           <PrimaryCTA variant="dark" className="z-20">
             Launch An Agent
           </PrimaryCTA>
-          <PrimaryCTA variant="light" className="z-20">
+          <PrimaryCTA
+            variant="light"
+            className="z-20"
+            onClick={() => setIsVideoOpen(true)}
+          >
             Watch 2-minutes Demo
           </PrimaryCTA>
 
@@ -47,12 +54,12 @@ export default function HowItWorksHero() {
             src="/icons/feauturesBenefitt.svg"
             width={1280}
             height={160}
-           style={{
+            style={{
               position: "absolute",
               top: "4rem",
               right: "4rem",
             }}
-             className="hidden xl:block"
+            className="hidden xl:block"
           />
 
           {/* Avatars */}
@@ -132,8 +139,11 @@ export default function HowItWorksHero() {
           </div>
         </div>
       </div>
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        mediaId="eu8l1vo7pz"
+      />
     </section>
   );
 }
-
-

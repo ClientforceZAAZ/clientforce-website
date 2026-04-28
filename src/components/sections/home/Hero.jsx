@@ -31,7 +31,7 @@ export default function Hero() {
       </>}
       rightBg="bg-[#F6F6F6]"
       rightImage={
-        <div className=" pl-0 lg:pl-6">
+        <div className=" pl-0 lg:pl-6 hidden lg:block">
           <HeroFlowDiagram />
         </div>
       }
@@ -40,7 +40,7 @@ export default function Hero() {
     <VideoModal 
         isOpen={isVideoOpen} 
         onClose={() => setIsVideoOpen(false)} 
-        mediaId="eu8l1vo7pz" // Your primary explainer ID
+        mediaId="eu8l1vo7pz" 
       />
     </>
   );

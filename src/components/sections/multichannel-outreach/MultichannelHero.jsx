@@ -1,10 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import PageHero from "@/components/sections/shared/PageHero";
+import VideoModal from "@/components/ui/VideoModal";
+
+import { useState } from "react";
 
 export default function Hero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
-    <PageHero
+    <>
+       <PageHero
       badge="Multichannel Outreach"
       badgeBg="#ECECEC"
       headline={<>Reach Every <br className="hidden lg:block" /> Prospect Where <br className="hidden md:block" /> They Actually Reply.</>}
@@ -12,7 +19,7 @@ export default function Hero() {
       description={<>Email, WhatsApp, LinkedIn, SMS, and AI Voice, Orchestrated In One Flow To Book Meetings And Close Deals, With Smart Timing, Fallbacks, And Compliance Built-In.</>}
       descriptionStyle="text-sm sm:text-lg text-center lg:text-left pr-0 lg:pr-10"
       primaryCTA={<PrimaryCTA variant="dark">Get Started</PrimaryCTA>}
-      secondaryCTA={<PrimaryCTA variant="light">Watch 2-Minutes Demo</PrimaryCTA>}
+      secondaryCTA={<PrimaryCTA variant="light" onClick={() => setIsVideoOpen(true)}>Watch 2-Minutes Demo</PrimaryCTA>}
       metrics={<>
         <span>★★★★★ 2,000+ USERS</span>
       </>}
@@ -34,5 +41,12 @@ export default function Hero() {
         <div className="border border-[#FFFFFF66] rounded-2xl w-[78%] h-[80%] bg-[#00000026] z-0 absolute top-[8%] left-[11%]"></div>
       </>}
     />
+
+     <VideoModal 
+                      isOpen={isVideoOpen} 
+                      onClose={() => setIsVideoOpen(false)} 
+                      mediaId="eu8l1vo7pz" 
+      />
+    </>
   );
 }
