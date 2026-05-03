@@ -153,7 +153,7 @@ const SECTIONS = [
     reverse: false,
     features: [
       { icon: <Image src="/images/products/icons/Email.svg" width={25} height={25} />, title: "Email Personalization:", description: "Dynamic Fields + Variable Angles That Feel Handcrafted At Scale." },
-      { icon: <Image src="/images/products/icons/Whatsapp.svg" width={25} height={25} />, title: "WhatsApp / SMS:", description: "Approved Templates With Email Fallbacks If Needed." },
+      { icon: <Image src="/images/products/icons/WhatsApp.svg" width={25} height={25} />, title: "WhatsApp / SMS:", description: "Approved Templates With Email Fallbacks If Needed." },
       { icon: <Image src="/images/products/icons/LinkedIn.svg" width={25} height={25} />, title: "LinkedIn Touches:", description: "Light, Context-Aware Nudges That Warm Conversations." },
       { icon: <Image src="/images/products/icons/Ai_voice.svg" width={25} height={25} />, title: "AI Voice Calls:", description: "Natural Discovery + Objection Handling + Booking Links—Used Sparingly To Close." },
     ],

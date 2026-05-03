@@ -322,13 +322,13 @@ function Template(){
      const [ref, visible] = useVisible();
 
      return (
-       <div ref={ref} className="px-6 lg:px-20 mt-10 sm:mt-20">
+       <div ref={ref} className="px-6 lg:px-20 mt-10 sm:mt-10">
          {/* Templates  */}
          <div
            style={{
-             opacity: visible ? 1 : 0,
-             transform: visible ? "translateY(0px)" : "translateY(24px)",
-             transition: `opacity 0.55s ease 1s, transform 0.55s ease 1s`,
+            //  opacity: visible ? 1 : 0,
+            //  transform: visible ? "translateY(0px)" : "translateY(24px)",
+            //  transition: `opacity 0.55s ease 1s, transform 0.55s ease 1s`,
            }}
            className={`rounded-2xl overflow-hidden flex flex-row items-center bg-linear-to-b from-[#FFFFFF0D] from-70% to-[#6BE8FD33] border border-[#FFFFFF0D] p-8 gap-8`}
          >

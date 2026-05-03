@@ -73,9 +73,9 @@ function StepCard({ step, index }) {
 
   return (
     <div
-      ref={ref}
+      // ref={ref}
       style={{
-        opacity: visible ? 1 : 0,
+        // opacity: visible ? 1 : 0,
         // transform: visible ? "translateY(0)" : "translateY(32px)",
         // transition: "opacity 0.65s ease, transform 0.65s ease",
       }}
@@ -91,7 +91,7 @@ function StepCard({ step, index }) {
         {step.imageLeft && (
           <div
             style={{
-              opacity: visible ? 1 : 0,
+              // opacity: visible ? 1 : 0,
               // transform: visible ? "translateX(0)" : "translateX(-24px)",
               // transition:
               //   "opacity 0.65s ease 0.15s, transform 0.65s ease 0.15s",
@@ -111,7 +111,7 @@ function StepCard({ step, index }) {
         {/* Text side */}
         <div
           style={{
-            opacity: visible ? 1 : 0,
+            // opacity: visible ? 1 : 0,
             // transform: visible
             //   ? "translateX(0)"
             //   : step.imageLeft
@@ -140,7 +140,7 @@ function StepCard({ step, index }) {
               <div
                 key={i}
                 style={{
-                  opacity: visible ? 1 : 0,
+                  // opacity: visible ? 1 : 0,
                   // transform: visible ? "translateX(0)" : "translateX(-12px)",
                   // transition: `opacity 0.5s ease ${0.3 + i * 0.08}s, transform 0.5s ease ${0.3 + i * 0.08}s`,
                 }}
@@ -174,7 +174,7 @@ function StepCard({ step, index }) {
         {!step.imageLeft && (
           <div
             style={{
-              opacity: visible ? 1 : 0,
+              // opacity: visible ? 1 : 0,
               // transform: visible ? "translateX(0)" : "translateX(24px)",
               // transition:
               //   "opacity 0.65s ease 0.15s, transform 0.65s ease 0.15s",

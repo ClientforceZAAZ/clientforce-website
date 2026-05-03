@@ -150,7 +150,7 @@ export default function FeauturesBenefits() {
     <section className=" pt-10 xl:pt-40 relative">
         <div className=" flex flex-col items-center">
             <p className=" text-xl sm:text-[28px] font-degular">The Value</p>
-            <h1 className=" font-bold text-5xl sm:text-6xl font-degular">Feature → Benefit</h1>
+            <h1 className=" font-bold text-4xl sm:text-6xl font-degular">Feature → Benefit</h1>
             <FeatureTabs TABS={HOME_TABS} />
         </div>
 

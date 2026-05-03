@@ -32,7 +32,7 @@ export default function ReadyToLaunch() {
 
   return (
     <section
-      ref={ref}
+      // ref={ref}
       className={`rounded-3xl overflow-hidden shadow-xl mb-8 sm:mb-14 mt-8 sm:mt-16 mx-8 lg:mx-26 px-6 lg:pl-14 pt-8 pr-0 bg-cover bg-center`}
       style={{
         backgroundImage:
@@ -46,9 +46,9 @@ export default function ReadyToLaunch() {
         <div className={`flex flex-col w-full  lg:w-[50%] lg:pb-8`}>
           <div
             style={{
-              opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(-30px)",
-              transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
+              // opacity: visible ? 1 : 0,
+              // transform: visible ? "translateX(0)" : "translateX(-30px)",
+              // transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
             }}
             className=" flex flex-col items-start justify-between"
           >
@@ -94,9 +94,9 @@ export default function ReadyToLaunch() {
         <div
           className={`hidden lg:flex items-center justify-center  lg:w-[45%] `}
           style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0px)" : "translateY(40px)",
-            transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
+            // opacity: visible ? 1 : 0,
+            // transform: visible ? "translateY(0px)" : "translateY(40px)",
+            // transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
           }}
         >
           <img

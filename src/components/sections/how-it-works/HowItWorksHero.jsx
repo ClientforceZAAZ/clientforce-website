@@ -57,9 +57,9 @@ export default function HowItWorksHero() {
             style={{
               position: "absolute",
               top: "4rem",
-              right: "4rem",
+              right: "",
             }}
-            className="hidden xl:block"
+            className="hidden md:block"
           />
 
           {/* Avatars */}

@@ -60,7 +60,7 @@ export default function UnifiedInboxHero() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-black opacity-40 animate-ping"></span>
 
               {/* Static Circle */}
-              <span className="relative inline-flex rounded-full bg-black shadow-md">
+              <span className="relative inline-flex rounded-full bg-black shadow-md cursor-pointer" onClick={() => setIsVideoOpen(true)}>
                 <img
                   src="/icons/play_icon.svg"
                   alt="Play"

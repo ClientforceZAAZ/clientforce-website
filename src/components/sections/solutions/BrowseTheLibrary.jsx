@@ -31,16 +31,18 @@ export default function Generate() {
 
   return (
     <section className="bg-[#EEF9FA] pb-6 pt-0 px-8 md:px-26">
-        <div ref={ref} className={`rounded-3xl overflow-hidden shadow-xl  px-6 sm:px-14 pt-0 lg:pt-8 lg:pr-0 bg-cover bg-center`} style={{  backgroundImage: "url('/images/lead-acquisition-suite/get_started_bg.png')" }}>
+        <div 
+        // ref={ref}
+         className={`rounded-3xl overflow-hidden shadow-xl  px-6 sm:px-14 pt-0 lg:pt-8 lg:pr-0 bg-cover bg-center`} style={{  backgroundImage: "url('/images/lead-acquisition-suite/get_started_bg.png')" }}>
         <div className={`flex flex-col lg:flex-row justify-center  lg:justify-between gap-8 py-8 lg:py-0`}>
 
             {/* Text Side */}
             <div className={`flex flex-col w-full lg:w-[50%] pb-6 `}>
             <div
                 style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateX(0)" : "translateX(-30px)",
-                transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
+                // opacity: visible ? 1 : 0,
+                // transform: visible ? "translateX(0)" : "translateX(-30px)",
+                // transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
                 }}
                 className=""
             >
@@ -61,9 +63,9 @@ export default function Generate() {
             <div
             className={` items-center justify-center lg:w-[45%] hidden lg:flex`}
             style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0px)" : "translateY(40px)",
-                transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
+                // opacity: visible ? 1 : 0,
+                // transform: visible ? "translateY(0px)" : "translateY(40px)",
+                // transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
             }}
             >
             <img

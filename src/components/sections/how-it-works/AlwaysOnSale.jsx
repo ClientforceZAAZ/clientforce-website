@@ -21,7 +21,7 @@ function useVisible(threshold = 0.1) {
 const TABS = [
   {
     label: "Prospect",
-    description: (<>Finder V2, Chrome Capture, And Embeddable <br className="hidden lg:block" /> Widgets Keep Your Pipeline Full.</>),
+    description: (<>Finder V2, Chrome Capture, And Embeddable Widgets Keep Your Pipeline Full.</>),
     image: "/images/how-it-works/prospect_bg.png",
     floatingLeft: { image: "/images/sales-loop/avatar_prospect.png", emoji: "👩🏼" },
     floatingRight: { avatars: ["👩", "🧔", "👩🏽"] },
@@ -84,7 +84,7 @@ function DashboardPreview({ tab }) {
     <div className="relative w-full">
 
       {/* Main dashboard card */}
-      <div className="relative mx-auto rounded-2xl border border-gray-300 py-8 px-8 sm:px-16 overflow-hidden bg-linear-to-br from-[#e5ff9e] from-0% via-[#81f781] via-50% to-[#97edfc] to-100%"
+      <div className="relative mx-auto flex flex-col items-center rounded-2xl border border-gray-300 py-8 px-8 overflow-hidden bg-linear-to-br from-[#e5ff9e] from-0% via-[#81f781] via-50% to-[#97edfc] to-100%"
         style={{ minHeight: "", background: "" }}
       >
          {/* Description */}
@@ -92,7 +92,7 @@ function DashboardPreview({ tab }) {
           <span className="font-bold">{tab.label}:</span> {tab.description}
         </p>
         {tab.image ? (
-          <img src={tab.image} alt={tab.label} className="w-full h-full object-cover" />
+          <img src={tab.image} alt={tab.label} className=" w-full h-full object-cover" />
         ) : (
           /* Placeholder mockup when no image */
           <div className="p-6">

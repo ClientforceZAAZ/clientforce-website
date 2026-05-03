@@ -31,16 +31,18 @@ export default function Generate() {
   const [ref, visible] = useVisible(0.15);
 
   return (
-    <section ref={ref} className={`rounded-3xl overflow-hidden shadow-xl mb-8 sm:mb-14 mt-8 sm:mt-16 mx-8 md:mx-26 px-6 sm:px-10 lg:pt-8 md:pr-0 bg-cover bg-center`} style={{  backgroundImage: "url('/images/how-it-works/launch_demo_bg.png')",border: "1px solid #CFCFCF"  }}>
+    <section 
+    // ref={ref}
+     className={`rounded-3xl overflow-hidden shadow-xl mb-8 sm:mb-14 mt-8 sm:mt-16 mx-8 md:mx-26 px-6 sm:px-10 lg:pt-8 md:pr-0 bg-cover bg-center`} style={{  backgroundImage: "url('/images/how-it-works/launch_demo_bg.png')",border: "1px solid #CFCFCF"  }}>
       <div className={`flex flex-col lg:flex-row items-start justify-between gap-8 px-0 sm:px-12 lg:px-0 py-6 sm:py-8 lg:py-0`}>
 
         {/* Text Side */}
         <div className={`flex flex-col justify-center  lg:w-[50%] lg:pb-8`}>
           <div
             style={{
-              opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(-30px)",
-              transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
+              // opacity: visible ? 1 : 0,
+              // transform: visible ? "translateX(0)" : "translateX(-30px)",
+              // transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
             }}
           >
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold lg:mt-12 font-degular text-black ">
@@ -59,9 +61,9 @@ export default function Generate() {
         <div
           className={` items-center justify-center lg:w-[45%]  hidden lg:flex`}
           style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0px)" : "translateY(40px)",
-            transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
+            // opacity: visible ? 1 : 0,
+            // transform: visible ? "translateY(0px)" : "translateY(40px)",
+            // transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
           }}
         >
           <img

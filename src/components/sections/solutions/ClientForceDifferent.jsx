@@ -92,14 +92,14 @@ function AutomationCard({ card, isVisible }) {
 
   return (
     <div
-      className={`absolute max-w-[278px] ${CARD_POSITIONS[card.position]}`}
+      className={`absolute max-w-[278px] z-20 ${CARD_POSITIONS[card.position]}`}
       style={{
         // Slide-in on scroll
-        opacity:    isVisible ? 1 : 0,
-        transform:  isVisible
-          ? "translate(0, 0)"
-          : `translate(${entry.x}px, ${entry.y}px)`,
-        transition: `opacity 0.7s ease ${delay * 0.3 + 0.3}s, transform 0.7s ease ${delay * 0.3 + 0.3}s`,
+        // opacity:    isVisible ? 1 : 0,
+        // transform:  isVisible
+        //   ? "translate(0, 0)"
+        //   : `translate(${entry.x}px, ${entry.y}px)`,
+        // transition: `opacity 0.7s ease ${delay * 0.3 + 0.3}s, transform 0.7s ease ${delay * 0.3 + 0.3}s`,
         // Float after slide-in
         animation:  isVisible
           ? `floatCard 3.5s ease-in-out ${delay}s infinite`

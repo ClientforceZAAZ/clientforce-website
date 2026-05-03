@@ -29,16 +29,18 @@ export default function Generate() {
   const [ref, visible] = useVisible(0.15);
 
   return (
-    <section ref={ref} className={`rounded-3xl overflow-hidden shadow-xl mb-14 mt-16 mx-8 md:mx-26 px-14 pt-8 md:pr-0 bg-cover bg-center`} style={{  backgroundImage: "url('/images/lead-acquisition-suite/get_started_bg.png')" }}>
+    <section 
+    // ref={ref}
+     className={`rounded-3xl overflow-hidden shadow-xl mb-14 mt-16 mx-8 md:mx-26 px-14 pt-8 md:pr-0 bg-cover bg-center`} style={{  backgroundImage: "url('/images/lead-acquisition-suite/get_started_bg.png')" }}>
       <div className={`flex flex-row items-center justify-between gap-8`}>
 
         {/* Text Side */}
         <div className={`flex flex-col md:w-[50%] pb-8`}>
           <div
             style={{
-              opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(-30px)",
-              transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
+              // opacity: visible ? 1 : 0,
+              // transform: visible ? "translateX(0)" : "translateX(-30px)",
+              // transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
             }}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[46px]  font-degular text-white leading-8 sm:leading-10 lg:leading-12 xl:leading-14 mb-6 xl:mb-12 mt-4">
@@ -58,9 +60,9 @@ export default function Generate() {
         <div
           className={` items-center justify-center md:w-[45%]  hidden md:flex`}
           style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0px)" : "translateY(40px)",
-            transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
+            // opacity: visible ? 1 : 0,
+            // transform: visible ? "translateY(0px)" : "translateY(40px)",
+            // transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
           }}
         >
           <img

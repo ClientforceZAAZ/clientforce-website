@@ -34,13 +34,13 @@ export default function AllSimpleSteps({ heading, steps, bgColor }) {
               style={{ zIndex: 1 }}
             >
               {/* Step image */}
-              <div className="flex-shrink-0 z-10">
-                <Image
+              <div className=" z-10">
+                <img
                   src={step.image}
                   alt={`step ${i + 1}`}
-                  width={280}
-                  height={288}
-                  className="h-56 md:h-72 w-auto object-contain"
+                  // width={280}
+                  // height={288}
+                  className=" object-contain"
                 />
               </div>
 
@@ -82,7 +82,7 @@ export default function AllSimpleSteps({ heading, steps, bgColor }) {
                       : "-right-[7%]"
                   } ${connector.top}`}
                 >
-                  <Image
+                  <img
                     src="/images/line.png"
                     alt=""
                     width={60}

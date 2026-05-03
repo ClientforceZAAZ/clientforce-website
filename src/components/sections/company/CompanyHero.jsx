@@ -31,7 +31,7 @@ export default function PricingSection() {
 
       <div
         className="flex-col lg:flex lg:flex-row justify-between px-8 sm:px-16 z-30 pt-6 md:pt-12 pb-0 sm:pb-16 lg:pb-0 bg-cover bg-center gap-6"
-        style={{ backgroundImage: "url('/images/pricing/pricing_heroBg.png')" }}
+        style={{ backgroundImage: "url('/images/pricing/')" }}
       >
         {/* LEFT */}
         <div className={`space-y-3 z-30`}>
@@ -40,7 +40,7 @@ export default function PricingSection() {
               <div className="relative p-0.5 rounded-full bg-[linear-gradient(270deg,#F437AB,#08A541,#FF9D7C,#F437AB)]">
                 <div
                   className={` rounded-full px-3 py-1 flex items-center justify-center`}
-                  style={{ background: "#E5FFFA" }}
+                  style={{ background: "#FFFFFF" }}
                 >
                   <span className="text-xs sm:text-sm font-bold bg-linear-to-r from-black to-[#C521D1] bg-clip-text text-transparent">
                     About Company
@@ -52,7 +52,7 @@ export default function PricingSection() {
 
           <h1 className="font-degular font-extrabold text-4xl sm:text-6xl  leading-8 sm:leading-14 md:leading-15 text-center lg:text-left z-30">
             We build AI Sales <br className="hidden sm:block" /> Agents So
-            Humans Can <br className="hidden sm:block" /> Focus On Building{" "}
+            Humans Can <br className="hidden lg:block" />Focus On Building
             <br className="hidden sm:block" /> Remarkable Businesses.
           </h1>
 
@@ -65,8 +65,8 @@ export default function PricingSection() {
           </p>
 
           <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start  mt-8 mb-0 md:mb-8">
-            {/* Browse Docs Button */}
-            <button className="relative group">
+            {/* Start Free Trial Button */}
+            <button className="relative group cursor-pointer hover:scale-105 transition-all ease-in-out z-10 ">
               {/* The Green 3D Depth Layer */}
               <div className="absolute inset-0 translate-y-[4px] bg-[#00E65A] rounded-xl" />
 
@@ -81,8 +81,8 @@ export default function PricingSection() {
               </div>
             </button>
 
-            {/* Request An Integration Button */}
-            <button className="relative group">
+            {/* See Open Roles Button */}
+            <button className="relative group cursor-pointer hover:scale-105 transition-all ease-in-out z-10">
               {/* The Gray 3D Depth Layer */}
               <div className="absolute inset-0 translate-y-[4px] bg-black/20 rounded-xl" />
 

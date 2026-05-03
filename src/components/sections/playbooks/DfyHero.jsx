@@ -2,11 +2,14 @@
 import PrimaryCTA from "@/components/ui/PrimaryCTA";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import VideoModal from "@/components/ui/VideoModal";
+import { useState } from "react";
 
 
 const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 
 export default function AgentsHero() {
+   const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className='mt-18 lg:mt-21 pt-12 bg-cover bg-center' style={{ backgroundImage: "url('/images/dfy/dfy_hero_bg.png')"}}>
         <div>
@@ -37,7 +40,7 @@ export default function AgentsHero() {
                         <span className="absolute inline-flex h-full w-full rounded-full bg-black opacity-40 animate-ping"></span>
 
                         {/* Static Circle */}
-                        <span className="relative inline-flex rounded-full bg-black shadow-md">
+                        <span className="relative inline-flex rounded-full bg-black shadow-md cursor-pointer" onClick={() => setIsVideoOpen(true)}>
                             <img src="/icons/play_icon.svg" alt="Play" className="w-15 h-15" />
                         </span>
                     </div>
@@ -51,6 +54,11 @@ export default function AgentsHero() {
             </div>
 
         </div>
+        <VideoModal
+            isOpen={isVideoOpen}
+            onClose={() => setIsVideoOpen(false)}
+            mediaId="eu8l1vo7pz"
+          />
     </section>
   )
 }

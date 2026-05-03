@@ -30,16 +30,18 @@ export default function GetStarted() {
   const [ref, visible] = useVisible(0.15);
 
   return (
-    <section ref={ref} className={`rounded-3xl overflow-hidden shadow-xl mb-14 mt-28 mx-8 md:mx-26 px-6 md:px-10 pt-6 bg-cover bg-center`} style={{  backgroundImage: "url('/images/lead-acquisition-suite/get_started_bg.png')" }}>
+    <section 
+    // ref={ref}
+     className={`rounded-3xl overflow-hidden shadow-xl mb-14 mt-28 mx-8 md:mx-26 px-6 md:px-10 pt-6 bg-cover bg-center`} style={{  backgroundImage: "url('/images/lead-acquisition-suite/get_started_bg.png')" }}>
       <div className={`flex flex-col lg:flex-row items-center justify-between gap-8`}>
 
         {/* Text Side */}
         <div className={`flex flex-col justify-center py-6`}>
           <div
             style={{
-              opacity: visible ? 1 : 0,
-              transform: visible ? "translateX(0)" : "translateX(-30px)",
-              transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
+              // opacity: visible ? 1 : 0,
+              // transform: visible ? "translateX(0)" : "translateX(-30px)",
+              // transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
             }}
           >
             <Image src="/images/lead-acquisition-suite/icons/Logo.svg" alt="Logo" width={150} height={60} />
@@ -58,9 +60,9 @@ export default function GetStarted() {
         <div
           className={`flex items-center justify-center`}
           style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0px)" : "translateY(40px)",
-            transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
+            // opacity: visible ? 1 : 0,
+            // transform: visible ? "translateY(0px)" : "translateY(40px)",
+            // transition: "opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s",
           }}
         >
           <img

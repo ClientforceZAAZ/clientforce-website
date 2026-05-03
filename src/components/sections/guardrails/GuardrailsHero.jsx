@@ -17,7 +17,7 @@ export default function Hero() {
       badgeBg="bg-[#627332]"
       badgeTextColor="text-white"
       BadgeBorder="bg-white"
-      headline={<>Scale Outreach Safely. <br className="hidden sm:block" /> Protect Reputation. Stay <br className="hidden sm:block" /> Compliant, By Default.</>}
+      headline={<>Scale Outreach Safely.  Protect Reputation. Stay  Compliant, By Default.</>}
       headlineStyle="text-4xl sm:text-5xl lg:text-[55px] leading-8 sm:leading-12 lg:leading-14 text-center lg:text-left text-white"
       description={<>ClientForce bakes deliverability, consent, and policy controls into every step so your Agents can run 24/7 without risking spam flags, fines, or brand damage.</>}
       descriptionStyle="text-black text-sm sm:text-lg text-center lg:text-left leading-4 sm:leading-5 sm:leading-6 text-white"
