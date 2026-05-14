@@ -11,6 +11,7 @@ const sections = [
   { id: "security", title: "Security Measures" },
   { id: "choices", title: "Your Choices" },
   { id: "children", title: "Children's Privacy" },
+  { id: "AI-Requirements", title: "AI Requirements" },
   { id: "changes", title: "Changes to This Policy" },
 ];
 
@@ -415,6 +416,19 @@ export default function PrivacyPage() {
                   ensure a safe and privacy-conscious experience.
                 </p>
               </Section>
+
+              {/* AI Requirements */}
+              <Section id="AI-Requirements" title="AI Requirements">
+                <p>
+                 Your application, or a website associated with your web service or application, does not include an affirmative statement confirming that your data usage adheres to the Limited Use restrictions. <span className="font-bold">Please include a statement similar to this example, verbatim, in your application or on your application website:</span> The use of raw or derived user data received from Workspace APIs will adhere to the Google User Data Policy, including the Limited Use requirements. <br />
+                 If you have any questions or need further clarification, please contact us at{" "}
+                  <span className="text-blue-700">support@clientforce.io</span>
+                </p>
+              </Section>
+
+
+
+
 
               {/* CHANGES */}
               <Section id="changes" title="Changes to This Policy">
