@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.6",
     "@portabletext/react": "^6.0.3",
     "@radix-ui/react-navigation-menu": "^1.2.14",
     "@sanity/image-url": "^1.2.0",
