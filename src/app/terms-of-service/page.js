@@ -6,8 +6,15 @@ import LegalLayout from "@/components/sections/shared/LegalLayout";
 const sections = [
   { id: "user-accounts", title: "User Accounts" },
   { id: "payments", title: "Payments" },
+  {
+    id: "cancellations-refunds",
+    title: "Cancellations & Refunds",
+  },
   { id: "intellectual-property", title: "Intellectual Property" },
-   { id: "Third-Party Data Sharing and Disclosure", title: "Third-Party Data Sharing and Disclosure" },
+  {
+    id: "Third-Party Data Sharing and Disclosure",
+    title: "Third-Party Data Sharing and Disclosure",
+  },
   { id: "liability", title: "Limitation of Liability" },
   { id: "termination", title: "Termination" },
   { id: "governing-law", title: "Governing Law" },
@@ -221,6 +228,169 @@ export default function TermsPage() {
                     may apply if you make payments in a different currency.
                   </li>
                 </ol>
+              </Section>
+
+              {/* CANCELLATIONS & REFUNDS */}
+              <Section
+                id="cancellations-refunds"
+                title="Cancellations & Refunds"
+              >
+                <p className="text-sm text-gray-400 -mt-2">
+                  Last Updated: June 7, 2025
+                </p>
+                <p>
+                  At Clientforce, we are committed to providing our customers
+                  with a reliable platform and excellent customer support. We
+                  encourage customers to work closely with our Customer Success
+                  team to resolve any issues and get the most value from the
+                  platform.
+                </p>
+
+                {/* Refund Policy */}
+                <h3 className="text-base font-semibold font-degular text-gray-900 mt-4">
+                  Refund Policy
+                </h3>
+
+                <p className="font-semibold">14-Day Refund Eligibility</p>
+                <p>
+                  New subscriptions may be eligible for a refund request within
+                  fourteen (14) days of the original purchase date, subject to
+                  the terms below. Refund requests are intended to address
+                  genuine technical or service-related issues that materially
+                  prevent the customer from using the platform as intended and
+                  which cannot be reasonably resolved by our Customer Success
+                  team.
+                </p>
+
+                <p className="font-semibold">Resolution Before Refund</p>
+                <p>
+                  Before a refund can be approved, customers agree to give
+                  Clientforce a reasonable opportunity to investigate and
+                  resolve the issue. This may include:
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Technical troubleshooting</li>
+                  <li>Configuration assistance</li>
+                  <li>Customer Success guidance</li>
+                  <li>Training or onboarding support</li>
+                  <li>Feature clarification</li>
+                </ul>
+                <p>
+                  Where an issue can reasonably be resolved, Clientforce
+                  reserves the right to provide a solution in lieu of issuing a
+                  refund.
+                </p>
+
+                <p className="font-semibold">Non-Refundable Situations</p>
+                <p>Refunds will generally not be granted for:</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Change of mind.</li>
+                  <li>Lack of time to use the platform.</li>
+                  <li>Failure to complete onboarding.</li>
+                  <li>Failure to attend training sessions.</li>
+                  <li>Failure to implement recommended setup steps.</li>
+                  <li>Business conditions or lack of results.</li>
+                  <li>Personal preference.</li>
+                  <li>Purchasing by mistake.</li>
+                  <li>Failure to cancel before the next billing cycle.</li>
+                  <li>Requests made after the refund period has expired.</li>
+                  <li>
+                    Dissatisfaction arising from features or limitations that
+                    were clearly disclosed prior to purchase.
+                  </li>
+                  <li>Services already substantially delivered.</li>
+                  <li>
+                    Custom implementation, consulting, done-for-you services, or
+                    strategy work already performed.
+                  </li>
+                </ul>
+
+                <p className="font-semibold">Done-For-You Services</p>
+                <p>
+                  Because DFY services involve significant time, strategy,
+                  content creation, technical setup, and labor by multiple team
+                  members, payments for custom services are generally
+                  non-refundable once work has commenced. However, our team
+                  remains committed to working with customers to address
+                  concerns and complete the agreed deliverables.
+                </p>
+
+                <p className="font-semibold">Abuse of Refund Policy</p>
+                <p>
+                  Clientforce reserves the right to deny refund requests where
+                  there is evidence of:
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Abuse of the refund policy.</li>
+                  <li>Repeated purchase-and-refund behavior.</li>
+                  <li>Fraudulent activity.</li>
+                  <li>Chargeback abuse.</li>
+                  <li>
+                    Unreasonable refusal to cooperate with Customer Success
+                    efforts.
+                  </li>
+                </ul>
+                <p>
+                  All refund decisions are made at the sole discretion of
+                  Clientforce.
+                </p>
+
+                {/* Cancellation Policy */}
+                <h3 className="text-base font-semibold font-degular text-gray-900 mt-4">
+                  Cancellation Policy
+                </h3>
+
+                <p>
+                  Customers may cancel their subscription at any time.
+                  Cancellation prevents future renewals but does not
+                  automatically generate refunds for payments already processed.
+                </p>
+
+                <p className="font-semibold">Recurring Billing</p>
+                <p>
+                  Subscriptions renew automatically according to the selected
+                  billing period unless cancelled before the renewal date.
+                  Customers are responsible for managing their subscriptions and
+                  submitting cancellation requests prior to the next billing
+                  cycle.
+                </p>
+
+                <p className="font-semibold">Renewal Charges</p>
+                <p>
+                  Once a renewal payment has been successfully processed, it is
+                  considered earned and is generally non-refundable. Requests
+                  submitted after a successful rebill or renewal charge will not
+                  normally qualify for a refund.
+                </p>
+
+                <p className="font-semibold">Cancellation Effective Date</p>
+                <p>
+                  Cancellation becomes effective at the end of the current
+                  billing period. Customers will continue to have access to the
+                  platform until the end of that paid term.
+                </p>
+
+                <p className="font-semibold">How to Cancel</p>
+                <p>Customers may cancel by:</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Using the account billing settings; or</li>
+                  <li>Contacting Clientforce Support.</li>
+                </ul>
+                <p>
+                  We recommend submitting cancellation requests at least three
+                  (3) business days before the next renewal date to allow
+                  adequate processing time.
+                </p>
+
+                <p className="font-semibold">Our Commitment</p>
+                <p>
+                  Our goal is not simply to process transactions, but to help
+                  our customers succeed. If you experience any issues, we
+                  encourage you to contact our Customer Success team first. In
+                  most cases, problems can be resolved quickly, allowing you to
+                  continue benefiting from the Clientforce platform and
+                  services.
+                </p>
               </Section>
 
               {/* INTELLECTUAL PROPERTY */}
