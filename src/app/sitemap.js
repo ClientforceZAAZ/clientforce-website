@@ -19,5 +19,6 @@ export default function sitemap() {
     { url: "https://clientforceai.com/B2B",                    lastModified: new Date(), changeFrequency: "monthly",  priority: 0.7 },
     { url: "https://clientforceai.com/how-it-works",           lastModified: new Date(), changeFrequency: "monthly",  priority: 0.7 },
     { url: "https://clientforceai.com/case-studies",           lastModified: new Date(), changeFrequency: "monthly",  priority: 0.7 },
+    { url: "https://clientforceai.com/docs/zapier",            lastModified: new Date(), changeFrequency: "monthly",  priority: 0.7 },
   ];
 }

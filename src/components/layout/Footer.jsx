@@ -11,10 +11,11 @@ const FOOTER_LINKS = [
     heading: "Services",
     color: "text-emerald-400",
     links: [
-      { label: "Products",  href: "/products"  },
-      { label: "Solutions", href: "/solutions" },
-      { label: "Pricing",   href: "/pricing"   },
-      { label: "Resources", href: "/resources" },
+      { label: "Products",  href: "/products"    },
+      { label: "Solutions", href: "/solutions"   },
+      { label: "Pricing",   href: "/pricing"     },
+      { label: "Resources", href: "/resources"   },
+      { label: "Docs",      href: "/docs/zapier" },
     ],
   },
   {
