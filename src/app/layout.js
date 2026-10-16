@@ -44,6 +44,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://app.buyerpingai.com/p.js" data-ws="Ue1qFuFb3x6vWf0oDZ-SxGoWKtXirIip"></script>
+      </head>
       <body
         className={`${dmSans.variable} ${manrope.variable} ${pjs.variable} ${bebasNeue.variable} ${sourceSerif.variable} antialiased`}
       >
